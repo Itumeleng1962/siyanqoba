@@ -1,4 +1,4 @@
-// Main JavaScript for Siyanqoba website
+// Main JavaScript for Guardian Angel Studios website
 
 // Wait for DOM to load
 document.addEventListener('DOMContentLoaded', function() {

@@ -1,6 +1,6 @@
-# Siyanqoba Training & Development Website
+# Guardian Angel Studios Training & Development Website
 
-A modern, responsive website for Siyanqoba training company featuring comprehensive course offerings, user authentication, and professional design.
+A modern, responsive website for Guardian Angel Studios training company featuring comprehensive course offerings, user authentication, and professional design.
 
 ## 🎨 Design Features
 
@@ -22,7 +22,7 @@ A modern, responsive website for Siyanqoba training company featuring comprehens
 ## 📁 File Structure
 
 ```
-siyanqoba/
+guardian-angel-studios/
 ├── index.html          # Main homepage
 ├── login.html          # User login page
 ├── signup.html         # User registration page
@@ -121,8 +121,8 @@ To customize the color scheme, modify the CSS variables in `styles.css`:
 
 **Address**: 673 Keeshond Street, Garsfontein, Pretoria, 0042  
 **Phone**: 012 998 3668  
-**Email**: training@siyanqoba.co.za  
-**Website**: siyanqoba.co.za
+**Email**: training@guardianangel.co.za  
+**Website**: guardianangel.co.za
 
 ---
 
