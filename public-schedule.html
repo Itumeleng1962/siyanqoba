@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Schedule - Siyanqoba Training & Development</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="schedule.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <h2>Siyanqoba</h2>
+                    <span>Training & Development</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="courses.html" class="nav-link">Courses <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="courses.html#business">Business Administration</a>
+                        <a href="courses.html#it">Information Technology</a>
+                        <a href="courses.html#finance">Finance & Accounting</a>
+                        <a href="courses.html#project">Project Management</a>
+                        <a href="courses.html#customer">Customer Service</a>
+                        <a href="courses.html#leadership">Management & Leadership</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="public-schedule.html" class="nav-link active">Public Schedule</a>
+                </li>
+                <li class="nav-item">
+                    <a href="resources.html" class="nav-link">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-auth">
+                <a href="login.html" class="btn-login">Login</a>
+                <a href="signup.html" class="btn-signup">Sign Up</a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="header-content">
+                <h1>Public Training Schedule</h1>
+                <p>Join our scheduled public training sessions across South Africa. Book your spot in upcoming courses and advance your career with expert-led training.</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Public Schedule</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Filter -->
+    <section class="schedule-filter">
+        <div class="container">
+            <div class="filter-controls">
+                <div class="month-navigation">
+                    <button class="nav-btn" id="prevMonth">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h3 id="currentMonth">December 2024</h3>
+                    <button class="nav-btn" id="nextMonth">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="view-controls">
+                    <div class="view-toggle">
+                        <button class="view-btn active" data-view="list">
+                            <i class="fas fa-list"></i>
+                            List View
+                        </button>
+                        <button class="view-btn" data-view="calendar">
+                            <i class="fas fa-calendar"></i>
+                            Calendar
+                        </button>
+                    </div>
+                    
+                    <div class="location-filter">
+                        <select id="locationFilter">
+                            <option value="all">All Locations</option>
+                            <option value="pretoria">Pretoria</option>
+                            <option value="johannesburg">Johannesburg</option>
+                            <option value="cape-town">Cape Town</option>
+                            <option value="durban">Durban</option>
+                            <option value="virtual">Virtual/Online</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Schedule -->
+    <section class="training-schedule">
+        <div class="container">
+            
+            <!-- List View -->
+            <div class="schedule-list-view active" id="listView">
+                <div class="schedule-grid">
+                    
+                    <!-- December 2024 -->
+                    <div class="schedule-item" data-location="pretoria" data-date="2024-12-09">
+                        <div class="schedule-card">
+                            <div class="schedule-date">
+                                <div class="day">09</div>
+                                <div class="month">DEC</div>
+                                <div class="year">2024</div>
+                            </div>
+                            <div class="schedule-content">
+                                <div class="course-info">
+                                    <h3>Business Administration Certificate</h3>
+                                    <p class="course-description">Comprehensive business skills including office management and communication</p>
+                                    <div class="course-details">
+                                        <div class="detail">
+                                            <i class="fas fa-clock"></i>
+                                            <span>9:00 AM - 5:00 PM</span>
+                                        </div>
+                                        <div class="detail">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <span>5 Days (Mon-Fri)</span>
+                                        </div>
+                                        <div class="detail">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <span>Pretoria Campus</span>
+                                        </div>
+                                        <div class="detail">
+                                            <i class="fas fa-users"></i>
+                                            <span>8/20 Enrolled</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="schedule-actions">
+                                    <div class="price-info">
+                                        <span class="price">R 8,500</span>
+                                        <span class="price-note">Early bird: R 7,500</span>
+                                    </div>
+                                    <button class="btn-book" onclick="openBookingModal('Business Administration Certificate', '09 Dec 2024', 'Pretoria Campus', 'R 8,500')">
+                                        Book Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="schedule-item" data-location="virtual" data-date="2024-12-16">
+                        <div class="schedule-card">
+                            <div class="schedule-date">
+                                <div class="day">16</div>
+                                <div class="month">DEC</div>
+                                <div class="year">2024</div>
+                            </div>
+                            <div class="schedule-content">
+                                <div class="course-info">
+                                    <h3>Customer Service Excellence</h3>
+                                    <p class="course-description">Develop exceptional customer service skills and communication techniques</p>
+                                    <div class="course-details">
+                                        <div class="detail">
+                                            <i class="fas fa-clock"></i>
+                                            <span>10:00 AM - 4:00 PM</span>
+                                        </div>
+                                        <div class="detail">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <span>3 Days (Mon, Wed, Fri)</span>
+                                        </div>
+                                        <div class="detail">
+                                            <i class="fas fa-laptop"></i>
+                                            <span>Virtual Classroom</span>
+                                        </div>
+                                        <div class="detail">
+                                            <i class="fas fa-users"></i>
+                                            <span>15/25 Enrolled</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="schedule-actions">
+                                    <div class="price-info">
+                                        <span class="price">R 5,500</span>
+                                        <span class="price-note">Online discount</span>
+                                    </div>
+                                    <button class="btn-book" onclick="openBookingModal('Customer Service Excellence', '16 Dec 2024', 'Virtual Classroom', 'R 5,500')">
+                                        Book Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- January 2025 -->
+                    <div class="schedule-item" data-location="johannesburg" data-date="2025-01-13">
+                        <div class="schedule-card">
+                            <div class="schedule-date">
+                                <div class="day">13</div>
+                                <div class="month">JAN</div>
+                                <div class="year">2025</div>
+                            </div>
+                            <div class="schedule-content">
+                                <div class="course-info">
+                                    <h3>IT Systems Support</h3>
+                                    <p class="course-description">Hardware troubleshooting, software installation, and network basics</p>
+                                    <div class="course-details">
+                                        <div class="detail">
+                                            <i class="fas fa-clock"></i>
+                                            <span>8:30 AM - 5:30 PM</span>
+                                        </div>
+                                        <div class="detail">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <span>8 Days (2 Weeks)</span>
+                                        </div>
+                                        <div class="detail">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <span>Johannesburg Campus</span>
+                                        </div>
+                                        <div class="detail">
+                                            <i class="fas fa-users"></i>
+                                            <span>5/15 Enrolled</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="schedule-actions">
+                                    <div class="price-info">
+                                        <span class="price">R 12,000</span>
+                                        <span class="price-note">Equipment included</span>
+                                    </div>
+                                    <button class="btn-book" onclick="openBookingModal('IT Systems Support', '13 Jan 2025', 'Johannesburg Campus', 'R 12,000')">
+                                        Book Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="schedule-item" data-location="cape-town" data-date="2025-01-20">
+                        <div class="schedule-card">
+                            <div class="schedule-date">
+                                <div class="day">20</div>
+                                <div class="month">JAN</div>
+                                <div class="year">2025</div>
+                            </div>
+                            <div class="schedule-content">
+                                <div class="course-info">
+                                    <h3>Project Management Professional</h3>
+                                    <p class="course-description">Comprehensive project management training with PMI preparation</p>
+                                    <div class="course-details">
+                                        <div class="detail">
+                                            <i class="fas fa-clock"></i>
+                                            <span>9:00 AM - 6:00 PM</span>
+                                        </div>
+                                        <div class="detail">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <span>10 Days (2 Weeks)</span>
+                                        </div>
+                                        <div class="detail">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <span>Cape Town Campus</span>
+                                        </div>
+                                        <div class="detail">
+                                            <i class="fas fa-users"></i>
+                                            <span>3/12 Enrolled</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="schedule-actions">
+                                    <div class="price-info">
+                                        <span class="price">R 15,000</span>
+                                        <span class="price-note">PMI prep included</span>
+                                    </div>
+                                    <button class="btn-book" onclick="openBookingModal('Project Management Professional', '20 Jan 2025', 'Cape Town Campus', 'R 15,000')">
+                                        Book Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="schedule-item" data-location="pretoria" data-date="2025-01-27">
+                        <div class="schedule-card">
+                            <div class="schedule-date">
+                                <div class="day">27</div>
+                                <div class="month">JAN</div>
+                                <div class="year">2025</div>
+                            </div>
+                            <div class="schedule-content">
+                                <div class="course-info">
+                                    <h3>Bookkeeping & Financial Management</h3>
+                                    <p class="course-description">Master double-entry bookkeeping and financial statements</p>
+                                    <div class="course-details">
+                                        <div class="detail">
+                                            <i class="fas fa-clock"></i>
+                                            <span>9:00 AM - 4:00 PM</span>
+                                        </div>
+                                        <div class="detail">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <span>6 Days (Weekdays)</span>
+                                        </div>
+                                        <div class="detail">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <span>Pretoria Campus</span>
+                                        </div>
+                                        <div class="detail">
+                                            <i class="fas fa-users"></i>
+                                            <span>12/18 Enrolled</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="schedule-actions">
+                                    <div class="price-info">
+                                        <span class="price">R 7,500</span>
+                                        <span class="price-note">Software license included</span>
+                                    </div>
+                                    <button class="btn-book" onclick="openBookingModal('Bookkeeping & Financial Management', '27 Jan 2025', 'Pretoria Campus', 'R 7,500')">
+                                        Book Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- February 2025 -->
+                    <div class="schedule-item" data-location="virtual" data-date="2025-02-03">
+                        <div class="schedule-card">
+                            <div class="schedule-date">
+                                <div class="day">03</div>
+                                <div class="month">FEB</div>
+                                <div class="year">2025</div>
+                            </div>
+                            <div class="schedule-content">
+                                <div class="course-info">
+                                    <h3>Leadership Development Programme</h3>
+                                    <p class="course-description">Advanced leadership skills and strategic thinking</p>
+                                    <div class="course-details">
+                                        <div class="detail">
+                                            <i class="fas fa-clock"></i>
+                                            <span>10:00 AM - 5:00 PM</span>
+                                        </div>
+                                        <div class="detail">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <span>9 Days (3 Weeks)</span>
+                                        </div>
+                                        <div class="detail">
+                                            <i class="fas fa-laptop"></i>
+                                            <span>Virtual + 1 Day In-Person</span>
+                                        </div>
+                                        <div class="detail">
+                                            <i class="fas fa-users"></i>
+                                            <span>2/10 Enrolled</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="schedule-actions">
+                                    <div class="price-info">
+                                        <span class="price">R 18,500</span>
+                                        <span class="price-note">Executive coaching included</span>
+                                    </div>
+                                    <button class="btn-book" onclick="openBookingModal('Leadership Development Programme', '03 Feb 2025', 'Virtual + In-Person', 'R 18,500')">
+                                        Book Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="schedule-item" data-location="durban" data-date="2025-02-17">
+                        <div class="schedule-card">
+                            <div class="schedule-date">
+                                <div class="day">17</div>
+                                <div class="month">FEB</div>
+                                <div class="year">2025</div>
+                            </div>
+                            <div class="schedule-content">
+                                <div class="course-info">
+                                    <h3>Business Analysis Fundamentals</h3>
+                                    <p class="course-description">Requirements gathering, process mapping, and solution evaluation</p>
+                                    <div class="course-details">
+                                        <div class="detail">
+                                            <i class="fas fa-clock"></i>
+                                            <span>8:30 AM - 5:00 PM</span>
+                                        </div>
+                                        <div class="detail">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <span>7 Days (Weekdays)</span>
+                                        </div>
+                                        <div class="detail">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <span>Durban Campus</span>
+                                        </div>
+                                        <div class="detail">
+                                            <i class="fas fa-users"></i>
+                                            <span>6/16 Enrolled</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="schedule-actions">
+                                    <div class="price-info">
+                                        <span class="price">R 11,000</span>
+                                        <span class="price-note">Case studies included</span>
+                                    </div>
+                                    <button class="btn-book" onclick="openBookingModal('Business Analysis Fundamentals', '17 Feb 2025', 'Durban Campus', 'R 11,000')">
+                                        Book Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Calendar View -->
+            <div class="schedule-calendar-view" id="calendarView">
+                <div class="calendar-container">
+                    <div class="calendar-grid" id="calendarGrid">
+                        <!-- Calendar will be generated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Course Booking</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="booking-details">
+                    <h3 id="modalCourseName">Course Name</h3>
+                    <div class="booking-info">
+                        <div class="info-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Start Date: <strong id="modalDate">Date</strong></span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Location: <strong id="modalLocation">Location</strong></span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-tag"></i>
+                            <span>Price: <strong id="modalPrice">Price</strong></span>
+                        </div>
+                    </div>
+                </div>
+                <form id="bookingForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="bookFirstName">First Name *</label>
+                            <input type="text" id="bookFirstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bookLastName">Last Name *</label>
+                            <input type="text" id="bookLastName" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookEmail">Email Address *</label>
+                        <input type="email" id="bookEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookPhone">Phone Number *</label>
+                        <input type="tel" id="bookPhone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookCompany">Company/Organization</label>
+                        <input type="text" id="bookCompany">
+                    </div>
+                    <div class="form-group">
+                        <label for="bookDietary">Dietary Requirements</label>
+                        <input type="text" id="bookDietary" placeholder="Any special dietary requirements...">
+                    </div>
+                    <div class="form-group">
+                        <label for="bookComments">Additional Comments</label>
+                        <textarea id="bookComments" rows="3" placeholder="Any special requirements or questions..."></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" onclick="closeBookingModal()">Cancel</button>
+                        <button type="submit" class="btn-primary">Confirm Booking</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3>Siyanqoba</h3>
+                        <p>Training & Development</p>
+                    </div>
+                    <p>Occupational training and development company providing comprehensive training services across industries.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="public-schedule.html">Public Schedule</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Our Locations</h4>
+                    <ul>
+                        <li><a href="#">Pretoria Campus</a></li>
+                        <li><a href="#">Johannesburg Campus</a></li>
+                        <li><a href="#">Cape Town Campus</a></li>
+                        <li><a href="#">Durban Campus</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> 012 998 3668</p>
+                    <p><i class="fas fa-envelope"></i> training@siyanqoba.co.za</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Pretoria, South Africa</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Siyanqoba Training & Development. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="schedule.js"></script>
+</body>
+</html>

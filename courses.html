@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Siyanqoba Training & Development</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="courses.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <h2>Siyanqoba</h2>
+                    <span>Training & Development</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="courses.html" class="nav-link active">Courses <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#business">Business Administration</a>
+                        <a href="#it">Information Technology</a>
+                        <a href="#finance">Finance & Accounting</a>
+                        <a href="#project">Project Management</a>
+                        <a href="#customer">Customer Service</a>
+                        <a href="#leadership">Management & Leadership</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="public-schedule.html" class="nav-link">Public Schedule</a>
+                </li>
+                <li class="nav-item">
+                    <a href="resources.html" class="nav-link">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-auth">
+                <a href="login.html" class="btn-login">Login</a>
+                <a href="signup.html" class="btn-signup">Sign Up</a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="header-content">
+                <h1>Our Courses</h1>
+                <p>Comprehensive training programs designed to advance your career and develop essential skills for the modern workplace</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Courses</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Filter -->
+    <section class="course-filter">
+        <div class="container">
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">All Courses</button>
+                <button class="filter-btn" data-filter="business">Business</button>
+                <button class="filter-btn" data-filter="technology">Technology</button>
+                <button class="filter-btn" data-filter="finance">Finance</button>
+                <button class="filter-btn" data-filter="management">Management</button>
+                <button class="filter-btn" data-filter="skills">Skills</button>
+            </div>
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search courses..." id="courseSearch">
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Listings -->
+    <section class="course-listings">
+        <div class="container">
+            <div class="courses-grid" id="coursesGrid">
+                
+                <!-- Business Administration Courses -->
+                <div class="course-item" data-category="business" id="business">
+                    <div class="course-card">
+                        <div class="course-image">
+                            <i class="fas fa-briefcase"></i>
+                            <div class="course-badge">Accredited</div>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-meta">
+                                <span class="course-category">Business Administration</span>
+                                <span class="course-level">Beginner to Advanced</span>
+                            </div>
+                            <h3>Business Administration Certificate</h3>
+                            <p>Comprehensive business skills including office management, communication, and administrative procedures.</p>
+                            <div class="course-features">
+                                <div class="feature">
+                                    <i class="fas fa-clock"></i>
+                                    <span>120 Hours</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-users"></i>
+                                    <span>Max 20 Students</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>NQF Level 4</span>
+                                </div>
+                            </div>
+                            <div class="course-footer">
+                                <div class="course-price">
+                                    <span class="price">R 8,500</span>
+                                    <span class="price-note">Incl. materials</span>
+                                </div>
+                                <button class="btn-enroll" onclick="openEnrollmentModal('Business Administration Certificate')">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IT Courses -->
+                <div class="course-item" data-category="technology" id="it">
+                    <div class="course-card">
+                        <div class="course-image">
+                            <i class="fas fa-code"></i>
+                            <div class="course-badge">Popular</div>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-meta">
+                                <span class="course-category">Information Technology</span>
+                                <span class="course-level">Intermediate</span>
+                            </div>
+                            <h3>IT Systems Support</h3>
+                            <p>Learn hardware troubleshooting, software installation, network basics, and customer support skills.</p>
+                            <div class="course-features">
+                                <div class="feature">
+                                    <i class="fas fa-clock"></i>
+                                    <span>160 Hours</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-users"></i>
+                                    <span>Max 15 Students</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>NQF Level 5</span>
+                                </div>
+                            </div>
+                            <div class="course-footer">
+                                <div class="course-price">
+                                    <span class="price">R 12,000</span>
+                                    <span class="price-note">Equipment included</span>
+                                </div>
+                                <button class="btn-enroll" onclick="openEnrollmentModal('IT Systems Support')">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Finance Courses -->
+                <div class="course-item" data-category="finance" id="finance">
+                    <div class="course-card">
+                        <div class="course-image">
+                            <i class="fas fa-chart-line"></i>
+                            <div class="course-badge">Accredited</div>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-meta">
+                                <span class="course-category">Finance & Accounting</span>
+                                <span class="course-level">Beginner</span>
+                            </div>
+                            <h3>Bookkeeping & Financial Management</h3>
+                            <p>Master double-entry bookkeeping, financial statements, and basic accounting principles.</p>
+                            <div class="course-features">
+                                <div class="feature">
+                                    <i class="fas fa-clock"></i>
+                                    <span>100 Hours</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-users"></i>
+                                    <span>Max 18 Students</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>NQF Level 3</span>
+                                </div>
+                            </div>
+                            <div class="course-footer">
+                                <div class="course-price">
+                                    <span class="price">R 7,500</span>
+                                    <span class="price-note">Software license included</span>
+                                </div>
+                                <button class="btn-enroll" onclick="openEnrollmentModal('Bookkeeping & Financial Management')">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Management -->
+                <div class="course-item" data-category="management" id="project">
+                    <div class="course-card">
+                        <div class="course-image">
+                            <i class="fas fa-tasks"></i>
+                            <div class="course-badge">Professional</div>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-meta">
+                                <span class="course-category">Project Management</span>
+                                <span class="course-level">Advanced</span>
+                            </div>
+                            <h3>Project Management Professional</h3>
+                            <p>Comprehensive project management training covering planning, execution, monitoring, and closure.</p>
+                            <div class="course-features">
+                                <div class="feature">
+                                    <i class="fas fa-clock"></i>
+                                    <span>200 Hours</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-users"></i>
+                                    <span>Max 12 Students</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>NQF Level 6</span>
+                                </div>
+                            </div>
+                            <div class="course-footer">
+                                <div class="course-price">
+                                    <span class="price">R 15,000</span>
+                                    <span class="price-note">PMI preparation included</span>
+                                </div>
+                                <button class="btn-enroll" onclick="openEnrollmentModal('Project Management Professional')">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Customer Service -->
+                <div class="course-item" data-category="skills" id="customer">
+                    <div class="course-card">
+                        <div class="course-image">
+                            <i class="fas fa-headset"></i>
+                            <div class="course-badge">Essential</div>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-meta">
+                                <span class="course-category">Customer Service</span>
+                                <span class="course-level">Beginner</span>
+                            </div>
+                            <h3>Customer Service Excellence</h3>
+                            <p>Develop exceptional customer service skills, communication techniques, and conflict resolution.</p>
+                            <div class="course-features">
+                                <div class="feature">
+                                    <i class="fas fa-clock"></i>
+                                    <span>80 Hours</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-users"></i>
+                                    <span>Max 25 Students</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>Skills Programme</span>
+                                </div>
+                            </div>
+                            <div class="course-footer">
+                                <div class="course-price">
+                                    <span class="price">R 5,500</span>
+                                    <span class="price-note">Workbook included</span>
+                                </div>
+                                <button class="btn-enroll" onclick="openEnrollmentModal('Customer Service Excellence')">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Management & Leadership -->
+                <div class="course-item" data-category="management" id="leadership">
+                    <div class="course-card">
+                        <div class="course-image">
+                            <i class="fas fa-crown"></i>
+                            <div class="course-badge">Executive</div>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-meta">
+                                <span class="course-category">Management & Leadership</span>
+                                <span class="course-level">Advanced</span>
+                            </div>
+                            <h3>Leadership Development Programme</h3>
+                            <p>Advanced leadership skills, strategic thinking, team management, and organizational development.</p>
+                            <div class="course-features">
+                                <div class="feature">
+                                    <i class="fas fa-clock"></i>
+                                    <span>180 Hours</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-users"></i>
+                                    <span>Max 10 Students</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>NQF Level 6</span>
+                                </div>
+                            </div>
+                            <div class="course-footer">
+                                <div class="course-price">
+                                    <span class="price">R 18,500</span>
+                                    <span class="price-note">Executive coaching included</span>
+                                </div>
+                                <button class="btn-enroll" onclick="openEnrollmentModal('Leadership Development Programme')">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Analysis -->
+                <div class="course-item" data-category="business">
+                    <div class="course-card">
+                        <div class="course-image">
+                            <i class="fas fa-chart-bar"></i>
+                            <div class="course-badge">Specialized</div>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-meta">
+                                <span class="course-category">Business Analysis</span>
+                                <span class="course-level">Intermediate</span>
+                            </div>
+                            <h3>Business Analysis Fundamentals</h3>
+                            <p>Learn requirements gathering, process mapping, stakeholder analysis, and solution evaluation.</p>
+                            <div class="course-features">
+                                <div class="feature">
+                                    <i class="fas fa-clock"></i>
+                                    <span>140 Hours</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-users"></i>
+                                    <span>Max 16 Students</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>NQF Level 5</span>
+                                </div>
+                            </div>
+                            <div class="course-footer">
+                                <div class="course-price">
+                                    <span class="price">R 11,000</span>
+                                    <span class="price-note">Case studies included</span>
+                                </div>
+                                <button class="btn-enroll" onclick="openEnrollmentModal('Business Analysis Fundamentals')">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Entrepreneurship -->
+                <div class="course-item" data-category="business">
+                    <div class="course-card">
+                        <div class="course-image">
+                            <i class="fas fa-lightbulb"></i>
+                            <div class="course-badge">Innovation</div>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-meta">
+                                <span class="course-category">Entrepreneurship</span>
+                                <span class="course-level">All Levels</span>
+                            </div>
+                            <h3>Start Your Own Business</h3>
+                            <p>Complete guide to starting and running a business, from idea to implementation and growth.</p>
+                            <div class="course-features">
+                                <div class="feature">
+                                    <i class="fas fa-clock"></i>
+                                    <span>90 Hours</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-users"></i>
+                                    <span>Max 20 Students</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>Skills Programme</span>
+                                </div>
+                            </div>
+                            <div class="course-footer">
+                                <div class="course-price">
+                                    <span class="price">R 6,500</span>
+                                    <span class="price-note">Business plan template included</span>
+                                </div>
+                                <button class="btn-enroll" onclick="openEnrollmentModal('Start Your Own Business')">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Enrollment Modal -->
+    <div id="enrollmentModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Course Enrollment</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="course-details">
+                    <h3 id="modalCourseName">Course Name</h3>
+                    <p>Please fill out the form below to enroll in this course. Our team will contact you within 24 hours to confirm your enrollment and provide payment details.</p>
+                </div>
+                <form id="enrollmentForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="enrollFirstName">First Name *</label>
+                            <input type="text" id="enrollFirstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="enrollLastName">Last Name *</label>
+                            <input type="text" id="enrollLastName" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="enrollEmail">Email Address *</label>
+                        <input type="email" id="enrollEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="enrollPhone">Phone Number *</label>
+                        <input type="tel" id="enrollPhone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="enrollCompany">Company/Organization</label>
+                        <input type="text" id="enrollCompany">
+                    </div>
+                    <div class="form-group">
+                        <label for="enrollExperience">Relevant Experience</label>
+                        <select id="enrollExperience">
+                            <option value="">Select experience level</option>
+                            <option value="none">No prior experience</option>
+                            <option value="beginner">Beginner (0-1 years)</option>
+                            <option value="intermediate">Intermediate (1-3 years)</option>
+                            <option value="experienced">Experienced (3+ years)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="enrollPreference">Preferred Training Method</label>
+                        <select id="enrollPreference">
+                            <option value="">Select preference</option>
+                            <option value="classroom">In-Classroom</option>
+                            <option value="virtual">Virtual/Online</option>
+                            <option value="blended">Blended Learning</option>
+                            <option value="onsite">On-Site (Company premises)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="enrollComments">Additional Comments</label>
+                        <textarea id="enrollComments" rows="3" placeholder="Any specific requirements or questions..."></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" onclick="closeEnrollmentModal()">Cancel</button>
+                        <button type="submit" class="btn-primary">Submit Enrollment</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3>Siyanqoba</h3>
+                        <p>Training & Development</p>
+                    </div>
+                    <p>Occupational training and development company providing comprehensive training services across industries.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="public-schedule.html">Public Schedule</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Course Categories</h4>
+                    <ul>
+                        <li><a href="#business">Business Administration</a></li>
+                        <li><a href="#it">Information Technology</a></li>
+                        <li><a href="#finance">Finance & Accounting</a></li>
+                        <li><a href="#project">Project Management</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> 012 998 3668</p>
+                    <p><i class="fas fa-envelope"></i> training@siyanqoba.co.za</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Pretoria, South Africa</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Siyanqoba Training & Development. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="courses.js"></script>
+</body>
+</html>

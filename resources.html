@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - Siyanqoba Training & Development</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="resources.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <h2>Siyanqoba</h2>
+                    <span>Training & Development</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="courses.html" class="nav-link">Courses <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="courses.html#business">Business Administration</a>
+                        <a href="courses.html#it">Information Technology</a>
+                        <a href="courses.html#finance">Finance & Accounting</a>
+                        <a href="courses.html#project">Project Management</a>
+                        <a href="courses.html#customer">Customer Service</a>
+                        <a href="courses.html#leadership">Management & Leadership</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="public-schedule.html" class="nav-link">Public Schedule</a>
+                </li>
+                <li class="nav-item">
+                    <a href="resources.html" class="nav-link active">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-auth">
+                <a href="login.html" class="btn-login">Login</a>
+                <a href="signup.html" class="btn-signup">Sign Up</a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="header-content">
+                <h1>Resources & Support</h1>
+                <p>Access helpful resources, testimonials, and information to support your learning journey with Siyanqoba Training & Development.</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Resources</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resource Categories -->
+    <section class="resource-categories">
+        <div class="container">
+            <div class="categories-grid">
+                <div class="category-card" onclick="scrollToSection('latest-updates')">
+                    <div class="category-icon">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <h3>Latest Updates</h3>
+                    <p>Stay informed with our latest news, course updates, and industry insights</p>
+                </div>
+                
+                <div class="category-card" onclick="scrollToSection('faq')">
+                    <div class="category-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>FAQ</h3>
+                    <p>Find answers to frequently asked questions about our courses and services</p>
+                </div>
+                
+                <div class="category-card" onclick="scrollToSection('testimonials')">
+                    <div class="category-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Testimonials</h3>
+                    <p>Read success stories from our graduates and corporate clients</p>
+                </div>
+                
+                <div class="category-card" onclick="scrollToSection('associations')">
+                    <div class="category-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Accreditation</h3>
+                    <p>Learn about our SETA accreditations and professional associations</p>
+                </div>
+                
+                <div class="category-card" onclick="scrollToSection('promotions')">
+                    <div class="category-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3>Promotions</h3>
+                    <p>Discover current offers, discounts, and special training packages</p>
+                </div>
+                
+                <div class="category-card" onclick="scrollToSection('downloads')">
+                    <div class="category-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <h3>Downloads</h3>
+                    <p>Access course brochures, guides, and helpful resources</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Updates -->
+    <section id="latest-updates" class="latest-updates">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest Updates</h2>
+                <p>Stay current with our latest announcements and industry news</p>
+            </div>
+            
+            <div class="updates-grid">
+                <article class="update-card">
+                    <div class="update-date">
+                        <div class="day">05</div>
+                        <div class="month">DEC</div>
+                    </div>
+                    <div class="update-content">
+                        <div class="update-category">Course Launch</div>
+                        <h3>New Digital Marketing Course Available</h3>
+                        <p>We're excited to announce our new Digital Marketing certification course, covering social media marketing, SEO, and Google Analytics. Perfect for marketing professionals looking to enhance their digital skills.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                
+                <article class="update-card">
+                    <div class="update-date">
+                        <div class="day">28</div>
+                        <div class="month">NOV</div>
+                    </div>
+                    <div class="update-content">
+                        <div class="update-category">Achievement</div>
+                        <h3>1000+ Students Certified This Year</h3>
+                        <p>We're proud to announce that over 1000 students have successfully completed their certifications with Siyanqoba this year, achieving career advancement and new opportunities.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                
+                <article class="update-card">
+                    <div class="update-date">
+                        <div class="day">15</div>
+                        <div class="month">NOV</div>
+                    </div>
+                    <div class="update-content">
+                        <div class="update-category">Partnership</div>
+                        <h3>New Corporate Training Partnerships</h3>
+                        <p>Siyanqoba has formed strategic partnerships with leading corporations to provide customized training solutions, bringing world-class education directly to the workplace.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about our courses and services</p>
+            </div>
+            
+            <div class="faq-categories">
+                <button class="faq-category-btn active" data-category="general">General</button>
+                <button class="faq-category-btn" data-category="courses">Courses</button>
+                <button class="faq-category-btn" data-category="payment">Payment</button>
+                <button class="faq-category-btn" data-category="certification">Certification</button>
+            </div>
+            
+            <div class="faq-container">
+                <!-- General FAQs -->
+                <div class="faq-category active" data-category="general">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What is Siyanqoba Training & Development?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Siyanqoba is an occupational training and development company that provides comprehensive training services across various industries. We offer accredited qualifications, skills programmes, and short courses to help individuals and organizations achieve their professional development goals.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Are your courses accredited?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, our courses are SETA accredited and registered on the National Qualifications Framework (NQF). This ensures that your certification is nationally recognized and will enhance your career prospects.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Do you offer online training?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely! We offer flexible learning options including virtual classrooms, blended learning, and fully online courses. Our virtual training sessions are conducted live with expert facilitators via platforms like Zoom and MS Teams.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course FAQs -->
+                <div class="faq-category" data-category="courses">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How long do courses typically take to complete?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Course duration varies depending on the qualification level and type. Short courses can be completed in 1-5 days, skills programmes typically take 2-6 weeks, and full qualifications may take 3-12 months including workplace experience.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What materials are included with my course?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>All courses include comprehensive study materials, workbooks, and relevant software licenses where applicable. For practical courses, we also provide access to necessary equipment and tools during training sessions.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Can I switch between delivery methods?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we offer flexible delivery methods. Depending on course availability and your circumstances, you may be able to switch between in-classroom, virtual, or blended learning options. Please speak with our consultants for specific arrangements.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Payment FAQs -->
+                <div class="faq-category" data-category="payment">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What payment methods do you accept?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We accept various payment methods including bank transfers, credit cards, company purchase orders, and installment plans. For corporate clients, we can arrange customized payment terms.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Do you offer payment plans?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we offer flexible payment plans for individual students. You can split your course fees into manageable monthly installments. Contact our finance team to discuss options that work for your budget.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Are there any additional costs?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our course fees are comprehensive and include study materials, assessments, and certification. Some specialized courses may have additional costs for external examinations or professional body registrations, which will be clearly communicated upfront.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certification FAQs -->
+                <div class="faq-category" data-category="certification">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How will I receive my certificate?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Upon successful completion of your course and assessments, your certificate will be posted to your registered address. You'll also receive a digital copy via email. Processing typically takes 4-6 weeks after course completion.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Will my qualification be recognized by employers?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, all our qualifications are registered on the National Qualifications Framework (NQF) and are recognized by employers across South Africa. Your achievements are also recorded on the National Learner Database.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Can I get a replacement certificate?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, replacement certificates can be issued for a small administrative fee. You'll need to provide proof of identity and complete a replacement request form. Processing takes 2-3 weeks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Success Stories</h2>
+                <p>Hear from our graduates and corporate clients about their experience with Siyanqoba</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"The Business Administration course at Siyanqoba completely transformed my career. The practical approach and expert facilitators gave me the confidence and skills I needed to advance to a management position."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Mthembu</h4>
+                            <span>Operations Manager, ABC Corp</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Excellent training! The IT Systems Support course was exactly what I needed to transition into the tech industry. The hands-on experience and industry-relevant curriculum made all the difference."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>David Ntuli</h4>
+                            <span>IT Support Specialist</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Siyanqoba provided exceptional corporate training for our team. The customized leadership development program improved our management effectiveness and team collaboration significantly."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Jennifer van der Merwe</h4>
+                            <span>HR Director, TechFlow Solutions</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"The financial management course gave me the skills to start my own bookkeeping business. The practical exercises and real-world case studies were incredibly valuable."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Nomsa Dlamini</h4>
+                            <span>Entrepreneur & Business Owner</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Associations & SETAs -->
+    <section id="associations" class="associations">
+        <div class="container">
+            <div class="section-header">
+                <h2>Accreditation & Partnerships</h2>
+                <p>We are accredited by leading SETAs and maintain partnerships with professional bodies</p>
+            </div>
+            
+            <div class="associations-content">
+                <div class="accreditation-info">
+                    <h3>SETA Accreditations</h3>
+                    <div class="seta-list">
+                        <div class="seta-item">
+                            <div class="seta-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div>
+                                <h4>Services SETA</h4>
+                                <p>Accredited training provider for business and administrative services</p>
+                            </div>
+                        </div>
+                        
+                        <div class="seta-item">
+                            <div class="seta-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div>
+                                <h4>MICT SETA</h4>
+                                <p>Media, Information & Communication Technologies training authority</p>
+                            </div>
+                        </div>
+                        
+                        <div class="seta-item">
+                            <div class="seta-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div>
+                                <h4>BANKSETA</h4>
+                                <p>Banking and financial services skills development</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quality-assurance">
+                    <h3>Quality Assurance</h3>
+                    <div class="qa-points">
+                        <div class="qa-point">
+                            <i class="fas fa-check-circle"></i>
+                            <span>SAQA registered qualifications</span>
+                        </div>
+                        <div class="qa-point">
+                            <i class="fas fa-check-circle"></i>
+                            <span>National Qualifications Framework aligned</span>
+                        </div>
+                        <div class="qa-point">
+                            <i class="fas fa-check-circle"></i>
+                            <span>External moderation and verification</span>
+                        </div>
+                        <div class="qa-point">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Continuous professional development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotions -->
+    <section id="promotions" class="promotions">
+        <div class="container">
+            <div class="section-header">
+                <h2>Current Promotions</h2>
+                <p>Take advantage of our special offers and save on your professional development</p>
+            </div>
+            
+            <div class="promotions-grid">
+                <div class="promotion-card featured">
+                    <div class="promotion-badge">Limited Time</div>
+                    <div class="promotion-content">
+                        <h3>Early Bird Special</h3>
+                        <p>Save 15% on all courses when you book 30 days in advance</p>
+                        <div class="promotion-details">
+                            <div class="discount">15% OFF</div>
+                            <div class="validity">Valid until 31 Dec 2024</div>
+                        </div>
+                        <button class="btn-promotion" onclick="openPromotionModal('Early Bird Special')">Claim Offer</button>
+                    </div>
+                </div>
+                
+                <div class="promotion-card">
+                    <div class="promotion-badge">Popular</div>
+                    <div class="promotion-content">
+                        <h3>Group Training Discount</h3>
+                        <p>Bring 3 or more colleagues and save on corporate training</p>
+                        <div class="promotion-details">
+                            <div class="discount">Up to 25% OFF</div>
+                            <div class="validity">3+ participants</div>
+                        </div>
+                        <button class="btn-promotion" onclick="openPromotionModal('Group Training Discount')">Learn More</button>
+                    </div>
+                </div>
+                
+                <div class="promotion-card">
+                    <div class="promotion-badge">New</div>
+                    <div class="promotion-content">
+                        <h3>Student Discount</h3>
+                        <p>Full-time students get special pricing on all courses</p>
+                        <div class="promotion-details">
+                            <div class="discount">20% OFF</div>
+                            <div class="validity">Valid student ID required</div>
+                        </div>
+                        <button class="btn-promotion" onclick="openPromotionModal('Student Discount')">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Downloads -->
+    <section id="downloads" class="downloads">
+        <div class="container">
+            <div class="section-header">
+                <h2>Downloads & Resources</h2>
+                <p>Access helpful documents, guides, and course information</p>
+            </div>
+            
+            <div class="downloads-grid">
+                <div class="download-item">
+                    <div class="download-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="download-content">
+                        <h3>Course Catalog 2024</h3>
+                        <p>Complete guide to all our courses, schedules, and pricing</p>
+                        <div class="download-meta">
+                            <span class="file-size">2.5 MB</span>
+                            <span class="file-type">PDF</span>
+                        </div>
+                    </div>
+                    <button class="btn-download">
+                        <i class="fas fa-download"></i>
+                        Download
+                    </button>
+                </div>
+                
+                <div class="download-item">
+                    <div class="download-icon">
+                        <i class="fas fa-file-word"></i>
+                    </div>
+                    <div class="download-content">
+                        <h3>Enrollment Application Form</h3>
+                        <p>Standard enrollment form for all courses</p>
+                        <div class="download-meta">
+                            <span class="file-size">0.8 MB</span>
+                            <span class="file-type">DOCX</span>
+                        </div>
+                    </div>
+                    <button class="btn-download">
+                        <i class="fas fa-download"></i>
+                        Download
+                    </button>
+                </div>
+                
+                <div class="download-item">
+                    <div class="download-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="download-content">
+                        <h3>Corporate Training Guide</h3>
+                        <p>Information about our corporate training solutions</p>
+                        <div class="download-meta">
+                            <span class="file-size">1.8 MB</span>
+                            <span class="file-type">PDF</span>
+                        </div>
+                    </div>
+                    <button class="btn-download">
+                        <i class="fas fa-download"></i>
+                        Download
+                    </button>
+                </div>
+                
+                <div class="download-item">
+                    <div class="download-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="download-content">
+                        <h3>PAIA Manual 2024</h3>
+                        <p>Promotion of Access to Information Act manual</p>
+                        <div class="download-meta">
+                            <span class="file-size">1.2 MB</span>
+                            <span class="file-type">PDF</span>
+                        </div>
+                    </div>
+                    <button class="btn-download">
+                        <i class="fas fa-download"></i>
+                        Download
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotion Modal -->
+    <div id="promotionModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Promotion Details</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="promotion-details">
+                    <h3 id="modalPromotionName">Promotion Name</h3>
+                    <p id="modalPromotionDescription">Promotion description will appear here.</p>
+                </div>
+                <form id="promotionForm">
+                    <div class="form-group">
+                        <label for="promoName">Full Name *</label>
+                        <input type="text" id="promoName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="promoEmail">Email Address *</label>
+                        <input type="email" id="promoEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="promoPhone">Phone Number *</label>
+                        <input type="tel" id="promoPhone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="promoCourse">Interested Course</label>
+                        <select id="promoCourse">
+                            <option value="">Select a course</option>
+                            <option value="business-admin">Business Administration</option>
+                            <option value="it-support">IT Systems Support</option>
+                            <option value="finance">Finance & Accounting</option>
+                            <option value="project-mgmt">Project Management</option>
+                            <option value="customer-service">Customer Service</option>
+                            <option value="leadership">Leadership Development</option>
+                        </select>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" onclick="closePromotionModal()">Cancel</button>
+                        <button type="submit" class="btn-primary">Submit Request</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3>Siyanqoba</h3>
+                        <p>Training & Development</p>
+                    </div>
+                    <p>Occupational training and development company providing comprehensive training services across industries.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="public-schedule.html">Public Schedule</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#latest-updates">Latest Updates</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#downloads">Downloads</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> 012 998 3668</p>
+                    <p><i class="fas fa-envelope"></i> training@siyanqoba.co.za</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Pretoria, South Africa</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Siyanqoba Training & Development. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="resources.js"></script>
+</body>
+</html>
