@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initContactForm();
     initScrollEffects();
     initSmoothScrolling();
+    initFAQ();
 });
 
 // Navigation functionality
@@ -369,6 +370,33 @@ function initSmoothScrolling() {
                     targetElement.style.transform = '';
                     targetElement.style.boxShadow = '';
                 }, 1000);
+            }
+        });
+    });
+}
+
+// FAQ functionality
+function initFAQ() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        question.addEventListener('click', function() {
+            const isActive = item.classList.contains('active');
+            
+            // Close all other FAQ items
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            
+            // Toggle current item
+            if (isActive) {
+                item.classList.remove('active');
+            } else {
+                item.classList.add('active');
             }
         });
     });
