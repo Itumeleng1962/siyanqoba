@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guardian Angel Studios Training & Development</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="chat.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -90,7 +91,7 @@
                 <div class="hero-left">
                     <div class="hero-badge">
                         <span class="badge-icon">⚡</span>
-                        <span>Professional Training Excellence</span>
+                        <span>20+ Years Experience • BEE Level 2 • 9 Provinces Coverage</span>
                     </div>
                     <h1>Transform Your Career with <span class="highlight">Expert Training</span></h1>
                     <p>Get certified in high-demand skills with our comprehensive training programs. From safety certifications to leadership development - we've got you covered.</p>
@@ -126,15 +127,53 @@
                     <div class="hero-image-wrapper">
                         <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Professional training session" class="hero-image">
                         <div class="stats-overlay">
-                            <div class="stat-card">
-                                <div class="stat-number">500+</div>
-                                <div class="stat-label">Certified Students</div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-number">95%</div>
-                                <div class="stat-label">Success Rate</div>
-                            </div>
+                                                    <div class="stat-card">
+                            <div class="stat-number">20+</div>
+                            <div class="stat-label">Years Experience</div>
                         </div>
+                        <div class="stat-card">
+                            <div class="stat-number">BEE Level 2</div>
+                            <div class="stat-label">Recognition</div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Credentials Section -->
+    <section class="credentials-section">
+        <div class="container">
+            <div class="credentials-grid">
+                <div class="credential-card">
+                    <div class="credential-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="credential-content">
+                        <h3>20+</h3>
+                        <p>Years Experience</p>
+                        <span>Established training excellence since 2003</span>
+                    </div>
+                </div>
+                <div class="credential-card">
+                    <div class="credential-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="credential-content">
+                        <h3>BEE Level 2</h3>
+                        <p>Recognition</p>
+                        <span>Certified B-BBEE contributor status</span>
+                    </div>
+                </div>
+                <div class="credential-card">
+                    <div class="credential-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="credential-content">
+                        <h3>9</h3>
+                        <p>Provinces Coverage</p>
+                        <span>Nationwide training delivery capacity</span>
                     </div>
                 </div>
             </div>
@@ -709,6 +748,58 @@
         </div>
     </footer>
 
+    <!-- Chat Widget -->
+    <div id="chatWidget" class="chat-widget">
+        <div id="chatButton" class="chat-button">
+            <i class="fas fa-comments"></i>
+            <span class="chat-text">Chat with us</span>
+            <span class="chat-notification" id="chatNotification">1</span>
+        </div>
+        
+        <div id="chatWindow" class="chat-window">
+            <div class="chat-header">
+                <div class="chat-agent">
+                    <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Support Agent" class="agent-avatar">
+                    <div class="agent-info">
+                        <h4>Training Support</h4>
+                        <span class="status-online">Online</span>
+                    </div>
+                </div>
+                <button id="chatClose" class="chat-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="chat-messages" id="chatMessages">
+                <div class="message agent-message">
+                    <div class="message-content">
+                        <p>Hi! 👋 Welcome to Guardian Angel Studios!</p>
+                        <p>How can I help you with your training needs today?</p>
+                        <span class="message-time">Just now</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-input-container">
+                <div class="quick-replies">
+                    <button class="quick-reply" data-message="I need course information">Course Info</button>
+                    <button class="quick-reply" data-message="I want to apply for learnership">Learnership</button>
+                    <button class="quick-reply" data-message="I need pricing details">Pricing</button>
+                </div>
+                <div class="chat-input-wrapper">
+                    <input type="text" id="chatInput" placeholder="Type your message..." maxlength="500">
+                    <button id="chatSend" class="chat-send">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="chat-footer">
+                    <span>Powered by Guardian Angel Studios</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
+    <script src="chat.js"></script>
 </body>
 </html>
