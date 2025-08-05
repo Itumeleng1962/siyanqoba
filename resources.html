@@ -3,13 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resources - Guardian Angel Studios Training & Development</title>
+    <title>Resources & Experts Portal - Guardian Angel Studios Training & Development</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="resources.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-links">
+                    <a href="login.html" class="top-link">Booking Portal</a>
+                    <a href="signup.html" class="top-link">Apply Here</a>
+                    <a href="login.html" class="top-link">Learner Portal</a>
+                </div>
+                <div class="top-bar-contact">
+                    <span><i class="fas fa-phone"></i> 087 288 5068</span>
+                    <span><i class="fas fa-envelope"></i> info@guardianangel.co.za</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -20,34 +36,47 @@
                 </a>
             </div>
             <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Explore <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="about.html">About Us</a>
+                        <a href="#campuses">Our Campuses</a>
+                        <a href="#departments">Our Departments</a>
+                        <a href="#accreditations">Our Accreditations & Certifications</a>
+                        <a href="#solutions">Our Solutions</a>
+                        <a href="courses.html">Our Courses & Qualifications</a>
+                        <a href="#faq">Frequently Asked Questions</a>
+                    </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="courses.html" class="nav-link">Courses <i class="fas fa-chevron-down"></i></a>
+                    <a href="#" class="nav-link">Solutions <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
-                        <a href="courses.html#business">Business Administration</a>
-                        <a href="courses.html#it">Information Technology</a>
-                        <a href="courses.html#finance">Finance & Accounting</a>
-                        <a href="courses.html#project">Project Management</a>
-                        <a href="courses.html#customer">Customer Service</a>
-                        <a href="courses.html#leadership">Management & Leadership</a>
+                        <a href="#absorption">Absorption</a>
+                        <a href="#learnerships">Learnerships</a>
+                        <a href="#accreditation">Accreditation</a>
+                        <a href="#consulting">Consulting</a>
+                        <a href="#community">Community Campuses</a>
+                        <a href="#compliance">Compliance Training</a>
+                        <a href="#development">Course Development</a>
+                        <a href="#skills-development">Skills Development</a>
+                        <a href="#business-advisory">Business Advisory</a>
+                        <a href="resources.html" class="active">Experts Portal</a>
+                        <a href="courses.html">Our Courses</a>
                     </div>
+                </li>
+                <li class="nav-item">
+                    <a href="insights.html" class="nav-link">Insights</a>
+                </li>
+                <li class="nav-item">
+                    <a href="courses.html" class="nav-link">Courses</a>
                 </li>
                 <li class="nav-item">
                     <a href="public-schedule.html" class="nav-link">Public Schedule</a>
                 </li>
                 <li class="nav-item">
-                    <a href="resources.html" class="nav-link active">Resources</a>
-                </li>
-                <li class="nav-item">
-                    <a href="index.html#contact" class="nav-link">Contact</a>
+                    <a href="index.html#contact" class="nav-link">Get in Touch</a>
                 </li>
             </ul>
-            <div class="nav-auth">
-                <a href="login.html" class="btn-login">Login</a>
-                <a href="signup.html" class="btn-signup">Sign Up</a>
-            </div>
             <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -60,8 +89,8 @@
     <section class="page-header">
         <div class="container">
             <div class="header-content">
-                <h1>Resources & Support</h1>
-                <p>Access helpful resources, testimonials, and information to support your learning journey with Guardian Angel Studios Training & Development.</p>
+                <h1>Resources & Experts Portal</h1>
+                <p>Access valuable training resources, tools, and connect with our expert trainers and consultants</p>
                 <div class="breadcrumb">
                     <a href="index.html">Home</a>
                     <i class="fas fa-chevron-right"></i>
@@ -74,653 +103,374 @@
     <!-- Resource Categories -->
     <section class="resource-categories">
         <div class="container">
-            <div class="categories-grid">
-                <div class="category-card" onclick="scrollToSection('latest-updates')">
-                    <div class="category-icon">
-                        <i class="fas fa-newspaper"></i>
+            <div class="section-header">
+                <h2>Training Resources</h2>
+                <p>Comprehensive resources to support your learning journey</p>
+            </div>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Black woman with learning materials">
                     </div>
-                    <h3>Latest Updates</h3>
-                    <p>Stay informed with our latest news, course updates, and industry insights</p>
+                    <div class="resource-content">
+                        <h3>Learning Materials</h3>
+                        <p>Comprehensive course materials, workbooks, and study guides for all our training programs.</p>
+                        <div class="resource-features">
+                            <span><i class="fas fa-download"></i> Downloadable PDFs</span>
+                            <span><i class="fas fa-video"></i> Video Resources</span>
+                            <span><i class="fas fa-mobile-alt"></i> Mobile Friendly</span>
+                        </div>
+                        <a href="#" class="btn-resource">Access Materials</a>
+                    </div>
                 </div>
                 
-                <div class="category-card" onclick="scrollToSection('faq')">
-                    <div class="category-icon">
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Black woman using assessment tools">
+                    </div>
+                    <div class="resource-content">
+                        <h3>Assessment Tools</h3>
+                        <p>Self-assessment questionnaires, skills evaluations, and progress tracking tools.</p>
+                        <div class="resource-features">
+                            <span><i class="fas fa-chart-bar"></i> Progress Tracking</span>
+                            <span><i class="fas fa-clipboard-check"></i> Self-Assessment</span>
+                            <span><i class="fas fa-certificate"></i> Skill Validation</span>
+                        </div>
+                        <a href="#" class="btn-resource">Take Assessment</a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Black woman using digital tools">
+                    </div>
+                    <div class="resource-content">
+                        <h3>Digital Learning Tools</h3>
+                        <p>Interactive online platforms, virtual classrooms, and digital collaboration tools.</p>
+                        <div class="resource-features">
+                            <span><i class="fas fa-laptop"></i> Online Platform</span>
+                            <span><i class="fas fa-users"></i> Virtual Collaboration</span>
+                            <span><i class="fas fa-clock"></i> 24/7 Access</span>
+                        </div>
+                        <a href="#" class="btn-resource">Access Platform</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expert Trainers -->
+    <section class="expert-trainers">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meet Our Expert Trainers</h2>
+                <p>Industry professionals with extensive experience and proven track records</p>
+            </div>
+            <div class="trainers-grid">
+                <div class="trainer-card">
+                    <div class="trainer-photo">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Dr. James Wilson - Black professional trainer">
+                    </div>
+                    <div class="trainer-info">
+                        <h4>Dr. James Wilson</h4>
+                        <span class="specialization">Leadership & Management</span>
+                        <p>20+ years experience in executive leadership development and organizational transformation.</p>
+                        <div class="trainer-credentials">
+                            <span>PhD in Organizational Psychology</span>
+                            <span>Certified Executive Coach</span>
+                            <span>500+ Leaders Trained</span>
+                        </div>
+                        <div class="trainer-contact">
+                            <a href="#" class="btn-contact-trainer">Contact Trainer</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="trainer-card">
+                    <div class="trainer-photo">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Sarah Thompson - Black female tech expert">
+                    </div>
+                    <div class="trainer-info">
+                        <h4>Sarah Thompson</h4>
+                        <span class="specialization">Digital Skills & Technology</span>
+                        <p>Expert in digital transformation, cybersecurity, and emerging technologies training.</p>
+                        <div class="trainer-credentials">
+                            <span>MSc Computer Science</span>
+                            <span>Certified Cybersecurity Expert</span>
+                            <span>1000+ IT Professionals Trained</span>
+                        </div>
+                        <div class="trainer-contact">
+                            <a href="#" class="btn-contact-trainer">Contact Trainer</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="trainer-card">
+                    <div class="trainer-photo">
+                        <img src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Michael Rodriguez - Black finance professional">
+                    </div>
+                    <div class="trainer-info">
+                        <h4>Michael Rodriguez</h4>
+                        <span class="specialization">Finance & Business Analysis</span>
+                        <p>Senior financial analyst and business consultant with expertise in corporate finance and strategy.</p>
+                        <div class="trainer-credentials">
+                            <span>CPA & MBA Finance</span>
+                            <span>15+ Years Corporate Experience</span>
+                            <span>300+ Finance Professionals Trained</span>
+                        </div>
+                        <div class="trainer-contact">
+                            <a href="#" class="btn-contact-trainer">Contact Trainer</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="trainer-card">
+                    <div class="trainer-photo">
+                        <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Lisa Chen - Black project management expert">
+                    </div>
+                    <div class="trainer-info">
+                        <h4>Lisa Chen</h4>
+                        <span class="specialization">Project Management</span>
+                        <p>PMP certified project management expert with experience in complex multi-million dollar projects.</p>
+                        <div class="trainer-credentials">
+                            <span>PMP & Agile Certified</span>
+                            <span>12+ Years Project Leadership</span>
+                            <span>200+ Project Managers Certified</span>
+                        </div>
+                        <div class="trainer-contact">
+                            <a href="#" class="btn-contact-trainer">Contact Trainer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resource Library -->
+    <section class="resource-library">
+        <div class="container">
+            <div class="section-header">
+                <h2>Resource Library</h2>
+                <p>Download guides, templates, and tools to enhance your learning experience</p>
+            </div>
+            <div class="library-grid">
+                <div class="library-item">
+                    <div class="library-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="library-content">
+                        <h4>Leadership Development Guide</h4>
+                        <p>Comprehensive 50-page guide on developing leadership skills</p>
+                        <div class="library-meta">
+                            <span>PDF • 2.3 MB</span>
+                            <span>1,234 Downloads</span>
+                        </div>
+                        <a href="#" class="btn-download">Download</a>
+                    </div>
+                </div>
+                
+                <div class="library-item">
+                    <div class="library-icon">
+                        <i class="fas fa-file-excel"></i>
+                    </div>
+                    <div class="library-content">
+                        <h4>Project Planning Template</h4>
+                        <p>Excel template for comprehensive project planning and tracking</p>
+                        <div class="library-meta">
+                            <span>XLSX • 1.1 MB</span>
+                            <span>892 Downloads</span>
+                        </div>
+                        <a href="#" class="btn-download">Download</a>
+                    </div>
+                </div>
+                
+                <div class="library-item">
+                    <div class="library-icon">
+                        <i class="fas fa-file-powerpoint"></i>
+                    </div>
+                    <div class="library-content">
+                        <h4>Presentation Skills Toolkit</h4>
+                        <p>PowerPoint templates and guidelines for effective presentations</p>
+                        <div class="library-meta">
+                            <span>PPTX • 3.7 MB</span>
+                            <span>567 Downloads</span>
+                        </div>
+                        <a href="#" class="btn-download">Download</a>
+                    </div>
+                </div>
+                
+                <div class="library-item">
+                    <div class="library-icon">
+                        <i class="fas fa-file-word"></i>
+                    </div>
+                    <div class="library-content">
+                        <h4>Business Plan Template</h4>
+                        <p>Professional business plan template with detailed sections</p>
+                        <div class="library-meta">
+                            <span>DOCX • 850 KB</span>
+                            <span>1,456 Downloads</span>
+                        </div>
+                        <a href="#" class="btn-download">Download</a>
+                    </div>
+                </div>
+                
+                <div class="library-item">
+                    <div class="library-icon">
+                        <i class="fas fa-file-video"></i>
+                    </div>
+                    <div class="library-content">
+                        <h4>Communication Skills Masterclass</h4>
+                        <p>2-hour video series on effective workplace communication</p>
+                        <div class="library-meta">
+                            <span>MP4 • 1.2 GB</span>
+                            <span>789 Views</span>
+                        </div>
+                        <a href="#" class="btn-download">Watch Now</a>
+                    </div>
+                </div>
+                
+                <div class="library-item">
+                    <div class="library-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="library-content">
+                        <h4>Skills Assessment Checklist</h4>
+                        <p>Self-assessment tool for professional skill evaluation</p>
+                        <div class="library-meta">
+                            <span>PDF • 450 KB</span>
+                            <span>2,134 Downloads</span>
+                        </div>
+                        <a href="#" class="btn-download">Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Center -->
+    <section class="support-center">
+        <div class="container">
+            <div class="section-header">
+                <h2>Support Center</h2>
+                <p>Get help with your training journey</p>
+            </div>
+            <div class="support-grid">
+                <div class="support-card">
+                    <div class="support-icon">
                         <i class="fas fa-question-circle"></i>
                     </div>
                     <h3>FAQ</h3>
-                    <p>Find answers to frequently asked questions about our courses and services</p>
+                    <p>Find answers to commonly asked questions about our courses and services.</p>
+                    <a href="#" class="support-link">View FAQ</a>
                 </div>
                 
-                <div class="category-card" onclick="scrollToSection('testimonials')">
-                    <div class="category-icon">
-                        <i class="fas fa-star"></i>
+                <div class="support-card">
+                    <div class="support-icon">
+                        <i class="fas fa-headset"></i>
                     </div>
-                    <h3>Testimonials</h3>
-                    <p>Read success stories from our graduates and corporate clients</p>
+                    <h3>Live Support</h3>
+                    <p>Chat with our support team for immediate assistance with your training needs.</p>
+                    <a href="#" class="support-link">Start Chat</a>
                 </div>
                 
-                <div class="category-card" onclick="scrollToSection('associations')">
-                    <div class="category-icon">
-                        <i class="fas fa-certificate"></i>
+                <div class="support-card">
+                    <div class="support-icon">
+                        <i class="fas fa-envelope"></i>
                     </div>
-                    <h3>Accreditation</h3>
-                    <p>Learn about our SETA accreditations and professional associations</p>
+                    <h3>Email Support</h3>
+                    <p>Send us your questions and we'll respond within 24 hours.</p>
+                    <a href="mailto:support@guardianangel.co.za" class="support-link">Send Email</a>
                 </div>
                 
-                <div class="category-card" onclick="scrollToSection('promotions')">
-                    <div class="category-icon">
-                        <i class="fas fa-tags"></i>
+                <div class="support-card">
+                    <div class="support-icon">
+                        <i class="fas fa-phone"></i>
                     </div>
-                    <h3>Promotions</h3>
-                    <p>Discover current offers, discounts, and special training packages</p>
-                </div>
-                
-                <div class="category-card" onclick="scrollToSection('downloads')">
-                    <div class="category-icon">
-                        <i class="fas fa-download"></i>
-                    </div>
-                    <h3>Downloads</h3>
-                    <p>Access course brochures, guides, and helpful resources</p>
+                    <h3>Phone Support</h3>
+                    <p>Call us during business hours for personalized assistance.</p>
+                    <a href="tel:+27872885068" class="support-link">Call Now</a>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Latest Updates -->
-    <section id="latest-updates" class="latest-updates">
-        <div class="container">
-            <div class="section-header">
-                <h2>Latest Updates</h2>
-                <p>Stay current with our latest announcements and industry news</p>
-            </div>
-            
-            <div class="updates-grid">
-                <article class="update-card">
-                    <div class="update-date">
-                        <div class="day">05</div>
-                        <div class="month">DEC</div>
-                    </div>
-                    <div class="update-content">
-                        <div class="update-category">Course Launch</div>
-                        <h3>New Digital Marketing Course Available</h3>
-                        <p>We're excited to announce our new Digital Marketing certification course, covering social media marketing, SEO, and Google Analytics. Perfect for marketing professionals looking to enhance their digital skills.</p>
-                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-                
-                <article class="update-card">
-                    <div class="update-date">
-                        <div class="day">28</div>
-                        <div class="month">NOV</div>
-                    </div>
-                    <div class="update-content">
-                        <div class="update-category">Achievement</div>
-                        <h3>1000+ Students Certified This Year</h3>
-                        <p>We're proud to announce that over 1000 students have successfully completed their certifications with Guardian Angel Studios this year, achieving career advancement and new opportunities.</p>
-                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-                
-                <article class="update-card">
-                    <div class="update-date">
-                        <div class="day">15</div>
-                        <div class="month">NOV</div>
-                    </div>
-                    <div class="update-content">
-                        <div class="update-category">Partnership</div>
-                        <h3>New Corporate Training Partnerships</h3>
-                        <p>Guardian Angel Studios has formed strategic partnerships with leading corporations to provide customized training solutions, bringing world-class education directly to the workplace.</p>
-                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="faq-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Frequently Asked Questions</h2>
-                <p>Find answers to common questions about our courses and services</p>
-            </div>
-            
-            <div class="faq-categories">
-                <button class="faq-category-btn active" data-category="general">General</button>
-                <button class="faq-category-btn" data-category="courses">Courses</button>
-                <button class="faq-category-btn" data-category="payment">Payment</button>
-                <button class="faq-category-btn" data-category="certification">Certification</button>
-            </div>
-            
-            <div class="faq-container">
-                <!-- General FAQs -->
-                <div class="faq-category active" data-category="general">
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>What is Guardian Angel Studios Training & Development?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Guardian Angel Studios is an occupational training and development company that provides comprehensive training services across various industries. We offer accredited qualifications, skills programmes, and short courses to help individuals and organizations achieve their professional development goals.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Are your courses accredited?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Yes, our courses are SETA accredited and registered on the National Qualifications Framework (NQF). This ensures that your certification is nationally recognized and will enhance your career prospects.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Do you offer online training?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Absolutely! We offer flexible learning options including virtual classrooms, blended learning, and fully online courses. Our virtual training sessions are conducted live with expert facilitators via platforms like Zoom and MS Teams.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Course FAQs -->
-                <div class="faq-category" data-category="courses">
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>How long do courses typically take to complete?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Course duration varies depending on the qualification level and type. Short courses can be completed in 1-5 days, skills programmes typically take 2-6 weeks, and full qualifications may take 3-12 months including workplace experience.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>What materials are included with my course?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>All courses include comprehensive study materials, workbooks, and relevant software licenses where applicable. For practical courses, we also provide access to necessary equipment and tools during training sessions.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Can I switch between delivery methods?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Yes, we offer flexible delivery methods. Depending on course availability and your circumstances, you may be able to switch between in-classroom, virtual, or blended learning options. Please speak with our consultants for specific arrangements.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Payment FAQs -->
-                <div class="faq-category" data-category="payment">
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>What payment methods do you accept?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>We accept various payment methods including bank transfers, credit cards, company purchase orders, and installment plans. For corporate clients, we can arrange customized payment terms.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Do you offer payment plans?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Yes, we offer flexible payment plans for individual students. You can split your course fees into manageable monthly installments. Contact our finance team to discuss options that work for your budget.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Are there any additional costs?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Our course fees are comprehensive and include study materials, assessments, and certification. Some specialized courses may have additional costs for external examinations or professional body registrations, which will be clearly communicated upfront.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Certification FAQs -->
-                <div class="faq-category" data-category="certification">
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>How will I receive my certificate?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Upon successful completion of your course and assessments, your certificate will be posted to your registered address. You'll also receive a digital copy via email. Processing typically takes 4-6 weeks after course completion.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Will my qualification be recognized by employers?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Yes, all our qualifications are registered on the National Qualifications Framework (NQF) and are recognized by employers across South Africa. Your achievements are also recorded on the National Learner Database.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Can I get a replacement certificate?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Yes, replacement certificates can be issued for a small administrative fee. You'll need to provide proof of identity and complete a replacement request form. Processing takes 2-3 weeks.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2>Success Stories</h2>
-                <p>Hear from our graduates and corporate clients about their experience with Guardian Angel Studios</p>
-            </div>
-            
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p>"The Business Administration course at Guardian Angel Studios completely transformed my career. The practical approach and expert facilitators gave me the confidence and skills I needed to advance to a management position."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-image">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4>Sarah Mthembu</h4>
-                            <span>Operations Manager, ABC Corp</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p>"Excellent training! The IT Systems Support course was exactly what I needed to transition into the tech industry. The hands-on experience and industry-relevant curriculum made all the difference."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-image">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4>David Ntuli</h4>
-                            <span>IT Support Specialist</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p>"Guardian Angel Studios provided exceptional corporate training for our team. The customized leadership development program improved our management effectiveness and team collaboration significantly."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-image">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4>Jennifer van der Merwe</h4>
-                            <span>HR Director, TechFlow Solutions</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p>"The financial management course gave me the skills to start my own bookkeeping business. The practical exercises and real-world case studies were incredibly valuable."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-image">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4>Nomsa Dlamini</h4>
-                            <span>Entrepreneur & Business Owner</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Associations & SETAs -->
-    <section id="associations" class="associations">
-        <div class="container">
-            <div class="section-header">
-                <h2>Accreditation & Partnerships</h2>
-                <p>We are accredited by leading SETAs and maintain partnerships with professional bodies</p>
-            </div>
-            
-            <div class="associations-content">
-                <div class="accreditation-info">
-                    <h3>SETA Accreditations</h3>
-                    <div class="seta-list">
-                        <div class="seta-item">
-                            <div class="seta-icon">
-                                <i class="fas fa-certificate"></i>
-                            </div>
-                            <div>
-                                <h4>Services SETA</h4>
-                                <p>Accredited training provider for business and administrative services</p>
-                            </div>
-                        </div>
-                        
-                        <div class="seta-item">
-                            <div class="seta-icon">
-                                <i class="fas fa-certificate"></i>
-                            </div>
-                            <div>
-                                <h4>MICT SETA</h4>
-                                <p>Media, Information & Communication Technologies training authority</p>
-                            </div>
-                        </div>
-                        
-                        <div class="seta-item">
-                            <div class="seta-icon">
-                                <i class="fas fa-certificate"></i>
-                            </div>
-                            <div>
-                                <h4>BANKSETA</h4>
-                                <p>Banking and financial services skills development</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="quality-assurance">
-                    <h3>Quality Assurance</h3>
-                    <div class="qa-points">
-                        <div class="qa-point">
-                            <i class="fas fa-check-circle"></i>
-                            <span>SAQA registered qualifications</span>
-                        </div>
-                        <div class="qa-point">
-                            <i class="fas fa-check-circle"></i>
-                            <span>National Qualifications Framework aligned</span>
-                        </div>
-                        <div class="qa-point">
-                            <i class="fas fa-check-circle"></i>
-                            <span>External moderation and verification</span>
-                        </div>
-                        <div class="qa-point">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Continuous professional development</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Promotions -->
-    <section id="promotions" class="promotions">
-        <div class="container">
-            <div class="section-header">
-                <h2>Current Promotions</h2>
-                <p>Take advantage of our special offers and save on your professional development</p>
-            </div>
-            
-            <div class="promotions-grid">
-                <div class="promotion-card featured">
-                    <div class="promotion-badge">Limited Time</div>
-                    <div class="promotion-content">
-                        <h3>Early Bird Special</h3>
-                        <p>Save 15% on all courses when you book 30 days in advance</p>
-                        <div class="promotion-details">
-                            <div class="discount">15% OFF</div>
-                            <div class="validity">Valid until 31 Dec 2024</div>
-                        </div>
-                        <button class="btn-promotion" onclick="openPromotionModal('Early Bird Special')">Claim Offer</button>
-                    </div>
-                </div>
-                
-                <div class="promotion-card">
-                    <div class="promotion-badge">Popular</div>
-                    <div class="promotion-content">
-                        <h3>Group Training Discount</h3>
-                        <p>Bring 3 or more colleagues and save on corporate training</p>
-                        <div class="promotion-details">
-                            <div class="discount">Up to 25% OFF</div>
-                            <div class="validity">3+ participants</div>
-                        </div>
-                        <button class="btn-promotion" onclick="openPromotionModal('Group Training Discount')">Learn More</button>
-                    </div>
-                </div>
-                
-                <div class="promotion-card">
-                    <div class="promotion-badge">New</div>
-                    <div class="promotion-content">
-                        <h3>Student Discount</h3>
-                        <p>Full-time students get special pricing on all courses</p>
-                        <div class="promotion-details">
-                            <div class="discount">20% OFF</div>
-                            <div class="validity">Valid student ID required</div>
-                        </div>
-                        <button class="btn-promotion" onclick="openPromotionModal('Student Discount')">Apply Now</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Downloads -->
-    <section id="downloads" class="downloads">
-        <div class="container">
-            <div class="section-header">
-                <h2>Downloads & Resources</h2>
-                <p>Access helpful documents, guides, and course information</p>
-            </div>
-            
-            <div class="downloads-grid">
-                <div class="download-item">
-                    <div class="download-icon">
-                        <i class="fas fa-file-pdf"></i>
-                    </div>
-                    <div class="download-content">
-                        <h3>Course Catalog 2024</h3>
-                        <p>Complete guide to all our courses, schedules, and pricing</p>
-                        <div class="download-meta">
-                            <span class="file-size">2.5 MB</span>
-                            <span class="file-type">PDF</span>
-                        </div>
-                    </div>
-                    <button class="btn-download">
-                        <i class="fas fa-download"></i>
-                        Download
-                    </button>
-                </div>
-                
-                <div class="download-item">
-                    <div class="download-icon">
-                        <i class="fas fa-file-word"></i>
-                    </div>
-                    <div class="download-content">
-                        <h3>Enrollment Application Form</h3>
-                        <p>Standard enrollment form for all courses</p>
-                        <div class="download-meta">
-                            <span class="file-size">0.8 MB</span>
-                            <span class="file-type">DOCX</span>
-                        </div>
-                    </div>
-                    <button class="btn-download">
-                        <i class="fas fa-download"></i>
-                        Download
-                    </button>
-                </div>
-                
-                <div class="download-item">
-                    <div class="download-icon">
-                        <i class="fas fa-file-pdf"></i>
-                    </div>
-                    <div class="download-content">
-                        <h3>Corporate Training Guide</h3>
-                        <p>Information about our corporate training solutions</p>
-                        <div class="download-meta">
-                            <span class="file-size">1.8 MB</span>
-                            <span class="file-type">PDF</span>
-                        </div>
-                    </div>
-                    <button class="btn-download">
-                        <i class="fas fa-download"></i>
-                        Download
-                    </button>
-                </div>
-                
-                <div class="download-item">
-                    <div class="download-icon">
-                        <i class="fas fa-file-pdf"></i>
-                    </div>
-                    <div class="download-content">
-                        <h3>PAIA Manual 2024</h3>
-                        <p>Promotion of Access to Information Act manual</p>
-                        <div class="download-meta">
-                            <span class="file-size">1.2 MB</span>
-                            <span class="file-type">PDF</span>
-                        </div>
-                    </div>
-                    <button class="btn-download">
-                        <i class="fas fa-download"></i>
-                        Download
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Promotion Modal -->
-    <div id="promotionModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Promotion Details</h2>
-                <span class="close">&times;</span>
-            </div>
-            <div class="modal-body">
-                <div class="promotion-details">
-                    <h3 id="modalPromotionName">Promotion Name</h3>
-                    <p id="modalPromotionDescription">Promotion description will appear here.</p>
-                </div>
-                <form id="promotionForm">
-                    <div class="form-group">
-                        <label for="promoName">Full Name *</label>
-                        <input type="text" id="promoName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="promoEmail">Email Address *</label>
-                        <input type="email" id="promoEmail" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="promoPhone">Phone Number *</label>
-                        <input type="tel" id="promoPhone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="promoCourse">Interested Course</label>
-                        <select id="promoCourse">
-                            <option value="">Select a course</option>
-                            <option value="business-admin">Business Administration</option>
-                            <option value="it-support">IT Systems Support</option>
-                            <option value="finance">Finance & Accounting</option>
-                            <option value="project-mgmt">Project Management</option>
-                            <option value="customer-service">Customer Service</option>
-                            <option value="leadership">Leadership Development</option>
-                        </select>
-                    </div>
-                    <div class="form-actions">
-                        <button type="button" class="btn-secondary" onclick="closePromotionModal()">Cancel</button>
-                        <button type="submit" class="btn-primary">Submit Request</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <div class="footer-logo">
-                        <h3>Guardian Angel Studios</h3>
-                        <p>Training & Development</p>
+                    <h4>Clients</h4>
+                    <ul>
+                        <li><a href="index.html#contact">Get In Touch</a></li>
+                        <li><a href="index.html#newsletter">Subscribe To Us</a></li>
+                        <li><a href="#feedback">Give Us Feedback</a></li>
+                        <li><a href="resources.html">Experts Portal</a></li>
+                        <li><a href="#staff">Kobus Visagie</a></li>
+                        <li><a href="#staff">Corné Krige</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Learners</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#campuses">Our Campuses</a></li>
+                        <li><a href="#departments">Our Departments</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#absorption">Absorption</a></li>
+                        <li><a href="#accreditation">Accreditation</a></li>
+                        <li><a href="#community">Community Campuses</a></li>
+                        <li><a href="#development">Course Development</a></li>
+                        <li><a href="#learnerships">Learnerships</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Talk to Us</h4>
+                    <div class="contact-table">
+                        <div class="contact-row">
+                            <span class="contact-phone">087 288 5068</span>
+                        </div>
+                        <div class="contact-row">
+                            <a href="mailto:info@guardianangel.co.za">info@guardianangel.co.za (business enquiries)</a><br>
+                            <a href="mailto:learn@guardianangel.co.za">learn@guardianangel.co.za (student enquiries)</a>
+                        </div>
+                        <div class="contact-row">
+                            <span>Mondays - Fridays, 08:00 - 17:00</span>
+                        </div>
                     </div>
-                    <p>Occupational training and development company providing comprehensive training services across industries.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="courses.html">Courses</a></li>
-                        <li><a href="public-schedule.html">Public Schedule</a></li>
-                        <li><a href="resources.html">Resources</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="#latest-updates">Latest Updates</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
-                        <li><a href="#downloads">Downloads</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <p><i class="fas fa-phone"></i> 012 998 3668</p>
-                    <p><i class="fas fa-envelope"></i> training@guardianangel.co.za</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Pretoria, South Africa</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-spotify"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Guardian Angel Studios Training & Development. All Rights Reserved.</p>
+                <p>Guardian Angel Studios is a multi-accredited training provider. BEE Level 2 | Reg No. 2016/514875/07 | Accreditation No. 12526</p>
+                <div class="footer-bottom-links">
+                    <span>&copy; 2025, Guardian Angel Studios. All Rights Reserved</span>
+                    <div class="footer-legal">
+                        <a href="#terms">Terms and Conditions</a>
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="login.html">Login</a>
+                    </div>
+                </div>
+                <div class="footer-contact-bottom">
+                    <span>+27 87 288 5068</span>
+                    <span>info@guardianangel.co.za</span>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#top">Back to top</a>
+                </div>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
-    <script src="resources.js"></script>
 </body>
 </html>

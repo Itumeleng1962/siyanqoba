@@ -10,6 +10,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-links">
+                    <a href="login.html" class="top-link">Booking Portal</a>
+                    <a href="signup.html" class="top-link">Apply Here</a>
+                    <a href="login.html" class="top-link">Learner Portal</a>
+                </div>
+                <div class="top-bar-contact">
+                    <span><i class="fas fa-phone"></i> 087 288 5068</span>
+                    <span><i class="fas fa-envelope"></i> info@guardianangel.co.za</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -20,34 +37,44 @@
                 </a>
             </div>
             <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Explore <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="index.html#about">About Us</a>
+                        <a href="#campuses">Our Campuses</a>
+                        <a href="#departments">Our Departments</a>
+                        <a href="#accreditations">Our Accreditations & Certifications</a>
+                        <a href="#solutions">Our Solutions</a>
+                        <a href="courses.html">Our Courses & Qualifications</a>
+                        <a href="#faq">Frequently Asked Questions</a>
+                    </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="courses.html" class="nav-link active">Courses <i class="fas fa-chevron-down"></i></a>
+                    <a href="#" class="nav-link">Solutions <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
-                        <a href="#business">Business Administration</a>
-                        <a href="#it">Information Technology</a>
-                        <a href="#finance">Finance & Accounting</a>
-                        <a href="#project">Project Management</a>
-                        <a href="#customer">Customer Service</a>
-                        <a href="#leadership">Management & Leadership</a>
+                        <a href="#absorption">Absorption</a>
+                        <a href="#learnerships">Learnerships</a>
+                        <a href="#accreditation">Accreditation</a>
+                        <a href="#consulting">Consulting</a>
+                        <a href="#community">Community Campuses</a>
+                        <a href="#compliance">Compliance Training</a>
+                        <a href="#development">Course Development</a>
+                        <a href="#skills-development">Skills Development</a>
+                        <a href="#business-advisory">Business Advisory</a>
+                        <a href="resources.html">Experts Portal</a>
+                        <a href="courses.html">Our Courses</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a href="public-schedule.html" class="nav-link">Public Schedule</a>
+                    <a href="index.html#insights" class="nav-link">Insights</a>
                 </li>
                 <li class="nav-item">
-                    <a href="resources.html" class="nav-link">Resources</a>
+                    <a href="courses.html" class="nav-link active">Courses</a>
                 </li>
                 <li class="nav-item">
-                    <a href="index.html#contact" class="nav-link">Contact</a>
+                    <a href="index.html#contact" class="nav-link">Get in Touch</a>
                 </li>
             </ul>
-            <div class="nav-auth">
-                <a href="login.html" class="btn-login">Login</a>
-                <a href="signup.html" class="btn-signup">Sign Up</a>
-            </div>
             <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -123,10 +150,6 @@
                                 </div>
                             </div>
                             <div class="course-footer">
-                                <div class="course-price">
-                                    <span class="price">R 8,500</span>
-                                    <span class="price-note">Incl. materials</span>
-                                </div>
                                 <button class="btn-enroll" onclick="openEnrollmentModal('Business Administration Certificate')">Enroll Now</button>
                             </div>
                         </div>
@@ -162,10 +185,6 @@
                                 </div>
                             </div>
                             <div class="course-footer">
-                                <div class="course-price">
-                                    <span class="price">R 12,000</span>
-                                    <span class="price-note">Equipment included</span>
-                                </div>
                                 <button class="btn-enroll" onclick="openEnrollmentModal('IT Systems Support')">Enroll Now</button>
                             </div>
                         </div>
@@ -201,10 +220,6 @@
                                 </div>
                             </div>
                             <div class="course-footer">
-                                <div class="course-price">
-                                    <span class="price">R 7,500</span>
-                                    <span class="price-note">Software license included</span>
-                                </div>
                                 <button class="btn-enroll" onclick="openEnrollmentModal('Bookkeeping & Financial Management')">Enroll Now</button>
                             </div>
                         </div>
@@ -240,10 +255,6 @@
                                 </div>
                             </div>
                             <div class="course-footer">
-                                <div class="course-price">
-                                    <span class="price">R 15,000</span>
-                                    <span class="price-note">PMI preparation included</span>
-                                </div>
                                 <button class="btn-enroll" onclick="openEnrollmentModal('Project Management Professional')">Enroll Now</button>
                             </div>
                         </div>
@@ -279,10 +290,6 @@
                                 </div>
                             </div>
                             <div class="course-footer">
-                                <div class="course-price">
-                                    <span class="price">R 5,500</span>
-                                    <span class="price-note">Workbook included</span>
-                                </div>
                                 <button class="btn-enroll" onclick="openEnrollmentModal('Customer Service Excellence')">Enroll Now</button>
                             </div>
                         </div>
@@ -318,10 +325,6 @@
                                 </div>
                             </div>
                             <div class="course-footer">
-                                <div class="course-price">
-                                    <span class="price">R 18,500</span>
-                                    <span class="price-note">Executive coaching included</span>
-                                </div>
                                 <button class="btn-enroll" onclick="openEnrollmentModal('Leadership Development Programme')">Enroll Now</button>
                             </div>
                         </div>
@@ -357,10 +360,6 @@
                                 </div>
                             </div>
                             <div class="course-footer">
-                                <div class="course-price">
-                                    <span class="price">R 11,000</span>
-                                    <span class="price-note">Case studies included</span>
-                                </div>
                                 <button class="btn-enroll" onclick="openEnrollmentModal('Business Analysis Fundamentals')">Enroll Now</button>
                             </div>
                         </div>
@@ -396,10 +395,6 @@
                                 </div>
                             </div>
                             <div class="course-footer">
-                                <div class="course-price">
-                                    <span class="price">R 6,500</span>
-                                    <span class="price-note">Business plan template included</span>
-                                </div>
                                 <button class="btn-enroll" onclick="openEnrollmentModal('Start Your Own Business')">Enroll Now</button>
                             </div>
                         </div>
@@ -483,39 +478,74 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <div class="footer-logo">
-                        <h3>Guardian Angel Studios</h3>
-                        <p>Training & Development</p>
+                    <h4>Clients</h4>
+                    <ul>
+                        <li><a href="index.html#contact">Get In Touch</a></li>
+                        <li><a href="index.html#newsletter">Subscribe To Us</a></li>
+                        <li><a href="#feedback">Give Us Feedback</a></li>
+                        <li><a href="resources.html">Experts Portal</a></li>
+                        <li><a href="#staff">Kobus Visagie</a></li>
+                        <li><a href="#staff">Corné Krige</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Learners</h4>
+                    <ul>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="#campuses">Our Campuses</a></li>
+                        <li><a href="#departments">Our Departments</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#absorption">Absorption</a></li>
+                        <li><a href="#accreditation">Accreditation</a></li>
+                        <li><a href="#community">Community Campuses</a></li>
+                        <li><a href="#development">Course Development</a></li>
+                        <li><a href="#learnerships">Learnerships</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Talk to Us</h4>
+                    <div class="contact-table">
+                        <div class="contact-row">
+                            <span class="contact-phone">087 288 5068</span>
+                        </div>
+                        <div class="contact-row">
+                            <a href="mailto:info@guardianangel.co.za">info@guardianangel.co.za (business enquiries)</a><br>
+                            <a href="mailto:learn@guardianangel.co.za">learn@guardianangel.co.za (student enquiries)</a>
+                        </div>
+                        <div class="contact-row">
+                            <span>Mondays - Fridays, 08:00 - 17:00</span>
+                        </div>
                     </div>
-                    <p>Occupational training and development company providing comprehensive training services across industries.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="courses.html">Courses</a></li>
-                        <li><a href="public-schedule.html">Public Schedule</a></li>
-                        <li><a href="resources.html">Resources</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Course Categories</h4>
-                    <ul>
-                        <li><a href="#business">Business Administration</a></li>
-                        <li><a href="#it">Information Technology</a></li>
-                        <li><a href="#finance">Finance & Accounting</a></li>
-                        <li><a href="#project">Project Management</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <p><i class="fas fa-phone"></i> 012 998 3668</p>
-                    <p><i class="fas fa-envelope"></i> training@guardianangel.co.za</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Pretoria, South Africa</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-spotify"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Guardian Angel Studios Training & Development. All Rights Reserved.</p>
+                <p>Guardian Angel Studios is a multi-accredited training provider. BEE Level 2 | Reg No. 2016/514875/07 | Accreditation No. 12526</p>
+                <div class="footer-bottom-links">
+                    <span>&copy; 2025, Guardian Angel Studios. All Rights Reserved</span>
+                    <div class="footer-legal">
+                        <a href="#terms">Terms and Conditions</a>
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="login.html">Login</a>
+                    </div>
+                </div>
+                <div class="footer-contact-bottom">
+                    <span>+27 87 288 5068</span>
+                    <span>info@guardianangel.co.za</span>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#top">Back to top</a>
+                </div>
             </div>
         </div>
     </footer>

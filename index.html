@@ -9,6 +9,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-links">
+                    <a href="login.html" class="top-link">Booking Portal</a>
+                    <a href="signup.html" class="top-link">Apply Here</a>
+                    <a href="login.html" class="top-link">Learner Portal</a>
+                </div>
+                <div class="top-bar-contact">
+                    <span><i class="fas fa-phone"></i> 087 288 5068</span>
+                    <span><i class="fas fa-envelope"></i> info@guardianangel.co.za</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -17,34 +34,47 @@
                 <span>Training & Development</span>
             </div>
             <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Explore <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="about.html">About Us</a>
+                        <a href="#campuses">Our Campuses</a>
+                        <a href="#departments">Our Departments</a>
+                        <a href="#accreditations">Our Accreditations & Certifications</a>
+                        <a href="#solutions">Our Solutions</a>
+                        <a href="courses.html">Our Courses & Qualifications</a>
+                        <a href="#faq">Frequently Asked Questions</a>
+                    </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="courses.html" class="nav-link">Courses <i class="fas fa-chevron-down"></i></a>
+                    <a href="#" class="nav-link">Solutions <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
-                        <a href="courses.html#business">Business Administration</a>
-                        <a href="courses.html#it">Information Technology</a>
-                        <a href="courses.html#finance">Finance & Accounting</a>
-                        <a href="courses.html#project">Project Management</a>
-                        <a href="courses.html#customer">Customer Service</a>
-                        <a href="courses.html#leadership">Management & Leadership</a>
+                        <a href="#absorption">Absorption</a>
+                        <a href="#learnerships">Learnerships</a>
+                        <a href="#accreditation">Accreditation</a>
+                        <a href="#consulting">Consulting</a>
+                        <a href="#community">Community Campuses</a>
+                        <a href="#compliance">Compliance Training</a>
+                        <a href="#development">Course Development</a>
+                        <a href="#skills-development">Skills Development</a>
+                        <a href="#business-advisory">Business Advisory</a>
+                        <a href="resources.html">Experts Portal</a>
+                        <a href="courses.html">Our Courses</a>
                     </div>
+                </li>
+                <li class="nav-item">
+                    <a href="insights.html" class="nav-link">Insights</a>
+                </li>
+                <li class="nav-item">
+                    <a href="courses.html" class="nav-link">Courses</a>
                 </li>
                 <li class="nav-item">
                     <a href="public-schedule.html" class="nav-link">Public Schedule</a>
                 </li>
                 <li class="nav-item">
-                    <a href="resources.html" class="nav-link">Resources</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="#contact" class="nav-link">Get in Touch</a>
                 </li>
             </ul>
-            <div class="nav-auth">
-                <a href="login.html" class="btn-login">Login</a>
-                <a href="signup.html" class="btn-signup">Sign Up</a>
-            </div>
             <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -55,18 +85,112 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-container">
+        <div class="container">
             <div class="hero-content">
-                <h1>Learning Development Starts Here</h1>
-                <p>Guardian Angel Studios is an occupational training and development company that provides a range of comprehensive training services across industries.</p>
-                <div class="hero-buttons">
-                    <a href="courses.html" class="btn-primary">Explore Courses</a>
-                    <a href="#contact" class="btn-secondary">Get Started</a>
+                <div class="hero-left">
+                    <div class="hero-badge">
+                        <span class="badge-icon">⚡</span>
+                        <span>Professional Training Excellence</span>
+                    </div>
+                    <h1>Transform Your Career with <span class="highlight">Expert Training</span></h1>
+                    <p>Get certified in high-demand skills with our comprehensive training programs. From safety certifications to leadership development - we've got you covered.</p>
+                    
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <span>Industry Certified</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <span>Flexible Schedule</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <span>Expert Instructors</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-buttons">
+                        <a href="courses.html" class="btn-primary">
+                            <span>Start Learning</span>
+                            <span class="arrow">→</span>
+                        </a>
+                        <a href="#contact" class="btn-secondary">
+                            <span class="icon">📞</span>
+                            <span>Get Info</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-right">
+                    <div class="hero-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Professional training session" class="hero-image">
+                        <div class="stats-overlay">
+                            <div class="stat-card">
+                                <div class="stat-number">500+</div>
+                                <div class="stat-label">Certified Students</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">95%</div>
+                                <div class="stat-label">Success Rate</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="hero-graphic">
-                    <i class="fas fa-graduation-cap"></i>
+        </div>
+    </section>
+
+    <!-- Events and Webinars Section -->
+    <section class="events-webinars">
+        <div class="container">
+            <div class="section-header">
+                <h2>Events and Webinars</h2>
+                <p>Join our upcoming training events and professional development sessions</p>
+            </div>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Black professionals in leadership meeting">
+                    </div>
+                    <div class="event-date">
+                        <span class="day">15</span>
+                        <span class="month">Aug</span>
+                        <span class="year">2025</span>
+                    </div>
+                    <div class="event-content">
+                        <h3>Leadership Excellence Workshop</h3>
+                        <p>Developing Leadership Skills for the Modern Workplace. This comprehensive workshop will cover emotional intelligence, team management, and strategic thinking for emerging leaders.</p>
+                        <div class="event-details">
+                            <div class="event-meta">
+                                <span><i class="fas fa-calendar"></i> 15 & 29 August</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Online (Microsoft Teams)</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-primary">VIEW</a>
+                    </div>
+                </div>
+                
+                                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Black woman working on laptop - digital skills">
+                    </div>
+                    <div class="event-date">
+                        <span class="day">02</span>
+                        <span class="month">Sep</span>
+                        <span class="year">2025</span>
+                    </div>
+                    <div class="event-content">
+                        <h3>Digital Skills Workshop: Building Your Digital Portfolio</h3>
+                        <p>Ready to enhance your digital presence? This workshop explores how digital literacy can transform your career prospects and business opportunities.</p>
+                        <div class="event-details">
+                            <div class="event-meta">
+                                <span><i class="fas fa-calendar"></i> 2 September 2025</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Online (Microsoft Teams)</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-primary">VIEW</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -211,34 +335,107 @@
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
+    <!-- Learnership Application Section -->
+    <section class="learnership-application">
+        <div class="container">
+            <div class="learnership-content">
+                <div class="learnership-text">
+                    <h2>Apply for Our Learnership Program!</h2>
+                    <h3>Register and start applying for learnership opportunities today!</h3>
+                    <p>Join thousands of learners who have transformed their careers through our comprehensive learnership programs. We offer industry-recognized qualifications across multiple sectors.</p>
+                </div>
+                <div class="learnership-action">
+                    <a href="signup.html" class="btn-apply">APPLY NOW!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accreditations Section -->
+    <section class="accreditations">
         <div class="container">
             <div class="section-header">
-                <h2>Our Approach: Your Advantage</h2>
-                <p>We provide standard and bespoke services and solutions</p>
+                <h2>Our Accreditations</h2>
+                <p>Recognized by leading industry bodies and regulatory authorities</p>
             </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
+            <div class="accreditation-logos">
+                <div class="accreditation-item">
+                    <div class="accreditation-logo">
+                        <i class="fas fa-certificate"></i>
                     </div>
-                    <h3>Occupational Training</h3>
-                    <p>Training to new and existing entrants into the job market and to the organizations that employ them.</p>
+                    <span>SETA Accredited</span>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-building"></i>
+                <div class="accreditation-item">
+                    <div class="accreditation-logo">
+                        <i class="fas fa-award"></i>
                     </div>
-                    <h3>Bespoke Solutions</h3>
-                    <p>In-house, on-site and public qualifications, learnerships, skills programmes and short courses.</p>
+                    <span>NQF Aligned</span>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-laptop"></i>
+                <div class="accreditation-item">
+                    <div class="accreditation-logo">
+                        <i class="fas fa-check-circle"></i>
                     </div>
-                    <h3>Flexible Delivery</h3>
-                    <p>In-classroom, virtual, facilitator-led online and blended training, assessment, and moderation.</p>
+                    <span>BEE Level 2</span>
+                </div>
+                <div class="accreditation-item">
+                    <div class="accreditation-logo">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span>ISO Certified</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prospectus Downloads Section -->
+    <section class="prospectus-downloads">
+        <div class="container">
+            <div class="section-header">
+                <h2>Download our 2025 Prospectus</h2>
+                <p>Get detailed information about our training programs and qualifications</p>
+            </div>
+            <div class="downloads-grid">
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Comprehensive Prospectus</h3>
+                    <p>This booklet includes all of our full qualifications, rapid learning courses and compliance training.</p>
+                    <a href="#" class="btn-download">Download</a>
+                </div>
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Full Qualifications & Learnerships</h3>
+                    <p>This booklet includes all of our accredited qualifications and learnerships (excludes short courses).</p>
+                    <a href="#" class="btn-download">Download</a>
+            </div>
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fas fa-lightning-bolt"></i>
+                    </div>
+                    <h3>Rapid Learning Courses</h3>
+                    <p>This booklet includes all of our rapid learning courses and compliance courses.</p>
+                    <a href="#" class="btn-download">Download</a>
+                </div>
+                    </div>
+                </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Subscribe to our Newsletter</h2>
+                    <h3>Latest training insights, Guardian Angel Studios updates, and industry news.</h3>
+                    </div>
+                <div class="newsletter-form">
+                    <form>
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn-subscribe">Subscribe</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -405,44 +602,109 @@
         </div>
     </section>
 
+    <!-- You are in good company section -->
+    <section class="clients-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>You are in good company!</h2>
+                <h3>Some of our current clients include:</h3>
+            </div>
+            <div class="clients-grid">
+                <div class="client-logo">
+                    <span>Company A</span>
+                </div>
+                <div class="client-logo">
+                    <span>Company B</span>
+                </div>
+                <div class="client-logo">
+                    <span>Company C</span>
+                </div>
+                <div class="client-logo">
+                    <span>Company D</span>
+                </div>
+                <div class="client-logo">
+                    <span>Company E</span>
+                </div>
+                <div class="client-logo">
+                    <span>Company F</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <div class="footer-logo">
-                        <h3>Guardian Angel Studios</h3>
-                        <p>Training & Development</p>
+                    <h4>Clients</h4>
+                    <ul>
+                        <li><a href="#contact">Get In Touch</a></li>
+                        <li><a href="#newsletter">Subscribe To Us</a></li>
+                        <li><a href="#feedback">Give Us Feedback</a></li>
+                        <li><a href="resources.html">Experts Portal</a></li>
+                        <li><a href="#staff">Kobus Visagie</a></li>
+                        <li><a href="#staff">Corné Krige</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Learners</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#campuses">Our Campuses</a></li>
+                        <li><a href="#departments">Our Departments</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#absorption">Absorption</a></li>
+                        <li><a href="#accreditation">Accreditation</a></li>
+                        <li><a href="#community">Community Campuses</a></li>
+                        <li><a href="#development">Course Development</a></li>
+                        <li><a href="#learnerships">Learnerships</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Talk to Us</h4>
+                    <div class="contact-table">
+                        <div class="contact-row">
+                            <span class="contact-phone">087 288 5068</span>
+                        </div>
+                        <div class="contact-row">
+                            <a href="mailto:info@guardianangel.co.za">info@guardianangel.co.za (business enquiries)</a><br>
+                            <a href="mailto:learn@guardianangel.co.za">learn@guardianangel.co.za (student enquiries)</a>
+                        </div>
+                        <div class="contact-row">
+                            <span>Mondays - Fridays, 08:00 - 17:00</span>
+                        </div>
                     </div>
-                    <p>Occupational training and development company providing comprehensive training services across industries.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="courses.html">Courses</a></li>
-                        <li><a href="public-schedule.html">Public Schedule</a></li>
-                        <li><a href="resources.html">Resources</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Course Categories</h4>
-                    <ul>
-                        <li><a href="courses.html#business">Business Administration</a></li>
-                        <li><a href="courses.html#it">Information Technology</a></li>
-                        <li><a href="courses.html#finance">Finance & Accounting</a></li>
-                        <li><a href="courses.html#project">Project Management</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <p><i class="fas fa-phone"></i> 012 998 3668</p>
-                    <p><i class="fas fa-envelope"></i> training@guardianangel.co.za</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Pretoria, South Africa</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-spotify"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Guardian Angel Studios Training & Development. All Rights Reserved.</p>
+                <p>Guardian Angel Studios is a multi-accredited training provider. BEE Level 2 | Reg No. 2016/514875/07 | Accreditation No. 12526</p>
+                <div class="footer-bottom-links">
+                    <span>&copy; 2025, Guardian Angel Studios. All Rights Reserved</span>
+                    <div class="footer-legal">
+                        <a href="#terms">Terms and Conditions</a>
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="login.html">Login</a>
+                    </div>
+                </div>
+                <div class="footer-contact-bottom">
+                    <span>+27 87 288 5068</span>
+                    <span>info@guardianangel.co.za</span>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#top">Back to top</a>
+                </div>
             </div>
         </div>
     </footer>

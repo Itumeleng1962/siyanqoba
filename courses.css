@@ -32,13 +32,17 @@
     font-weight: 700;
     margin-bottom: var(--spacing-4);
     line-height: 1.2;
+    color: var(--white) !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 .header-content p {
     font-size: var(--font-size-lg);
-    opacity: 0.9;
+    opacity: 0.95;
     margin-bottom: var(--spacing-6);
     line-height: 1.6;
+    color: rgba(255, 255, 255, 0.95) !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 .breadcrumb {
@@ -47,13 +51,15 @@
     justify-content: center;
     gap: var(--spacing-2);
     font-size: var(--font-size-sm);
-    opacity: 0.8;
+    opacity: 0.9;
+    color: rgba(255, 255, 255, 0.9) !important;
 }
 
 .breadcrumb a {
-    color: var(--light-green);
+    color: var(--light-green) !important;
     text-decoration: none;
     transition: opacity 0.3s ease;
+    font-weight: 500;
 }
 
 .breadcrumb a:hover {
@@ -267,7 +273,7 @@
 
 .course-footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: var(--spacing-4);
     padding-top: var(--spacing-4);
@@ -293,20 +299,22 @@
 .btn-enroll {
     background-color: var(--light-green);
     color: var(--dark-blue);
-    padding: var(--spacing-2) var(--spacing-4);
+    padding: 12px 24px;
     border: none;
-    border-radius: var(--radius-md);
-    font-size: var(--font-size-sm);
+    border-radius: 6px;
+    font-size: 14px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
     white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .btn-enroll:hover {
     background-color: var(--light-green-hover);
     transform: translateY(-1px);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 4px 12px rgba(144, 238, 144, 0.3);
 }
 
 /* Enhanced Modal Styles */

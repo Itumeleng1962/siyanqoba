@@ -9,125 +9,91 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html">
-                    <h2>Guardian Angel Studios</h2>
-                    <span>Training & Development</span>
-                </a>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="courses.html" class="nav-link">Courses</a>
-                </li>
-                <li class="nav-item">
-                    <a href="public-schedule.html" class="nav-link">Public Schedule</a>
-                </li>
-                <li class="nav-item">
-                    <a href="resources.html" class="nav-link">Resources</a>
-                </li>
-            </ul>
-            <div class="nav-auth">
-                <a href="signup.html" class="btn-signup">Sign Up</a>
-            </div>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+<body class="auth-body">
+    <div class="auth-container">
+        <div class="auth-left">
+            <div class="auth-image">
+                <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Black professionals in training environment">
+                <div class="auth-overlay">
+                    <div class="auth-logo">
+                        <h2>Guardian Angel Studios</h2>
+                        <span>Training & Development</span>
+                    </div>
+                    <div class="auth-tagline">
+                        <h3>Welcome Back</h3>
+                        <p>Continue your learning journey with us</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
-
-    <!-- Login Section -->
-    <section class="auth-section">
-        <div class="auth-container">
-            <div class="auth-card">
+        
+        <div class="auth-right">
+            <div class="auth-form-container">
                 <div class="auth-header">
-                    <h1>Welcome Back</h1>
-                    <p>Sign in to your Guardian Angel Studios account</p>
+                    <h1>Sign In</h1>
+                    <p>Access your training portal and continue your professional development</p>
                 </div>
                 
                 <form class="auth-form" id="loginForm">
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        <div class="input-group">
+                        <div class="input-wrapper">
                             <i class="fas fa-envelope"></i>
-                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email">
                         </div>
                     </div>
                     
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <div class="input-group">
+                        <div class="input-wrapper">
                             <i class="fas fa-lock"></i>
-                            <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                            <button type="button" class="password-toggle" onclick="togglePassword('password')">
-                                <i class="fas fa-eye" id="passwordToggleIcon"></i>
+                            <input type="password" id="password" name="password" required placeholder="Enter your password">
+                            <button type="button" class="password-toggle" id="togglePassword">
+                                <i class="fas fa-eye"></i>
                             </button>
                         </div>
                     </div>
                     
                     <div class="form-options">
-                        <label class="checkbox-container">
+                        <label class="checkbox-wrapper">
                             <input type="checkbox" id="remember" name="remember">
                             <span class="checkmark"></span>
                             Remember me
                         </label>
-                        <a href="#" class="forgot-link">Forgot password?</a>
+                        <a href="#" class="forgot-password">Forgot password?</a>
                     </div>
                     
                     <button type="submit" class="btn-auth">Sign In</button>
                     
                     <div class="auth-divider">
-                        <span>or</span>
+                        <span>Or continue with</span>
                     </div>
                     
-                    <div class="social-login">
+                    <div class="social-auth">
                         <button type="button" class="btn-social google">
                             <i class="fab fa-google"></i>
-                            Continue with Google
+                            Sign in with Google
                         </button>
                         <button type="button" class="btn-social microsoft">
                             <i class="fab fa-microsoft"></i>
-                            Continue with Microsoft
+                            Sign in with Microsoft
                         </button>
+                    </div>
+                    
+                    <div class="auth-footer">
+                        <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
                     </div>
                 </form>
                 
-                <div class="auth-footer">
-                    <p>Don't have an account? <a href="signup.html">Sign up</a></p>
-                </div>
-            </div>
-            
-            <div class="auth-image">
-                <div class="auth-graphic">
-                    <i class="fas fa-user-graduate"></i>
-                    <h3>Start Your Learning Journey</h3>
-                    <p>Access world-class training programs and advance your career with Guardian Angel Studios</p>
-                    <div class="auth-features">
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Expert-led courses</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Flexible learning options</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Industry certifications</span>
-                        </div>
-                    </div>
+                <div class="auth-links">
+                    <a href="index.html">
+                        <i class="fas fa-arrow-left"></i>
+                        Back to Home
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <script src="auth.js"></script>
 </body>

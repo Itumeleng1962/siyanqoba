@@ -9,153 +9,121 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html">
-                    <h2>Guardian Angel Studios</h2>
-                    <span>Training & Development</span>
-                </a>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="courses.html" class="nav-link">Courses</a>
-                </li>
-                <li class="nav-item">
-                    <a href="public-schedule.html" class="nav-link">Public Schedule</a>
-                </li>
-                <li class="nav-item">
-                    <a href="resources.html" class="nav-link">Resources</a>
-                </li>
-            </ul>
-            <div class="nav-auth">
-                <a href="login.html" class="btn-login">Login</a>
-            </div>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+<body class="auth-body">
+    <div class="auth-container">
+        <div class="auth-left">
+            <div class="auth-image">
+                <img src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Black professionals collaborating">
+                <div class="auth-overlay">
+                    <div class="auth-logo">
+                        <h2>Guardian Angel Studios</h2>
+                        <span>Training & Development</span>
+                    </div>
+                    <div class="auth-tagline">
+                        <h3>Start Your Journey</h3>
+                        <p>Join thousands of professionals advancing their careers</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
-
-    <!-- Signup Section -->
-    <section class="auth-section">
-        <div class="auth-container">
-            <div class="auth-card">
+        
+        <div class="auth-right">
+            <div class="auth-form-container">
                 <div class="auth-header">
                     <h1>Create Account</h1>
-                    <p>Join Guardian Angel Studios and start your learning journey</p>
+                    <p>Join our training community and unlock your potential</p>
                 </div>
                 
                 <form class="auth-form" id="signupForm">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="firstName">First Name</label>
-                            <div class="input-group">
+                            <div class="input-wrapper">
                                 <i class="fas fa-user"></i>
-                                <input type="text" id="firstName" name="firstName" placeholder="Enter first name" required>
+                                <input type="text" id="firstName" name="firstName" required placeholder="First name">
                             </div>
                         </div>
-                        
                         <div class="form-group">
                             <label for="lastName">Last Name</label>
-                            <div class="input-group">
+                            <div class="input-wrapper">
                                 <i class="fas fa-user"></i>
-                                <input type="text" id="lastName" name="lastName" placeholder="Enter last name" required>
+                                <input type="text" id="lastName" name="lastName" required placeholder="Last name">
                             </div>
                         </div>
                     </div>
                     
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        <div class="input-group">
+                        <div class="input-wrapper">
                             <i class="fas fa-envelope"></i>
-                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email">
                         </div>
                     </div>
                     
                     <div class="form-group">
                         <label for="phone">Phone Number</label>
-                        <div class="input-group">
+                        <div class="input-wrapper">
                             <i class="fas fa-phone"></i>
-                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                            <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
                         </div>
                     </div>
                     
                     <div class="form-group">
-                        <label for="role">I am a</label>
-                        <div class="input-group">
-                            <i class="fas fa-briefcase"></i>
-                            <select id="role" name="role" required>
-                                <option value="">Select your role</option>
-                                <option value="student">Student</option>
-                                <option value="professional">Working Professional</option>
-                                <option value="entrepreneur">Entrepreneur</option>
-                                <option value="hr">HR Manager</option>
-                                <option value="manager">Manager/Executive</option>
-                                <option value="job-seeker">Job Seeker</option>
-                                <option value="other">Other</option>
-                            </select>
+                        <label for="company">Company/Organization</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-building"></i>
+                            <input type="text" id="company" name="company" placeholder="Company name (optional)">
                         </div>
                     </div>
                     
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <div class="input-group">
+                        <div class="input-wrapper">
                             <i class="fas fa-lock"></i>
-                            <input type="password" id="password" name="password" placeholder="Create a password" required>
-                            <button type="button" class="password-toggle" onclick="togglePassword('password')">
-                                <i class="fas fa-eye" id="passwordToggleIcon"></i>
+                            <input type="password" id="password" name="password" required placeholder="Create a password">
+                            <button type="button" class="password-toggle" id="togglePassword">
+                                <i class="fas fa-eye"></i>
                             </button>
                         </div>
-                        <div class="password-strength">
+                        <div class="password-strength" id="passwordStrength">
                             <div class="strength-bar">
-                                <div class="strength-fill" id="strengthFill"></div>
+                                <div class="strength-fill"></div>
                             </div>
-                            <span class="strength-text" id="strengthText">Password strength</span>
+                            <span class="strength-text">Password strength</span>
                         </div>
                     </div>
                     
                     <div class="form-group">
                         <label for="confirmPassword">Confirm Password</label>
-                        <div class="input-group">
+                        <div class="input-wrapper">
                             <i class="fas fa-lock"></i>
-                            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
-                            <button type="button" class="password-toggle" onclick="togglePassword('confirmPassword')">
-                                <i class="fas fa-eye" id="confirmPasswordToggleIcon"></i>
-                            </button>
+                            <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirm your password">
                         </div>
                     </div>
                     
-                    <div class="form-group">
-                        <label class="checkbox-container">
+                    <div class="form-options">
+                        <label class="checkbox-wrapper">
                             <input type="checkbox" id="terms" name="terms" required>
                             <span class="checkmark"></span>
-                            I agree to the <a href="#" class="link">Terms of Service</a> and <a href="#" class="link">Privacy Policy</a>
+                            I agree to the <a href="#terms">Terms of Service</a> and <a href="#privacy">Privacy Policy</a>
                         </label>
                     </div>
                     
-                    <div class="form-group">
-                        <label class="checkbox-container">
+                    <div class="form-options">
+                        <label class="checkbox-wrapper">
                             <input type="checkbox" id="newsletter" name="newsletter">
                             <span class="checkmark"></span>
-                            Subscribe to our newsletter for course updates and special offers
+                            Subscribe to our newsletter for training updates and insights
                         </label>
                     </div>
                     
                     <button type="submit" class="btn-auth">Create Account</button>
                     
                     <div class="auth-divider">
-                        <span>or</span>
+                        <span>Or sign up with</span>
                     </div>
                     
-                    <div class="social-login">
+                    <div class="social-auth">
                         <button type="button" class="btn-social google">
                             <i class="fab fa-google"></i>
                             Sign up with Google
@@ -165,40 +133,21 @@
                             Sign up with Microsoft
                         </button>
                     </div>
+                    
+                    <div class="auth-footer">
+                        <p>Already have an account? <a href="login.html">Sign in here</a></p>
+                    </div>
                 </form>
                 
-                <div class="auth-footer">
-                    <p>Already have an account? <a href="login.html">Sign in</a></p>
-                </div>
-            </div>
-            
-            <div class="auth-image">
-                <div class="auth-graphic">
-                    <i class="fas fa-rocket"></i>
-                    <h3>Unlock Your Potential</h3>
-                    <p>Join thousands of learners who have advanced their careers with our comprehensive training programs</p>
-                    <div class="auth-features">
-                        <div class="feature-item">
-                            <i class="fas fa-certificate"></i>
-                            <span>Accredited certifications</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-users"></i>
-                            <span>Expert instructors</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-clock"></i>
-                            <span>Flexible scheduling</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-trophy"></i>
-                            <span>Career advancement</span>
-                        </div>
-                    </div>
+                <div class="auth-links">
+                    <a href="index.html">
+                        <i class="fas fa-arrow-left"></i>
+                        Back to Home
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <script src="auth.js"></script>
 </body>
