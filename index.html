@@ -44,6 +44,7 @@
                         <a href="#accreditations">Our Accreditations & Certifications</a>
                         <a href="#solutions">Our Solutions</a>
                         <a href="courses.html">Our Courses & Qualifications</a>
+                        <a href="courses.html#qualifications">QTCO Qualifications</a>
                         <a href="#faq">Frequently Asked Questions</a>
                     </div>
                 </li>
@@ -73,7 +74,7 @@
                     <a href="public-schedule.html" class="nav-link">Public Schedule</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#contact" class="nav-link">Get in Touch</a>
+                    <a href="contact.html" class="nav-link">Get in Touch</a>
                 </li>
             </ul>
             <div class="hamburger">
@@ -126,16 +127,7 @@
                 <div class="hero-right">
                     <div class="hero-image-wrapper">
                         <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Professional training session" class="hero-image">
-                        <div class="stats-overlay">
-                                                    <div class="stat-card">
-                            <div class="stat-number">20+</div>
-                            <div class="stat-label">Years Experience</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">BEE Level 2</div>
-                            <div class="stat-label">Recognition</div>
-                        </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -206,7 +198,7 @@
                                 <li><i class="fas fa-check"></i> Custom Learning Solutions</li>
                                 <li><i class="fas fa-check"></i> Bulk Enrollment Discounts</li>
                             </ul>
-                            <a href="#contact" class="selection-btn">Get Started</a>
+                            <a href="contact.html" class="selection-btn">Get Started</a>
                         </div>
                     </div>
                 </div>
@@ -811,21 +803,20 @@
         </div>
     </footer>
 
-    <!-- Chat Widget -->
+    <!-- Chat Widget - Buttonizer Style -->
     <div id="chatWidget" class="chat-widget">
         <div id="chatButton" class="chat-button">
             <i class="fas fa-comments"></i>
-            <span class="chat-text">Chat with us</span>
             <span class="chat-notification" id="chatNotification">1</span>
         </div>
         
         <div id="chatWindow" class="chat-window">
             <div class="chat-header">
-                <div class="chat-agent">
-                    <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Support Agent" class="agent-avatar">
-                    <div class="agent-info">
-                        <h4>Training Support</h4>
-                        <span class="status-online">Online</span>
+                <div class="chat-header-info">
+                    <i class="fas fa-user-circle"></i>
+                    <div>
+                        <h4>Agent 1</h4>
+                        <span>Replies within 1 day</span>
                     </div>
                 </div>
                 <button id="chatClose" class="chat-close">
@@ -834,31 +825,32 @@
             </div>
             
             <div class="chat-messages" id="chatMessages">
-                <div class="message agent-message">
+                <div class="date-separator">
+                    <span>Today</span>
+                </div>
+                <div class="message bot-message">
                     <div class="message-content">
-                        <p>Hi! 👋 Welcome to Guardian Angel Studios!</p>
-                        <p>Click on any option below or type your message to connect with our training consultants via WhatsApp.</p>
-                        <span class="message-time">Just now</span>
+                        <p>Hey! 👋 How can we help you?</p>
+                        <span class="message-time">17:32</span>
                     </div>
                 </div>
             </div>
             
-            <div class="chat-input-container">
-                <div class="quick-replies">
-                    <button class="quick-reply" data-message="I need course information">Course Info</button>
-                    <button class="quick-reply" data-message="I want to apply for learnership">Learnership</button>
-                    <button class="quick-reply" data-message="I need pricing details">Pricing</button>
-                </div>
-                <div class="chat-input-wrapper">
-                    <input type="text" id="chatInput" placeholder="Type your message to send via WhatsApp..." maxlength="500">
-                    <button id="chatSend" class="chat-send" title="Send via WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                    </button>
-                </div>
-                <div class="chat-footer">
-                    <i class="fab fa-whatsapp"></i>
-                    <span>Connect via WhatsApp Business</span>
-                </div>
+            <div class="chat-quick-replies">
+                <button class="quick-reply" data-message="I need information about courses">Course Information</button>
+                <button class="quick-reply" data-message="I want to know about corporate training">Corporate Training</button>
+                <button class="quick-reply" data-message="I need help with enrollment">Enrollment Help</button>
+            </div>
+            
+            <div class="chat-input">
+                <input type="text" id="chatInput" placeholder="Enter your message">
+                <button id="chatSend">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+            
+            <div class="chat-powered">
+                Powered by <a href="https://buttonizer.io/" target="_blank">Buttonizer</a>
             </div>
         </div>
     </div>
