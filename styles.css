@@ -6,12 +6,14 @@
 }
 
 :root {
-    /* Color Scheme - Light Green, Dark Blue, White */
-    --light-green: #90EE90;
-    --dark-blue: #1e3a8a;
+    /* Brand Color Scheme - Navy Blue & Lime Green */
+    --primary-blue: #0c2c68;
+    --primary-lime: #c7fa04;
+    --dark-blue: #0c2c68;
+    --light-green: #c7fa04;
     --white: #ffffff;
-    --light-green-hover: #7FDD7F;
-    --dark-blue-light: #3b82f6;
+    --primary-lime-hover: #b3e103;
+    --primary-blue-light: #1a4082;
     --gray-100: #f3f4f6;
     --gray-200: #e5e7eb;
     --gray-300: #d1d5db;
@@ -77,8 +79,8 @@ body {
 
 /* Buttons */
 .btn-primary {
-    background-color: var(--light-green);
-    color: var(--dark-blue);
+    background-color: var(--primary-lime);
+    color: var(--primary-blue);
     padding: 12px 24px;
     border: none;
     border-radius: 4px;
@@ -100,7 +102,7 @@ body {
 
 .btn-secondary {
     background-color: transparent;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     padding: 12px 24px;
     border: 2px solid var(--dark-blue);
     border-radius: 4px;
@@ -115,7 +117,7 @@ body {
 }
 
 .btn-secondary:hover {
-    background-color: var(--dark-blue);
+    background-color: var(--primary-blue);
     color: var(--white);
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
@@ -133,12 +135,12 @@ body {
 
 .btn-login:hover {
     background-color: var(--gray-100);
-    color: var(--dark-blue);
+    color: var(--primary-blue);
 }
 
 .btn-signup {
-    background-color: var(--light-green);
-    color: var(--dark-blue);
+    background-color: var(--primary-lime);
+    color: var(--primary-blue);
     text-decoration: none;
     padding: 8px 16px;
     border-radius: 4px;
@@ -156,7 +158,7 @@ body {
 
 /* Top Bar */
 .top-bar {
-    background-color: var(--dark-blue);
+    background-color: var(--primary-blue);
     color: var(--white);
     padding: 8px 0;
     font-size: 12px;
@@ -232,7 +234,7 @@ body {
 }
 
 .nav-logo h2 {
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     font-size: 24px;
     font-weight: 700;
     margin: 0;
@@ -273,12 +275,12 @@ body {
 }
 
 .nav-link:hover {
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     background-color: var(--gray-100);
 }
 
 .nav-link.active {
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     background-color: var(--gray-200);
     font-weight: 600;
 }
@@ -315,7 +317,7 @@ body {
 
 .dropdown-content a:hover {
     background-color: var(--gray-100);
-    color: var(--dark-blue);
+    color: var(--primary-blue);
 }
 
 .nav-auth {
@@ -335,14 +337,14 @@ body {
 .bar {
     width: 25px;
     height: 3px;
-    background-color: var(--dark-blue);
+    background-color: var(--primary-blue);
     transition: 0.3s;
     border-radius: var(--radius-full);
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--dark-blue) 0%, #1e3a8a 100%);
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-light) 100%);
     padding: 120px 0 80px;
     margin-top: 106px;
     position: relative;
@@ -357,7 +359,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(ellipse at 20% 50%, rgba(144, 238, 144, 0.15) 0%, transparent 70%);
+    background: radial-gradient(ellipse at 20% 50%, rgba(199, 250, 4, 0.15) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -365,13 +367,13 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: rgba(144, 238, 144, 0.25);
-    border: 1px solid rgba(144, 238, 144, 0.5);
+    background: rgba(199, 250, 4, 0.25);
+    border: 1px solid rgba(199, 250, 4, 0.5);
     padding: 12px 24px;
     border-radius: 30px;
     font-size: 14px;
     font-weight: 600;
-    color: var(--light-green) !important;
+    color: var(--primary-lime) !important;
     margin-bottom: 30px;
     backdrop-filter: blur(15px);
     text-shadow: none;
@@ -392,8 +394,8 @@ body {
 }
 
 .hero h1 .highlight {
-    color: var(--light-green);
-    text-shadow: 0 0 20px rgba(144, 238, 144, 0.3);
+    color: var(--primary-lime);
+    text-shadow: 0 0 20px rgba(199, 250, 4, 0.3);
 }
 
 .hero p {
@@ -425,8 +427,8 @@ body {
 .feature-icon {
     width: 24px;
     height: 24px;
-    background: var(--light-green);
-    color: var(--dark-blue);
+    background: var(--primary-lime);
+    color: var(--primary-blue);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -511,7 +513,7 @@ body {
 }
 
 .event-date {
-    background-color: var(--dark-blue);
+    background-color: var(--primary-blue);
     color: var(--white);
     padding: 16px;
     border-radius: 8px;
@@ -549,7 +551,7 @@ body {
 .event-content h3 {
     font-size: 20px;
     font-weight: 600;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     margin-bottom: 12px;
     line-height: 1.3;
 }
@@ -577,7 +579,7 @@ body {
 }
 
 .event-meta i {
-    color: var(--light-green);
+    color: var(--primary-lime);
     width: 14px;
 }
 
@@ -648,7 +650,7 @@ body {
 .category-content h3 {
     font-size: var(--font-size-4xl);
     font-weight: 700;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     line-height: 1.1;
     margin-bottom: var(--spacing-4);
     text-transform: uppercase;
@@ -667,8 +669,8 @@ body {
     display: inline-flex;
     align-items: center;
     gap: var(--spacing-2);
-    background-color: var(--light-green);
-    color: var(--dark-blue);
+    background-color: var(--primary-lime);
+    color: var(--primary-blue);
     padding: var(--spacing-3) var(--spacing-6);
     border-radius: var(--radius-full);
     text-decoration: none;
@@ -755,9 +757,9 @@ body {
 }
 
 .carousel-btn:hover {
-    background-color: var(--light-green);
+    background-color: var(--primary-lime);
     border-color: var(--light-green);
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     transform: translateY(-50%) scale(1.1);
     box-shadow: var(--shadow-lg);
 }
@@ -777,7 +779,7 @@ body {
 }
 
 .carousel-btn:hover i {
-    color: var(--dark-blue);
+    color: var(--primary-blue);
 }
 
 .carousel-indicators {
@@ -797,12 +799,12 @@ body {
 }
 
 .indicator.active {
-    background-color: var(--light-green);
+    background-color: var(--primary-lime);
     transform: scale(1.2);
 }
 
 .indicator:hover {
-    background-color: var(--dark-blue);
+    background-color: var(--primary-blue);
 }
 
 /* Hero Layout Fix */
@@ -878,7 +880,7 @@ body {
     display: block;
     font-size: 28px;
     font-weight: 900;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     line-height: 1;
     margin-bottom: 6px;
 }
@@ -894,7 +896,7 @@ body {
 .hero-content h1 {
     font-size: var(--font-size-5xl);
     font-weight: 700;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     margin-bottom: var(--spacing-6);
     line-height: 1.2;
 }
@@ -921,19 +923,19 @@ body {
     padding: 18px 36px;
     font-size: 16px;
     font-weight: 700;
-    background: var(--light-green);
-    color: var(--dark-blue);
+    background: var(--primary-lime);
+    color: var(--primary-blue);
     border: none;
     border-radius: 10px;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 6px 20px rgba(144, 238, 144, 0.4);
+    box-shadow: 0 6px 20px rgba(199, 250, 4, 0.4);
 }
 
 .hero-buttons .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(144, 238, 144, 0.5);
-    background: #7FDD7F;
+    box-shadow: 0 10px 30px rgba(199, 250, 4, 0.5);
+    background: var(--primary-lime-hover);
 }
 
 .hero-buttons .btn-primary .arrow {
@@ -1032,7 +1034,7 @@ body {
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 16px;
-    color: var(--light-green);
+    color: var(--primary-lime);
 }
 
 .learnership-text p {
@@ -1042,8 +1044,8 @@ body {
 }
 
 .btn-apply {
-    background-color: var(--light-green);
-    color: var(--dark-blue);
+    background-color: var(--primary-lime);
+    color: var(--primary-blue);
     padding: 16px 32px;
     border: none;
     border-radius: 6px;
@@ -1060,7 +1062,7 @@ body {
 .btn-apply:hover {
     background-color: var(--light-green-hover);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(144, 238, 144, 0.4);
+    box-shadow: 0 6px 20px rgba(199, 250, 4, 0.4);
 }
 
 /* Accreditations Section */
@@ -1103,7 +1105,7 @@ body {
 
 .accreditation-logo i {
     font-size: 32px;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
 }
 
 .accreditation-item span {
@@ -1142,7 +1144,7 @@ body {
 .download-icon {
     width: 60px;
     height: 60px;
-    background-color: var(--dark-blue);
+    background-color: var(--primary-blue);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1158,7 +1160,7 @@ body {
 .download-card h3 {
     font-size: 20px;
     font-weight: 600;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     margin-bottom: 12px;
 }
 
@@ -1171,7 +1173,7 @@ body {
 
 .btn-download {
     background-color: transparent;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     border: 2px solid var(--dark-blue);
     padding: 12px 24px;
     border-radius: 4px;
@@ -1182,7 +1184,7 @@ body {
 }
 
 .btn-download:hover {
-    background-color: var(--dark-blue);
+    background-color: var(--primary-blue);
     color: var(--white);
 }
 
@@ -1202,7 +1204,7 @@ body {
 .newsletter-text h2 {
     font-size: 28px;
     font-weight: 700;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     margin-bottom: 8px;
 }
 
@@ -1233,7 +1235,7 @@ body {
 }
 
 .btn-subscribe {
-    background-color: var(--dark-blue);
+    background-color: var(--primary-blue);
     color: var(--white);
     border: none;
     padding: 16px 24px;
@@ -1279,7 +1281,7 @@ body {
 .course-icon {
     width: 60px;
     height: 60px;
-    background-color: var(--light-green);
+    background-color: var(--primary-lime);
     border-radius: var(--radius-xl);
     display: flex;
     justify-content: center;
@@ -1289,13 +1291,13 @@ body {
 
 .course-icon i {
     font-size: var(--font-size-xl);
-    color: var(--dark-blue);
+    color: var(--primary-blue);
 }
 
 .course-card h3 {
     font-size: var(--font-size-lg);
     font-weight: 600;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     margin-bottom: var(--spacing-3);
 }
 
@@ -1306,14 +1308,14 @@ body {
 }
 
 .course-link {
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
 .course-link:hover {
-    color: var(--light-green);
+    color: var(--primary-lime);
 }
 
 /* Training Methods Section */
@@ -1369,7 +1371,7 @@ body {
 .contact-info h2 {
     font-size: var(--font-size-3xl);
     font-weight: 700;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     margin-bottom: var(--spacing-4);
 }
 
@@ -1393,14 +1395,14 @@ body {
 
 .contact-item i {
     font-size: var(--font-size-xl);
-    color: var(--light-green);
+    color: var(--primary-lime);
     margin-top: var(--spacing-1);
 }
 
 .contact-item h4 {
     font-size: var(--font-size-base);
     font-weight: 600;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     margin-bottom: var(--spacing-1);
 }
 
@@ -1485,13 +1487,13 @@ body {
 
 .client-logo span {
     font-weight: 600;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     font-size: 14px;
 }
 
 /* Footer */
 .footer {
-    background-color: var(--dark-blue);
+    background-color: var(--primary-blue);
     color: var(--white);
     padding: 50px 0 20px;
 }
@@ -1925,7 +1927,7 @@ body {
 .header-content h1 {
     font-size: 48px;
     font-weight: 700;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     margin-bottom: 16px;
     line-height: 1.2;
 }
@@ -1949,7 +1951,7 @@ body {
 }
 
 .breadcrumb a {
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     text-decoration: none;
 }
 
@@ -1987,8 +1989,8 @@ body {
 
 .filter-btn.active,
 .filter-btn:hover {
-    background-color: var(--light-green);
-    color: var(--dark-blue);
+    background-color: var(--primary-lime);
+    color: var(--primary-blue);
     border-color: var(--light-green);
 }
 
@@ -2013,7 +2015,7 @@ body {
 
 .view-btn.active,
 .view-btn:hover {
-    background-color: var(--dark-blue);
+    background-color: var(--primary-blue);
     color: var(--white);
     border-color: var(--dark-blue);
 }
@@ -2052,7 +2054,7 @@ body {
 }
 
 .date-block {
-    background-color: var(--dark-blue);
+    background-color: var(--primary-blue);
     color: var(--white);
     padding: 16px;
     border-radius: 8px;
@@ -2082,8 +2084,8 @@ body {
 }
 
 .time-block {
-    background-color: var(--light-green);
-    color: var(--dark-blue);
+    background-color: var(--primary-lime);
+    color: var(--primary-blue);
     padding: 12px;
     border-radius: 6px;
     text-align: center;
@@ -2114,7 +2116,7 @@ body {
 
 .session-category {
     background-color: var(--gray-200);
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     padding: 4px 12px;
     border-radius: 12px;
     font-size: 12px;
@@ -2122,8 +2124,8 @@ body {
 }
 
 .session-level {
-    background-color: var(--light-green);
-    color: var(--dark-blue);
+    background-color: var(--primary-lime);
+    color: var(--primary-blue);
     padding: 4px 12px;
     border-radius: 12px;
     font-size: 12px;
@@ -2131,7 +2133,7 @@ body {
 }
 
 .session-mode {
-    background-color: var(--dark-blue);
+    background-color: var(--primary-blue);
     color: var(--white);
     padding: 4px 12px;
     border-radius: 12px;
@@ -2142,7 +2144,7 @@ body {
 .session-content h3 {
     font-size: 24px;
     font-weight: 600;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     margin-bottom: 12px;
     line-height: 1.3;
 }
@@ -2169,7 +2171,7 @@ body {
 }
 
 .detail-item i {
-    color: var(--light-green);
+    color: var(--primary-lime);
     width: 16px;
 }
 
@@ -2179,8 +2181,8 @@ body {
 }
 
 .btn-register {
-    background-color: var(--light-green);
-    color: var(--dark-blue);
+    background-color: var(--primary-lime);
+    color: var(--primary-blue);
     border: none;
     padding: 12px 24px;
     border-radius: 6px;
@@ -2199,7 +2201,7 @@ body {
 
 .btn-info {
     background-color: transparent;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     border: 1px solid var(--dark-blue);
     padding: 12px 24px;
     border-radius: 6px;
@@ -2210,7 +2212,7 @@ body {
 }
 
 .btn-info:hover {
-    background-color: var(--dark-blue);
+    background-color: var(--primary-blue);
     color: var(--white);
 }
 
@@ -2223,7 +2225,7 @@ body {
 .cta-content h2 {
     font-size: 32px;
     font-weight: 700;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     margin-bottom: 16px;
 }
 
@@ -2331,8 +2333,8 @@ body {
     position: absolute;
     top: 16px;
     left: 16px;
-    background-color: var(--light-green);
-    color: var(--dark-blue);
+    background-color: var(--primary-lime);
+    color: var(--primary-blue);
     padding: 6px 12px;
     border-radius: 20px;
     font-size: 12px;
@@ -2348,7 +2350,7 @@ body {
 .article-content h3 {
     font-size: 24px;
     font-weight: 700;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     margin-bottom: 16px;
     line-height: 1.3;
 }
@@ -2368,7 +2370,7 @@ body {
 }
 
 .read-more {
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     text-decoration: none;
     font-weight: 600;
     display: inline-flex;
@@ -2411,7 +2413,7 @@ body {
 .category-icon {
     width: 80px;
     height: 80px;
-    background-color: var(--light-green);
+    background-color: var(--primary-lime);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -2422,11 +2424,11 @@ body {
 
 .category-icon i {
     font-size: 32px;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
 }
 
 .category-card:hover .category-icon {
-    background-color: var(--dark-blue);
+    background-color: var(--primary-blue);
 }
 
 .category-card:hover .category-icon i {
@@ -2436,7 +2438,7 @@ body {
 .category-card h3 {
     font-size: 20px;
     font-weight: 600;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     margin-bottom: 12px;
 }
 
@@ -2501,8 +2503,8 @@ body {
 }
 
 .article-tag {
-    background-color: var(--light-green);
-    color: var(--dark-blue);
+    background-color: var(--primary-lime);
+    color: var(--primary-blue);
     padding: 4px 10px;
     border-radius: 12px;
     font-size: 11px;
@@ -2514,7 +2516,7 @@ body {
 .article-info h4 {
     font-size: 18px;
     font-weight: 600;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     margin: 12px 0;
     line-height: 1.4;
 }
@@ -2538,7 +2540,7 @@ body {
 }
 
 .read-link {
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
@@ -2569,7 +2571,7 @@ body {
 .overview-text h2 {
     font-size: 36px;
     font-weight: 700;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     margin-bottom: 24px;
 }
 
@@ -2614,7 +2616,7 @@ body {
 .mvv-icon {
     width: 80px;
     height: 80px;
-    background-color: var(--light-green);
+    background-color: var(--primary-lime);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -2624,13 +2626,13 @@ body {
 
 .mvv-icon i {
     font-size: 32px;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
 }
 
 .mvv-card h3 {
     font-size: 24px;
     font-weight: 700;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     margin-bottom: 16px;
 }
 
@@ -2658,7 +2660,7 @@ body {
     content: '✓';
     position: absolute;
     left: 0;
-    color: var(--light-green);
+    color: var(--primary-lime);
     font-weight: bold;
 }
 
@@ -2706,12 +2708,12 @@ body {
 .member-info h4 {
     font-size: 24px;
     font-weight: 700;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     margin-bottom: 8px;
 }
 
 .position {
-    color: var(--light-green);
+    color: var(--primary-lime);
     font-weight: 600;
     font-size: 14px;
     text-transform: uppercase;
@@ -2745,8 +2747,8 @@ body {
 }
 
 .member-social a:hover {
-    background-color: var(--light-green);
-    color: var(--dark-blue);
+    background-color: var(--primary-lime);
+    color: var(--primary-blue);
 }
 
 .our-approach {
@@ -2764,7 +2766,7 @@ body {
 .approach-text h2 {
     font-size: 36px;
     font-weight: 700;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     margin-bottom: 24px;
 }
 
@@ -2790,7 +2792,7 @@ body {
 .feature-icon {
     width: 50px;
     height: 50px;
-    background-color: var(--light-green);
+    background-color: var(--primary-lime);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -2800,13 +2802,13 @@ body {
 
 .feature-icon i {
     font-size: 20px;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
 }
 
 .feature-content h4 {
     font-size: 18px;
     font-weight: 600;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     margin-bottom: 8px;
 }
 
@@ -2823,7 +2825,7 @@ body {
 
 .company-stats {
     padding: 80px 0;
-    background-color: var(--dark-blue);
+    background-color: var(--primary-blue);
     color: var(--white);
 }
 
@@ -2840,7 +2842,7 @@ body {
 .stat-number {
     font-size: 48px;
     font-weight: 700;
-    color: var(--light-green);
+    color: var(--primary-lime);
     margin-bottom: 8px;
     line-height: 1;
 }
@@ -2881,7 +2883,7 @@ body {
 .accreditation-card .accreditation-logo {
     width: 80px;
     height: 80px;
-    background-color: var(--light-green);
+    background-color: var(--primary-lime);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -2891,13 +2893,13 @@ body {
 
 .accreditation-card .accreditation-logo i {
     font-size: 32px;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
 }
 
 .accreditation-card h4 {
     font-size: 20px;
     font-weight: 600;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     margin-bottom: 12px;
 }
 
@@ -2915,7 +2917,7 @@ body {
 .about-cta .cta-content h2 {
     font-size: 36px;
     font-weight: 700;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     margin-bottom: 16px;
 }
 
@@ -2977,7 +2979,7 @@ body {
 .resource-content h3 {
     font-size: 24px;
     font-weight: 600;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     margin-bottom: 16px;
 }
 
@@ -3007,12 +3009,12 @@ body {
 }
 
 .resource-features i {
-    color: var(--light-green);
+    color: var(--primary-lime);
 }
 
 .btn-resource {
-    background-color: var(--light-green);
-    color: var(--dark-blue);
+    background-color: var(--primary-lime);
+    color: var(--primary-blue);
     padding: 12px 24px;
     border: none;
     border-radius: 6px;
@@ -3073,12 +3075,12 @@ body {
 .trainer-info h4 {
     font-size: 24px;
     font-weight: 700;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     margin-bottom: 8px;
 }
 
 .specialization {
-    color: var(--light-green);
+    color: var(--primary-lime);
     font-weight: 600;
     font-size: 14px;
     text-transform: uppercase;
@@ -3110,7 +3112,7 @@ body {
 }
 
 .btn-contact-trainer {
-    background-color: var(--dark-blue);
+    background-color: var(--primary-blue);
     color: var(--white);
     padding: 12px 24px;
     border: none;
@@ -3160,7 +3162,7 @@ body {
 .library-icon {
     width: 50px;
     height: 50px;
-    background-color: var(--light-green);
+    background-color: var(--primary-lime);
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -3170,13 +3172,13 @@ body {
 
 .library-icon i {
     font-size: 20px;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
 }
 
 .library-content h4 {
     font-size: 18px;
     font-weight: 600;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     margin-bottom: 8px;
 }
 
@@ -3225,7 +3227,7 @@ body {
 .support-icon {
     width: 80px;
     height: 80px;
-    background-color: var(--light-green);
+    background-color: var(--primary-lime);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -3235,13 +3237,13 @@ body {
 
 .support-icon i {
     font-size: 32px;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
 }
 
 .support-card h3 {
     font-size: 20px;
     font-weight: 600;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     margin-bottom: 12px;
 }
 
@@ -3252,7 +3254,7 @@ body {
 }
 
 .support-link {
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
