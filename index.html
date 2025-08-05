@@ -111,7 +111,7 @@
                         </div>
                     </div>
 
-                    <div class="hero-buttons">
+                <div class="hero-buttons">
                         <a href="courses.html" class="btn-primary">
                             <span>Start Learning</span>
                             <span class="arrow">→</span>
@@ -180,6 +180,63 @@
         </div>
     </section>
 
+    <!-- Business/Learner Selection Section -->
+    <section class="user-selection">
+        <div class="container">
+            <div class="section-header">
+                <h2>Choose Your Path</h2>
+                <p>Select the option that best describes you to get personalized training solutions</p>
+            </div>
+            <div class="selection-grid">
+                <div class="selection-card business-card">
+                    <div class="card-image">
+                        <img src="images/business.png" alt="Professional business meeting with diverse team in modern boardroom">
+                    </div>
+                    <div class="card-background">
+                        <div class="card-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>BUSINESS</h3>
+                            <p>Are you a business?</p>
+                            <p class="card-description">Corporate training solutions, team development programs, and customized learning paths for your organization.</p>
+                            <ul class="card-features">
+                                <li><i class="fas fa-check"></i> Corporate Training Programs</li>
+                                <li><i class="fas fa-check"></i> Team Development</li>
+                                <li><i class="fas fa-check"></i> Custom Learning Solutions</li>
+                                <li><i class="fas fa-check"></i> Bulk Enrollment Discounts</li>
+                            </ul>
+                            <a href="#contact" class="selection-btn">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="selection-card learner-card">
+                    <div class="card-image">
+                        <img src="images/learner.jpg" alt="Individual student studying alone with books and laptop - focused learning">
+                    </div>
+                    <div class="card-background">
+                        <div class="card-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>LEARNER</h3>
+                            <p>Are you an individual learner?</p>
+                            <p class="card-description">Personal development courses, professional certifications, and career advancement programs tailored for individuals.</p>
+                            <ul class="card-features">
+                                <li><i class="fas fa-check"></i> Individual Course Access</li>
+                                <li><i class="fas fa-check"></i> Professional Certifications</li>
+                                <li><i class="fas fa-check"></i> Flexible Learning Schedule</li>
+                                <li><i class="fas fa-check"></i> Career Support Services</li>
+                            </ul>
+                            <a href="courses.html" class="selection-btn">Explore Courses</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Events and Webinars Section -->
     <section class="events-webinars">
         <div class="container">
@@ -190,7 +247,7 @@
             <div class="events-grid">
                 <div class="event-card">
                     <div class="event-image">
-                        <img src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Black professionals in leadership meeting">
+                        <img src="images/black.jpg" alt="Black professionals in leadership meeting">
                     </div>
                     <div class="event-date">
                         <span class="day">15</span>
@@ -613,22 +670,29 @@
                         <div class="form-group">
                             <select id="role" name="role" required>
                                 <option value="">Select Your Role</option>
-                                <option value="student">Student</option>
-                                <option value="professional">Working Professional</option>
+                                <option value="business-owner">Business Owner</option>
                                 <option value="hr">HR Manager</option>
-                                <option value="manager">Manager</option>
+                                <option value="training-manager">Training Manager</option>
+                                <option value="manager">Manager/Supervisor</option>
+                                <option value="student">Individual Learner</option>
+                                <option value="professional">Working Professional</option>
                                 <option value="other">Other</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <select id="program" name="program" required>
-                                <option value="">Programme Portfolio</option>
+                                <option value="">Select Service Type</option>
+                                <option value="corporate-training">Corporate Training Programs</option>
+                                <option value="team-development">Team Development</option>
+                                <option value="custom-solutions">Custom Learning Solutions</option>
+                                <option value="bulk-enrollment">Bulk Enrollment Programs</option>
                                 <option value="business-admin">Business Administration</option>
                                 <option value="it">Information Technology</option>
                                 <option value="finance">Finance & Accounting</option>
                                 <option value="project-mgmt">Project Management</option>
                                 <option value="customer-service">Customer Service</option>
                                 <option value="leadership">Management & Leadership</option>
+                                <option value="consultation">Business Consultation</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -682,8 +746,7 @@
                         <li><a href="#newsletter">Subscribe To Us</a></li>
                         <li><a href="#feedback">Give Us Feedback</a></li>
                         <li><a href="resources.html">Experts Portal</a></li>
-                        <li><a href="#staff">Kobus Visagie</a></li>
-                        <li><a href="#staff">Corné Krige</a></li>
+
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -728,7 +791,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>Guardian Angel Studios is a multi-accredited training provider. BEE Level 2 | Reg No. 2016/514875/07 | Accreditation No. 12526</p>
+                <p>Guardian Angel Studios is a multi-accredited training provider. BEE Level 2 | Professional Training Excellence</p>
                 <div class="footer-bottom-links">
                     <span>&copy; 2025, Guardian Angel Studios. All Rights Reserved</span>
                     <div class="footer-legal">
@@ -774,7 +837,7 @@
                 <div class="message agent-message">
                     <div class="message-content">
                         <p>Hi! 👋 Welcome to Guardian Angel Studios!</p>
-                        <p>How can I help you with your training needs today?</p>
+                        <p>Click on any option below or type your message to connect with our training consultants via WhatsApp.</p>
                         <span class="message-time">Just now</span>
                     </div>
                 </div>
@@ -787,13 +850,14 @@
                     <button class="quick-reply" data-message="I need pricing details">Pricing</button>
                 </div>
                 <div class="chat-input-wrapper">
-                    <input type="text" id="chatInput" placeholder="Type your message..." maxlength="500">
-                    <button id="chatSend" class="chat-send">
-                        <i class="fas fa-paper-plane"></i>
+                    <input type="text" id="chatInput" placeholder="Type your message to send via WhatsApp..." maxlength="500">
+                    <button id="chatSend" class="chat-send" title="Send via WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
                     </button>
                 </div>
                 <div class="chat-footer">
-                    <span>Powered by Guardian Angel Studios</span>
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Connect via WhatsApp Business</span>
                 </div>
             </div>
         </div>

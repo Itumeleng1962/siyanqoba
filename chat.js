@@ -1,8 +1,10 @@
-// Chat Widget Functionality
+// WhatsApp Chat Widget Functionality
 class ChatWidget {
     constructor() {
         this.isOpen = false;
         this.messageCount = 0;
+        // Replace with your business WhatsApp number (include country code, no + or spaces)
+        this.whatsappNumber = "27123456789"; // Replace with your actual WhatsApp Business number
         this.init();
     }
 
@@ -33,12 +35,11 @@ class ChatWidget {
             }
         });
 
-        // Quick replies
+        // Quick replies - redirect to WhatsApp
         this.quickReplies.forEach(button => {
             button.addEventListener('click', (e) => {
                 const message = e.target.getAttribute('data-message');
-                this.sendUserMessage(message);
-                this.handleQuickReply(message);
+                this.redirectToWhatsApp(message);
             });
         });
 
@@ -85,13 +86,8 @@ class ChatWidget {
     sendMessage() {
         const message = this.chatInput.value.trim();
         if (message) {
-            this.sendUserMessage(message);
-            this.chatInput.value = '';
-            
-            // Simulate agent response
-            setTimeout(() => {
-                this.sendAgentResponse(message);
-            }, 1000 + Math.random() * 2000);
+            // Redirect to WhatsApp with the user's message
+            this.redirectToWhatsApp(message);
         }
     }
 
@@ -165,15 +161,40 @@ class ChatWidget {
         return responseArray[Math.floor(Math.random() * responseArray.length)];
     }
 
-    handleQuickReply(message) {
-        // Hide quick replies after use
-        const quickRepliesContainer = document.querySelector('.quick-replies');
-        quickRepliesContainer.style.display = 'none';
+    redirectToWhatsApp(message) {
+        // Create WhatsApp URL with pre-filled message
+        const encodedMessage = encodeURIComponent(`Hi! I'm interested in Guardian Angel Studios training services. ${message}`);
+        const whatsappUrl = `https://wa.me/${this.whatsappNumber}?text=${encodedMessage}`;
         
-        // Generate appropriate response
+        // Open WhatsApp in a new tab/window
+        window.open(whatsappUrl, '_blank');
+        
+        // Close the chat widget
+        this.closeChat();
+        
+        // Show confirmation message
+        this.showWhatsAppRedirectMessage();
+    }
+
+    showWhatsAppRedirectMessage() {
+        // Create a temporary notification
+        const notification = document.createElement('div');
+        notification.className = 'whatsapp-redirect-notification';
+        notification.innerHTML = `
+            <div class="notification-content">
+                <i class="fab fa-whatsapp"></i>
+                <span>Redirecting to WhatsApp...</span>
+            </div>
+        `;
+        
+        document.body.appendChild(notification);
+        
+        // Remove notification after 3 seconds
         setTimeout(() => {
-            this.sendAgentResponse(message);
-        }, 800);
+            if (notification.parentNode) {
+                notification.parentNode.removeChild(notification);
+            }
+        }, 3000);
     }
 
     scrollToBottom() {

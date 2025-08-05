@@ -274,6 +274,10 @@
     box-shadow: 0 0 0 3px rgba(203, 251, 5, 0.1);
 }
 
+#chatInput::placeholder {
+    color: var(--gray-500);
+}
+
 .chat-send {
     background: var(--electric-lime);
     color: var(--blue-zodiac);
@@ -296,11 +300,56 @@
 .chat-footer {
     text-align: center;
     margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.chat-footer i {
+    color: #25D366;
+    font-size: 14px;
 }
 
 .chat-footer span {
     font-size: 11px;
     color: var(--gray-500);
+}
+
+/* WhatsApp Redirect Notification */
+.whatsapp-redirect-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 16px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+    z-index: 10000;
+    animation: slideInRight 0.3s ease-out;
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.notification-content i {
+    font-size: 18px;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 /* Mobile Responsive */

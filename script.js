@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initCarousel();
     initContactForm();
     initScrollEffects();
+    initSmoothScrolling();
 });
 
 // Navigation functionality
@@ -337,6 +338,40 @@ function initNewsletter() {
             }
         });
     }
+}
+
+// Smooth scrolling functionality
+function initSmoothScrolling() {
+    // Handle all anchor links for smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                const headerOffset = 100; // Account for fixed header
+                const elementPosition = targetElement.offsetTop;
+                const offsetPosition = elementPosition - headerOffset;
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+                
+                // Add a visual highlight to the target section
+                targetElement.style.transition = 'all 0.3s ease';
+                targetElement.style.transform = 'scale(1.02)';
+                targetElement.style.boxShadow = '0 10px 30px rgba(203, 251, 5, 0.2)';
+                
+                setTimeout(() => {
+                    targetElement.style.transform = '';
+                    targetElement.style.boxShadow = '';
+                }, 1000);
+            }
+        });
+    });
 }
 
 // Initialize newsletter on load

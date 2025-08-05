@@ -595,6 +595,223 @@ body {
     width: 14px;
 }
 
+/* User Selection Section */
+.user-selection {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    position: relative;
+}
+
+.user-selection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 20%, rgba(203, 251, 5, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(16, 44, 75, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.selection-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.selection-card {
+    background: var(--white);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.selection-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.selection-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-background {
+    position: relative;
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.business-card .card-background {
+    background: linear-gradient(135deg, var(--electric-lime) 0%, var(--yellow-green) 100%);
+    color: var(--blue-zodiac);
+}
+
+.learner-card .card-background {
+    background: linear-gradient(135deg, var(--blue-zodiac) 0%, var(--fern-frond) 100%);
+    color: var(--white);
+}
+
+.card-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.business-card .card-icon {
+    color: var(--blue-zodiac);
+}
+
+.learner-card .card-icon {
+    color: var(--electric-lime);
+}
+
+.card-content h3 {
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.card-content > p {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    opacity: 0.9;
+}
+
+.card-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    opacity: 0.85;
+}
+
+.card-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px 0;
+}
+
+.card-features li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.card-features i {
+    margin-right: 12px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.business-card .card-features i {
+    color: var(--blue-zodiac);
+}
+
+.learner-card .card-features i {
+    color: var(--electric-lime);
+}
+
+.selection-btn {
+    display: inline-block;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: auto;
+}
+
+.business-card .selection-btn {
+    background: var(--blue-zodiac);
+    color: var(--white);
+    border-color: var(--blue-zodiac);
+}
+
+.business-card .selection-btn:hover {
+    background: transparent;
+    color: var(--blue-zodiac);
+    border-color: var(--blue-zodiac);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(16, 44, 75, 0.3);
+}
+
+.learner-card .selection-btn {
+    background: var(--electric-lime);
+    color: var(--blue-zodiac);
+    border-color: var(--electric-lime);
+}
+
+.learner-card .selection-btn:hover {
+    background: transparent;
+    color: var(--electric-lime);
+    border-color: var(--electric-lime);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(203, 251, 5, 0.3);
+}
+
+/* Responsive Design for Selection Cards */
+@media (max-width: 768px) {
+    .selection-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 20px;
+    }
+    
+    .selection-card {
+        min-height: 450px;
+    }
+    
+    .card-image {
+        height: 150px;
+    }
+    
+    .card-background {
+        padding: 30px;
+    }
+    
+    .card-content h3 {
+        font-size: 28px;
+    }
+    
+    .card-icon {
+        font-size: 40px;
+    }
+}
+
 /* Course Categories Carousel */
 .course-categories-carousel {
     background-color: var(--white);
@@ -930,55 +1147,66 @@ body {
 .hero-image-wrapper {
     position: relative;
     width: 100%;
-    max-width: 550px;
+    max-width: 580px;
 }
 
 .hero-image {
     width: 100%;
-    height: 480px;
+    height: 500px;
     object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+    border-radius: 24px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
     display: block;
 }
 
 .stats-overlay {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
     display: flex;
-    gap: 12px;
+    gap: 20px;
     justify-content: center;
     z-index: 10;
 }
 
 .stat-card {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(15px);
-    border-radius: 15px;
-    padding: 20px;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 24px 20px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
     flex: 1;
-    max-width: 140px;
+    max-width: 160px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    border-color: var(--electric-lime);
+}
 }
 
 .stat-number {
     display: block;
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 900;
     color: var(--blue-zodiac);
     line-height: 1;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .stat-label {
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--gray-600);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--gray-700);
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+    line-height: 1.2;
 }
 
 .hero-content h1 {
@@ -3441,18 +3669,24 @@ body {
     }
     
     .stats-overlay {
-        bottom: 15px;
-        left: 15px;
-        right: 15px;
-        gap: 10px;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        gap: 15px;
+        flex-direction: row;
     }
     
     .stat-card {
-        padding: 12px;
+        padding: 20px 16px;
+        max-width: 140px;
     }
     
     .stat-number {
-        font-size: 20px;
+        font-size: 24px;
+    }
+    
+    .stat-label {
+        font-size: 11px;
     }
     
     .hero-buttons {
