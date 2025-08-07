@@ -1,13 +1,45 @@
 /* Courses Page Specific Styles */
 
-/* Page Header */
+/* Page Header - High Specificity */
+body .page-header,
 .page-header {
-    background: linear-gradient(135deg, var(--dark-blue) 0%, var(--dark-blue-light) 100%);
-    color: var(--white);
+    background: linear-gradient(135deg, #102c4b 0%, #1a4082 100%) !important;
+    color: #ffffff !important;
     padding: 120px 0 var(--spacing-16);
     margin-top: 70px;
     position: relative;
     overflow: hidden;
+}
+
+/* Additional high specificity rules */
+body .header-content h1,
+.header-content h1 {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8) !important;
+    font-size: var(--font-size-5xl);
+    margin-bottom: var(--spacing-4);
+    line-height: 1.2;
+}
+
+body .header-content p,
+.header-content p {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5) !important;
+    font-size: var(--font-size-lg);
+    opacity: 0.95;
+    margin-bottom: var(--spacing-6);
+    line-height: 1.6;
+}
+
+body .breadcrumb,
+.breadcrumb {
+    color: #ffffff !important;
+}
+
+body .breadcrumb span,
+.breadcrumb span {
+    color: #ffffff !important;
 }
 
 .page-header::before {
@@ -27,36 +59,8 @@
     margin: 0 auto;
 }
 
-.header-content h1 {
-    font-size: var(--font-size-5xl);
-    font-weight: 700;
-    margin-bottom: var(--spacing-4);
-    line-height: 1.2;
-    color: var(--white) !important;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-}
-
-.header-content p {
-    font-size: var(--font-size-lg);
-    opacity: 0.95;
-    margin-bottom: var(--spacing-6);
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.95) !important;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
-}
-
-.breadcrumb {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--spacing-2);
-    font-size: var(--font-size-sm);
-    opacity: 0.9;
-    color: rgba(255, 255, 255, 0.9) !important;
-}
-
 .breadcrumb a {
-    color: var(--light-green) !important;
+    color: var(--primary-lime) !important;
     text-decoration: none;
     transition: opacity 0.3s ease;
     font-weight: 500;

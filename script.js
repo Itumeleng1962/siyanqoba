@@ -2,6 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     initNavigation();
+    initHeroSlideshow();
     initCarousel();
     initContactForm();
     initScrollEffects();
@@ -54,6 +55,46 @@ function initNavigation() {
             }
         }
     });
+}
+
+// Hero slideshow functionality
+function initHeroSlideshow() {
+    const slides = document.querySelectorAll('.hero-slideshow .slide');
+    const indicators = document.querySelectorAll('.slideshow-indicators .indicator');
+    
+    if (!slides || slides.length === 0) return;
+    
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+    
+    // Initialize first slide as active
+    updateHeroSlide();
+    
+    // Auto-slide every 4 seconds
+    setInterval(function() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateHeroSlide();
+    }, 4000);
+    
+    // Indicator click functionality
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', function() {
+            currentSlide = index;
+            updateHeroSlide();
+        });
+    });
+    
+    function updateHeroSlide() {
+        // Update slide visibility
+        slides.forEach((slide, index) => {
+            slide.classList.toggle('active', index === currentSlide);
+        });
+        
+        // Update indicators
+        indicators.forEach((indicator, index) => {
+            indicator.classList.toggle('active', index === currentSlide);
+        });
+    }
 }
 
 // Course categories carousel

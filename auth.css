@@ -45,6 +45,16 @@
     color: white;
 }
 
+.auth-logo a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.auth-logo a:hover {
+    text-decoration: none;
+}
+
 .auth-logo h2 {
     font-size: 32px;
     font-weight: 900;

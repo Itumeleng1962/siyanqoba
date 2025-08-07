@@ -216,65 +216,76 @@
 }
 
 .faq-item {
-    border: 1px solid var(--gray-200);
-    border-radius: var(--radius-lg);
-    margin-bottom: var(--spacing-4);
+    border: none;
+    border-radius: 0;
+    margin-bottom: 2px;
     overflow: hidden;
     transition: all 0.3s ease;
+    background: linear-gradient(135deg, #102c4b 0%, #1a4082 100%);
+    box-shadow: 0 2px 8px rgba(16, 44, 75, 0.2);
+    width: 100%;
 }
 
 .faq-item:hover {
-    border-color: var(--light-green);
+    box-shadow: 0 4px 12px rgba(16, 44, 75, 0.3);
 }
 
 .faq-question {
-    background-color: var(--gray-100);
-    padding: var(--spacing-4);
+    background-color: transparent;
+    padding: 20px 24px;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: background-color 0.3s ease;
+    margin-bottom: 0;
+    width: 100%;
 }
 
 .faq-question:hover {
-    background-color: rgba(144, 238, 144, 0.1);
+    background-color: rgba(203, 251, 5, 0.1);
 }
 
 .faq-question h3 {
-    font-size: var(--font-size-base);
+    font-size: 18px;
     font-weight: 600;
-    color: var(--dark-blue);
+    color: var(--primary-lime) !important;
     margin: 0;
     line-height: 1.4;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    flex: 1;
+    padding-right: 20px;
 }
 
 .faq-question i {
-    color: var(--gray-600);
+    font-size: 20px;
+    color: var(--primary-lime) !important;
     transition: transform 0.3s ease;
-    font-size: var(--font-size-sm);
+    display: block;
 }
 
 .faq-item.active .faq-question i {
-    transform: rotate(180deg);
-    color: var(--light-green);
+    transform: rotate(45deg);
 }
 
 .faq-answer {
-    padding: 0 var(--spacing-4);
+    padding: 0 24px;
     max-height: 0;
     overflow: hidden;
     transition: all 0.3s ease;
+    background: rgba(203, 251, 5, 0.05);
+    opacity: 0;
 }
 
 .faq-item.active .faq-answer {
-    padding: var(--spacing-4);
-    max-height: 200px;
+    padding: 0 24px 20px;
+    max-height: 300px;
+    opacity: 1;
 }
 
 .faq-answer p {
-    color: var(--gray-700);
+    color: rgba(255, 255, 255, 0.9) !important;
     line-height: 1.6;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
     margin: 0;
 }
 
