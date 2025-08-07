@@ -1076,7 +1076,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 16px;
     gap: 32px;
 }
 
@@ -1090,14 +1089,14 @@ body {
 .faq-item h4 {
     font-size: 18px;
     font-weight: 600;
-    color: var(--blue-zodiac);
+    color: var(--primary-lime) !important;
     margin-bottom: 12px;
 }
 
 .faq-item p {
     font-size: 16px;
     line-height: 1.6;
-    color: var(--gray-600);
+    color: white !important;
 }
 
 /* Responsive Design for Contact Page */
@@ -2651,7 +2650,7 @@ body {
 
 .faq-item {
     border: none;
-    border-radius: 0;
+    border-radius: 16px;
     margin-bottom: 2px;
     overflow: hidden;
     transition: all 0.3s ease;
