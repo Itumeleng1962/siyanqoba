@@ -8,6 +8,89 @@
     <link rel="stylesheet" href="courses.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        #courses-hero {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, #1a3d66 100%);
+            color: var(--white);
+            padding: 5rem 0;
+        }
+
+        #courses-hero .highlight {
+            color: var(--light-green);
+        }
+
+        .course-categories-preview {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .category-highlight {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            border-radius: 10px;
+            background: #f8f9fa;
+            transition: all 0.3s ease;
+        }
+
+        .category-highlight:hover {
+            transform: translateX(5px);
+            background: #f0f2f5;
+        }
+
+        .category-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            background: var(--dark-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .category-icon i {
+            color: var(--light-green);
+            font-size: 1.5rem;
+        }
+
+        .category-highlight h3 {
+            margin: 0;
+            color: var(--dark-blue);
+            font-size: 1.1rem;
+        }
+
+        .category-highlight p {
+            margin: 0.25rem 0 0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .view-all {
+            color: var(--dark-blue);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem;
+            border-radius: 10px;
+            background: var(--light-green);
+            text-align: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .view-all:hover {
+            background: #b5e006;
+            transform: translateY(-2px);
+        }
+    </style>
 </head>
 <body>
     <!-- Top Bar -->
@@ -31,45 +114,47 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="index.html">
-                    <h2>Guardian Angel Studios</h2>
-                    <span>Training & Development</span>
-                </a>
+                <h2>Guardian Angel Studios</h2>
+                <span>Training & Consulting</span>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link">Explore <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
-                        <a href="index.html#about">About Us</a>
-                        <a href="#campuses">Our Campuses</a>
-                        <a href="#departments">Our Departments</a>
-                        <a href="#accreditations">Our Accreditations & Certifications</a>
-                        <a href="#solutions">Our Solutions</a>
-                        <a href="courses.html">Our Courses & Qualifications</a>
-                        <a href="#faq">Frequently Asked Questions</a>
+                        <a href="about.html">About Us</a>
+                        <a href="about.html#team">The Team</a>
+                        <a href="courses.html">Why Choosing Guardian Angel Studios</a>
+                        <a href="index.html">Frequently Asked Questions</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link">Solutions <i class="fas fa-chevron-down"></i></a>
+                    <a href="#" class="nav-link">Students <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
-                        <a href="#absorption">Absorption</a>
-                        <a href="#learnerships">Learnerships</a>
-                        <a href="#accreditation">Accreditation</a>
-                        <a href="#consulting">Consulting</a>
-                        <a href="#community">Community Campuses</a>
-                        <a href="#compliance">Compliance Training</a>
-                        <a href="#development">Course Development</a>
-                        <a href="#skills-development">Skills Development</a>
-                        <a href="#business-advisory">Business Advisory</a>
-                        <a href="resources.html">Experts Portal</a>
-                        <a href="courses.html">Our Courses</a>
+                        <a href="student-programs.html">Student Programs</a>
+                        <a href="fees-guide.html">Fees Guide</a>
+                        <a href="careers-guide.html">Careers Guide</a>
+                        <a href="prospectus.html">Prospectus</a>
+                        <a href="index.html#faq">FAQ's</a>
+                        <a href="testimonials.html">Student Testimonials</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Corporates <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="challenges.html">Your Challenges</a>
+                        <a href="solutions.html">Our Solutions</a>
+                        <a href="why-choose-us.html">Why Choosing Guardian Angel Studios</a>
+                        <a href="free-offerings.html">Free Offerings</a>
+                        <a href="ai-hr.html">Upcoming AI for HR</a>
+                        <a href="corporate-brochure.html">Corporate Brochure</a>
+                        <a href="public-programs.html">Public Programs</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a href="insights.html" class="nav-link">Insights</a>
+                    <a href="insights.html" class="nav-link">News & Insights</a>
                 </li>
                 <li class="nav-item">
-                    <a href="courses.html" class="nav-link active">Courses</a>
+                    <a href="courses.html" class="nav-link">Courses</a>
                 </li>
                 <li class="nav-item">
                     <a href="contact.html" class="nav-link">Get in Touch</a>
@@ -639,7 +724,6 @@
                         <li><a href="#accreditation">Accreditation</a></li>
                         <li><a href="#community">Community Campuses</a></li>
                         <li><a href="#development">Course Development</a></li>
-                        <li><a href="#learnerships">Learnerships</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">

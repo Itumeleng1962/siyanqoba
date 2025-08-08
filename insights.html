@@ -7,6 +7,77 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        #insights-hero {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, #1a3d66 100%);
+            color: var(--white);
+            padding: 5rem 0;
+        }
+
+        #insights-hero .highlight {
+            color: var(--light-green);
+        }
+
+        .featured-post-card {
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .featured-label {
+            background: var(--light-green);
+            color: var(--dark-blue);
+            padding: 0.5rem 1rem;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .featured-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .featured-content {
+            padding: 1.5rem;
+        }
+
+        .post-category {
+            color: var(--dark-blue);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .featured-content h3 {
+            color: var(--dark-blue);
+            margin: 0.5rem 0;
+            font-size: 1.5rem;
+        }
+
+        .featured-content p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .read-more {
+            color: var(--dark-blue);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .read-more:hover {
+            color: var(--light-green);
+        }
+    </style>
 </head>
 <body>
     <!-- Top Bar -->
@@ -27,46 +98,47 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="navbar">
+     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="index.html">
-                    <h2>Guardian Angel Studios</h2>
-                    <span>Training & Development</span>
-                </a>
+                <h2>Guardian Angel Studios</h2>
+                <span>Training & Consulting</span>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link">Explore <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
                         <a href="about.html">About Us</a>
-                        <a href="#campuses">Our Campuses</a>
-                        <a href="#departments">Our Departments</a>
-                        <a href="#accreditations">Our Accreditations & Certifications</a>
-                        <a href="#solutions">Our Solutions</a>
-                        <a href="courses.html">Our Courses & Qualifications</a>
-                        <a href="courses.html#qualifications">QTCO Qualifications</a>
-                        <a href="#faq">Frequently Asked Questions</a>
+                        <a href="about.html#team">The Team</a>
+                        <a href="courses.html">Why Choosing Guardian Angel Studios</a>
+                        <a href="index.html">Frequently Asked Questions</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link">Solutions <i class="fas fa-chevron-down"></i></a>
+                    <a href="#" class="nav-link">Students <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
-                        <a href="#absorption">Absorption</a>
-                        <a href="#learnerships">Learnerships</a>
-                        <a href="#accreditation">Accreditation</a>
-                        <a href="#consulting">Consulting</a>
-                        <a href="#community">Community Campuses</a>
-                        <a href="#compliance">Compliance Training</a>
-                        <a href="#development">Course Development</a>
-                        <a href="#skills-development">Skills Development</a>
-                        <a href="#business-advisory">Business Advisory</a>
-                        <a href="resources.html">Experts Portal</a>
-                        <a href="courses.html">Our Courses</a>
+                        <a href="student-programs.html">Student Programs</a>
+                        <a href="fees-guide.html">Fees Guide</a>
+                        <a href="careers-guide.html">Careers Guide</a>
+                        <a href="prospectus.html">Prospectus</a>
+                        <a href="index.html#faq">FAQ's</a>
+                        <a href="testimonials.html">Student Testimonials</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Corporates <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="challenges.html">Your Challenges</a>
+                        <a href="solutions.html">Our Solutions</a>
+                        <a href="why-choose-us.html">Why Choosing Guardian Angel Studios</a>
+                        <a href="free-offerings.html">Free Offerings</a>
+                        <a href="ai-hr.html">Upcoming AI for HR</a>
+                        <a href="corporate-brochure.html">Corporate Brochure</a>
+                        <a href="public-programs.html">Public Programs</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a href="insights.html" class="nav-link active">Insights</a>
+                    <a href="insights.html" class="nav-link">News & Insights</a>
                 </li>
                 <li class="nav-item">
                     <a href="courses.html" class="nav-link">Courses</a>
@@ -82,6 +154,61 @@
             </div>
         </div>
     </nav>
+
+    <!-- Hero Section -->
+    <!-- <section id="insights-hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <div class="hero-badge">
+                        <span class="badge-icon">📚</span>
+                        <span>Latest Updates • Industry Trends • Success Stories</span>
+                    </div>
+                    <h1>Stay Informed with Our Latest <span class="highlight">News & Insights</span></h1>
+                    <p>Discover the latest trends in training and development, success stories, industry updates, and expert insights to keep you ahead in your professional journey.</p>
+                    
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <span>Industry Updates</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <span>Success Stories</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <span>Expert Analysis</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-buttons">
+                        <a href="#latest-posts" class="btn-primary">
+                            <span>Latest Articles</span>
+                            <span class="arrow">→</span>
+                        </a>
+                        <a href="#newsletter" class="btn-secondary">
+                            <span class="icon">📧</span>
+                            <span>Subscribe</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-right">
+                    <div class="featured-post-card">
+                        <div class="featured-label">Featured Post</div>
+                        <img src="images/pic2.jpg" alt="Featured training session" class="featured-image">
+                        <div class="featured-content">
+                            <span class="post-category">Industry Trends</span>
+                            <h3>The Future of Corporate Training in 2025</h3>
+                            <p>Discover how AI, virtual reality, and personalized learning are transforming the corporate training landscape.</p>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
 
     <!-- Page Header -->
     <section class="page-header">
@@ -345,8 +472,9 @@
                     <h4>Learners</h4>
                     <ul>
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="#campuses">Our Campuses</a></li>
-                        <li><a href="#departments">Our Departments</a></li>
+                        <li><a href="about.html">The Team</a></li>
+                        <li><a href="courses.html">Why Choosing Guardian Angel Studios</a></li>
+                        <li><a href="index.html">Frequently Asked Questions</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -356,7 +484,6 @@
                         <li><a href="#accreditation">Accreditation</a></li>
                         <li><a href="#community">Community Campuses</a></li>
                         <li><a href="#development">Course Development</a></li>
-                        <li><a href="#learnerships">Learnerships</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">

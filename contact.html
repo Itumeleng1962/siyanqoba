@@ -28,6 +28,67 @@
             width: 100%;
             height: 100%;
         }
+
+        /* Contact Hero Specific Styles */
+        .contact-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        .quick-contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            border-radius: 10px;
+            background: #f8f9fa;
+            transition: all 0.3s ease;
+        }
+
+        .contact-method:hover {
+            transform: translateX(5px);
+            background: #f0f2f5;
+        }
+
+        .contact-method i {
+            font-size: 1.5rem;
+            color: var(--dark-blue);
+        }
+
+        .contact-method h4 {
+            margin: 0;
+            color: var(--dark-blue);
+            font-size: 1rem;
+        }
+
+        .contact-method p {
+            margin: 0.25rem 0 0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        #contact-hero {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, #1a3d66 100%);
+            color: var(--white);
+            padding: 5rem 0;
+        }
+
+        #contact-hero .highlight {
+            color: var(--light-green);
+        }
+
+        #contact-hero .hero-badge {
+            background: rgba(203, 251, 5, 0.1);
+        }
     </style>
 </head>
 <body>
@@ -54,7 +115,7 @@
             <div class="nav-logo">
                 <a href="index.html">
                     <h2>Guardian Angel Studios</h2>
-                    <span>Training & Development</span>
+                    <span>Training & Consulting</span>
                 </a>
             </div>
             <ul class="nav-menu">
@@ -62,33 +123,36 @@
                     <a href="#" class="nav-link">Explore <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
                         <a href="about.html">About Us</a>
-                        <a href="#campuses">Our Campuses</a>
-                        <a href="#departments">Our Departments</a>
-                        <a href="#accreditations">Our Accreditations & Certifications</a>
-                        <a href="#solutions">Our Solutions</a>
-                        <a href="courses.html">Our Courses & Qualifications</a>
-                        <a href="courses.html#qualifications">QTCO Qualifications</a>
-                        <a href="#faq">Frequently Asked Questions</a>
+                        <a href="about.html#team">The Team</a>
+                        <a href="courses.html">Why Choosing Guardian Angel Studios</a>
+                        <a href="index.html">Frequently Asked Questions</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link">Solutions <i class="fas fa-chevron-down"></i></a>
+                    <a href="#" class="nav-link">Students <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
-                        <a href="#absorption">Absorption</a>
-                        <a href="#learnerships">Learnerships</a>
-                        <a href="#accreditation">Accreditation</a>
-                        <a href="#consulting">Consulting</a>
-                        <a href="#community">Community Campuses</a>
-                        <a href="#compliance">Compliance Training</a>
-                        <a href="#development">Course Development</a>
-                        <a href="#skills-development">Skills Development</a>
-                        <a href="#business-advisory">Business Advisory</a>
-                        <a href="resources.html">Experts Portal</a>
-                        <a href="courses.html">Our Courses</a>
+                        <a href="student-programs.html">Student Programs</a>
+                        <a href="fees-guide.html">Fees Guide</a>
+                        <a href="careers-guide.html">Careers Guide</a>
+                        <a href="prospectus.html">Prospectus</a>
+                        <a href="index.html#faq">FAQ's</a>
+                        <a href="testimonials.html">Student Testimonials</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Corporates <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="challenges.html">Your Challenges</a>
+                        <a href="solutions.html">Our Solutions</a>
+                        <a href="why-choose-us.html">Why Choosing Guardian Angel Studios</a>
+                        <a href="free-offerings.html">Free Offerings</a>
+                        <a href="ai-hr.html">Upcoming AI for HR</a>
+                        <a href="corporate-brochure.html">Corporate Brochure</a>
+                        <a href="public-programs.html">Public Programs</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a href="insights.html" class="nav-link">Insights</a>
+                    <a href="insights.html" class="nav-link">News & Insights</a>
                 </li>
                 <li class="nav-item">
                     <a href="courses.html" class="nav-link">Courses</a>
@@ -109,11 +173,11 @@
     <section class="page-header">
         <div class="container">
             <div class="header-content">
-                <h1>Get In Touch</h1>
-                <p>Ready to start your learning journey? Contact us today and let's discuss how we can help you achieve your training goals.</p>
+                <h1>Get in Touch</h1>
+                <p>Connect with our team for personalized support and solutions tailored to your training needs</p>
                 <div class="breadcrumb">
                     <a href="index.html">Home</a>
-                    <span>/</span>
+                    <i class="fas fa-chevron-right"></i>
                     <span>Contact</span>
                 </div>
             </div>
@@ -324,7 +388,7 @@
                 <div class="footer-section">
                     <h4>Clients</h4>
                     <ul>
-                        <li><a href="#contact">Get In Touch</a></li>
+                        <li><a href="contact.html">Get In Touch</a></li>
                         <li><a href="#newsletter">Subscribe To Us</a></li>
                         <li><a href="#feedback">Give Us Feedback</a></li>
                         <li><a href="resources.html">Experts Portal</a></li>
@@ -334,9 +398,10 @@
                 <div class="footer-section">
                     <h4>Learners</h4>
                     <ul>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#campuses">Our Campuses</a></li>
-                        <li><a href="#departments">Our Departments</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html">The Team</a></li>
+                        <li><a href="courses.html">Why Choosing Guardian Angel Studios</a></li>
+                        <li><a href="index.html">Frequently Asked Questions</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -346,7 +411,7 @@
                         <li><a href="#accreditation">Accreditation</a></li>
                         <li><a href="#community">Community Campuses</a></li>
                         <li><a href="#development">Course Development</a></li>
-                        <li><a href="#learnerships">Learnerships</a></li>
+                        
                     </ul>
                 </div>
                 <div class="footer-section">
