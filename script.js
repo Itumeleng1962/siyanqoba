@@ -25,20 +25,54 @@ function initNavigation() {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
-        
-        // Close menu when clicking on a link
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', function() {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
+
+        // Dropdown toggle behavior for mobile: tap to open, tap again to close
+        const dropdownToggles = document.querySelectorAll('.nav-item.dropdown > .nav-link');
+        const dropdownItems = document.querySelectorAll('.nav-item.dropdown');
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', function(event) {
+                // On mobile, prevent navigation and toggle dropdown
+                if (window.matchMedia('(max-width: 768px)').matches) {
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                    const parentItem = this.parentElement;
+                    const isOpen = parentItem.classList.contains('open');
+
+                    // Close all dropdowns first
+                    dropdownItems.forEach(item => item.classList.remove('open'));
+
+                    // Toggle current
+                    if (!isOpen) {
+                        parentItem.classList.add('open');
+                    }
+                }
             });
         });
-        
-        // Close menu when clicking outside
+
+        // Close menu when clicking on a non-dropdown link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const parentItem = this.parentElement;
+                const isDropdownToggle = parentItem && parentItem.classList && parentItem.classList.contains('dropdown') && this.classList.contains('nav-link');
+                if (isDropdownToggle && window.matchMedia('(max-width: 768px)').matches) {
+                    // Handled by dropdown toggle above
+                    return;
+                }
+                // Close the mobile menu after selecting a leaf link
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                // Also close any open dropdowns
+                dropdownItems.forEach(item => item.classList.remove('open'));
+            });
+        });
+
+        // Close menu or any open dropdown when clicking outside
         document.addEventListener('click', function(e) {
             if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
+                dropdownItems.forEach(item => item.classList.remove('open'));
             }
         });
     }

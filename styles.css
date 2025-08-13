@@ -100,6 +100,11 @@ html {
     font-weight: 300;
     margin-bottom: 2rem;
     position: relative;
+    border-left: 4px solid var(--light-green);
+    padding-left: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    overflow-wrap: anywhere;
+    word-break: normal;
 }
 
 .mandela-quote blockquote::before {
@@ -213,6 +218,8 @@ html {
 
     .mandela-quote blockquote {
         font-size: 2rem;
+        border-left-width: 4px;
+        padding-left: 1rem;
     }
 
     .mandela-slider {
@@ -228,6 +235,8 @@ html {
 
     .mandela-quote blockquote {
         font-size: 1.5rem;
+        border-left-width: 4px;
+        padding-left: 0.75rem;
     }
 }
 
@@ -237,6 +246,7 @@ html {
         left: -1rem;
         top: -1rem;
     }
+    .mandela-quote blockquote { padding-left: 0.75rem; }
 }
     --light-green: #cbfb05;
     --white: #ffffff;
@@ -3054,6 +3064,78 @@ body {
     }
 }
 
+/* Extra small devices fine-tuning (phones) */
+@media (max-width: 480px) {
+    /* Hero adjustments */
+    .hero {
+        padding: 80px 0 40px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero-slideshow,
+    .hero-image {
+        height: 360px;
+    }
+
+    .stats-overlay {
+        display: none;
+    }
+
+    /* Mandela Inspiration consistency */
+    .mandela-inspiration {
+        padding: 48px 0;
+    }
+
+    .mandela-content {
+        gap: 1.5rem;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .mandela-image {
+        flex: 0 0 220px;
+        height: 220px;
+        width: 100%;
+    }
+
+    .mandela-quote blockquote {
+        font-size: 1.25rem;
+        line-height: 1.5;
+    }
+
+    .mandela-quote blockquote::before {
+        font-size: 3rem;
+        left: -0.5rem;
+        top: -0.5rem;
+    }
+
+    .mandela-slider-controls {
+        bottom: 1rem;
+        gap: 1rem;
+    }
+
+    .prev-slide,
+    .next-slide {
+        width: 36px;
+        height: 36px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    /* Ensure anchors are visible below fixed navbar */
+    section,
+    .leadership-team,
+    .page-header {
+        scroll-margin-top: 80px;
+    }
+}
+
 @media (max-width: 1024px) {
     .nav-menu {
         gap: var(--spacing-1-1);
@@ -3126,6 +3208,9 @@ body {
         border-radius: 0;
     }
 
+    .dropdown.open > .dropdown-content {
+        display: block;
+    }
     .dropdown-content {
         position: static;
         box-shadow: none;
@@ -3969,3 +4054,115 @@ body.public-schedule .breadcrumb span {
         font-size: 1rem;
     }
 }
+
+/* FINAL mobile overrides (placed at end to win specificity) */
+@media (max-width: 768px) {
+    /* Stack hero columns */
+    .hero-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .hero-right {
+        justify-content: center;
+    }
+
+    .hero-slideshow-wrapper,
+    .hero-slideshow {
+        max-width: 100%;
+        height: 320px;
+    }
+
+    .hero-slideshow .slide,
+    .hero-slideshow .slide img,
+    .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .hero-badge {
+        padding: 10px 16px;
+        font-size: 12px;
+    }
+
+    .hero-features {
+        gap: 12px;
+        margin: 24px 0;
+    }
+
+    .feature-item { font-size: 14px; }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-slideshow-wrapper,
+    .hero-slideshow { height: 280px; }
+}
+
+/* FINAL mobile overrides for Mandela Inspiration and News sections */
+@media (max-width: 1024px) {
+    /* News grid to 2 columns on tablets */
+    .news-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    /* Mandela Inspiration */
+    .mandela-inspiration { min-height: 640px; }
+    .mandela-slider { height: auto; }
+    /* Let slide determine height on mobile to avoid clipping */
+    .mandela-slide { position: relative; display: none; opacity: 1; width: 100%; }
+    .mandela-slide.active { display: block; }
+    .mandela-content { flex-direction: column; text-align: center; gap: 16px; padding: 16px; }
+    .mandela-image { width: 100%; max-width: 520px; height: 320px; margin: 0 auto; }
+    .mandela-photo { object-position: center top; }
+    .mandela-quote blockquote {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        padding: 12px 14px 12px 12px;
+        border-left-width: 3px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.07);
+    }
+    .mandela-quote blockquote::before { display: none; }
+    .special-quote .mandela-quote blockquote { font-size: 1.05rem; }
+    /* Place controls below content, not overlaying */
+    .mandela-slider-controls { position: static; transform: none; left: auto; bottom: auto; margin-top: 8px; gap: 12px; }
+    .slider-dots { justify-content: center; }
+    .prev-slide, .next-slide { width: 36px; height: 36px; }
+    .dot { width: 8px; height: 8px; }
+
+    /* News & Insights */
+    .news-insights { padding: 3.5rem 0; }
+    .news-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+    .news-image { height: 200px; }
+    .news-date { padding: 8px; border-radius: 6px; }
+    .news-date .day { font-size: 1.2rem; }
+    .news-date .month { font-size: 0.8rem; }
+    .news-content { padding: 1.25rem; }
+    .news-content h3 { font-size: 1.1rem; }
+    .news-content p { font-size: 0.95rem; }
+}
+
+@media (max-width: 480px) {
+    /* Smaller phones */
+    .mandela-inspiration { min-height: 720px; }
+    .mandela-image { height: 300px; }
+    .mandela-quote blockquote {
+        font-size: 0.95rem;
+        line-height: 1.65;
+        padding: 10px 12px 10px 12px;
+        border-left-width: 3px;
+    }
+    .mandela-quote blockquote::before { display: none; }
+    .special-quote .mandela-quote blockquote { font-size: 0.9rem; }
+    .mandela-quote cite { font-size: 0.9rem; }
+    .news-image { height: 180px; }
+}
+
