@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initScrollEffects();
     initSmoothScrolling();
     initFAQ();
+    initTestimonialCarousel();
 });
 
 // Navigation functionality
@@ -441,6 +442,61 @@ function initFAQ() {
             }
         });
     });
+}
+
+// Testimonial carousel functionality
+function initTestimonialCarousel() {
+    const testimonialTrack = document.getElementById('testimonialTrack');
+    const prevTestimonial = document.getElementById('prevTestimonial');
+    const nextTestimonial = document.getElementById('nextTestimonial');
+    const testimonialIndicators = document.getElementById('testimonialIndicators');
+    let currentTestimonial = 0;
+
+    function updateTestimonialCarousel(index) {
+        const slides = testimonialTrack.getElementsByClassName('testimonial-slide');
+        const indicators = testimonialIndicators.getElementsByClassName('indicator');
+        
+        // Hide all slides
+        Array.from(slides).forEach(slide => slide.classList.remove('active'));
+        Array.from(indicators).forEach(indicator => indicator.classList.remove('active'));
+        
+        // Show current slide
+        slides[index].classList.add('active');
+        indicators[index].classList.add('active');
+    }
+
+    // Next button
+    if (nextTestimonial) {
+        nextTestimonial.addEventListener('click', function() {
+            currentTestimonial = (currentTestimonial + 1) % testimonialTrack.children.length;
+            updateTestimonialCarousel(currentTestimonial);
+        });
+    }
+    
+    // Previous button
+    if (prevTestimonial) {
+        prevTestimonial.addEventListener('click', function() {
+            currentTestimonial = (currentTestimonial - 1 + testimonialTrack.children.length) % testimonialTrack.children.length;
+            updateTestimonialCarousel(currentTestimonial);
+        });
+    }
+    
+    // Indicators
+    if (testimonialIndicators) {
+        testimonialIndicators.addEventListener('click', function(e) {
+            if (e.target.classList.contains('indicator')) {
+                const index = Array.from(e.target.parentNode.children).indexOf(e.target);
+                currentTestimonial = index;
+                updateTestimonialCarousel(currentTestimonial);
+            }
+        });
+    }
+
+    // Auto-slide every 7 seconds
+    setInterval(function() {
+        currentTestimonial = (currentTestimonial + 1) % testimonialTrack.children.length;
+        updateTestimonialCarousel(currentTestimonial);
+    }, 7000);
 }
 
 // Initialize newsletter on load
