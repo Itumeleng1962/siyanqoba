@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScrolling();
     initFAQ();
     initTestimonialCarousel();
+    initMandelaSlider();
 });
 
 // Navigation functionality
@@ -445,6 +446,75 @@ function initFAQ() {
 }
 
 // Testimonial carousel functionality
+// Mandela Slider functionality
+function initMandelaSlider() {
+    const slides = document.querySelectorAll('.mandela-slide');
+    const dots = document.querySelectorAll('.slider-dots .dot');
+    const prevBtn = document.querySelector('.prev-slide');
+    const nextBtn = document.querySelector('.next-slide');
+    let currentSlide = 0;
+    let interval;
+
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        if (index >= slides.length) currentSlide = 0;
+        if (index < 0) currentSlide = slides.length - 1;
+        
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+        currentSlide++;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide--;
+        showSlide(currentSlide);
+    }
+
+    function startAutoSlide() {
+        interval = setInterval(nextSlide, 5000);
+    }
+
+    function stopAutoSlide() {
+        clearInterval(interval);
+    }
+
+    // Event Listeners
+    prevBtn.addEventListener('click', () => {
+        prevSlide();
+        stopAutoSlide();
+        startAutoSlide();
+    });
+
+    nextBtn.addEventListener('click', () => {
+        nextSlide();
+        stopAutoSlide();
+        startAutoSlide();
+    });
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentSlide = index;
+            showSlide(currentSlide);
+            stopAutoSlide();
+            startAutoSlide();
+        });
+    });
+
+    // Start automatic sliding
+    startAutoSlide();
+
+    // Pause on hover
+    const sliderContainer = document.querySelector('.mandela-slider');
+    sliderContainer.addEventListener('mouseenter', stopAutoSlide);
+    sliderContainer.addEventListener('mouseleave', startAutoSlide);
+}
+
 function initTestimonialCarousel() {
     const testimonialTrack = document.getElementById('testimonialTrack');
     const prevTestimonial = document.getElementById('prevTestimonial');
