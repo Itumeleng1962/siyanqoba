@@ -1,0 +1,259 @@
+/* Footer Styles */
+.footer {
+    background: var(--dark-blue);
+    color: white;
+    padding: 4rem 0 0;
+    position: relative;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    padding: 0 2rem;
+}
+
+.footer-section h4 {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-section ul li a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+.footer-section ul li a:hover {
+    color: var(--light-green);
+}
+
+/* Contact Section Styles */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-phone-box {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    padding: 0.8rem 1.2rem;
+    display: inline-block;
+}
+
+.contact-phone-box a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-email {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.email-type {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+}
+
+.business-hours {
+    margin-top: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.social-link:hover {
+    color: var(--light-green);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+.footer-info {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-info p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+    margin: 0.5rem 0;
+}
+
+.footer-bottom-right {
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--light-green);
+}
+
+.footer-contact {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer-contact span,
+.footer-contact a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.footer-contact a:hover {
+    color: var(--light-green);
+}
+
+.youtube-link,
+.linkedin-link {
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.2s ease;
+}
+
+.youtube-link:hover,
+.linkedin-link:hover {
+    color: var(--light-green);
+}
+
+.back-to-top {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+}
+
+.back-to-top:hover {
+    background: var(--light-green);
+    color: var(--dark-blue);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .footer-content {
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem 2rem;
+    }
+
+    .footer-bottom-right {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .footer-contact {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 3rem 0 0;
+    }
+
+    .footer-content {
+        padding: 0 1.5rem;
+        gap: 2.5rem;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .social-links {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .contact-phone-box {
+        text-align: center;
+        display: block;
+    }
+
+    .footer-info {
+        text-align: center;
+    }
+}

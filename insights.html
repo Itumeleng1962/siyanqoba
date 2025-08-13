@@ -5,64 +5,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Insights - Guardian Angel Studios Training & Development</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="footer.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        #insights-hero {
-            background: linear-gradient(135deg, var(--dark-blue) 0%, #1a3d66 100%);
-            color: var(--white);
-            padding: 5rem 0;
+        /* General Section Styles */
+        .section-padding {
+            padding: 6rem 0;
         }
 
-        #insights-hero .highlight {
+        .section-subtitle {
             color: var(--light-green);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: block;
         }
 
-        .featured-post-card {
+        .text-center {
+            text-align: center;
+        }
+
+        .section-header {
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        /* Insights Page Specific Styles */
+        .insights-content {
+            padding: 4rem 0;
+        }
+
+        .featured-insights {
+            background: var(--gray-100);
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .featured-article {
             background: var(--white);
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .featured-article:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .article-image {
+            position: relative;
+            height: 300px;
             overflow: hidden;
         }
 
-        .featured-label {
-            background: var(--light-green);
-            color: var(--dark-blue);
-            padding: 0.5rem 1rem;
+        .article-image::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+        }
+
+        .article-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .featured-article:hover .article-image img {
+            transform: scale(1.1);
+        }
+
+        .article-category {
             position: absolute;
             top: 1rem;
             right: 1rem;
+            background: var(--light-green);
+            color: var(--dark-blue);
+            padding: 0.5rem 1rem;
             border-radius: 50px;
             font-weight: 600;
             font-size: 0.9rem;
         }
 
-        .featured-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
+        .article-content {
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+            background: var(--white);
         }
 
-        .featured-content {
-            padding: 1.5rem;
-        }
-
-        .post-category {
+        .article-content h3 {
             color: var(--dark-blue);
-            font-weight: 600;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-        }
-
-        .featured-content h3 {
-            color: var(--dark-blue);
-            margin: 0.5rem 0;
-            font-size: 1.5rem;
-        }
-
-        .featured-content p {
-            color: #666;
+            font-size: 1.8rem;
             margin-bottom: 1rem;
+            line-height: 1.4;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+
+        .article-content p {
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 2rem;
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
         }
 
         .read-more {
@@ -72,10 +150,394 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
+            transition: all 0.3s ease;
         }
 
         .read-more:hover {
             color: var(--light-green);
+            transform: translateX(5px);
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .insights-categories {
+            background: var(--white);
+        }
+
+        .category-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 1px solid var(--gray-200);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(to right, var(--light-green), var(--dark-blue));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border-color: transparent;
+        }
+
+        .category-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .category-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--light-green) 0%, var(--dark-blue) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: var(--white);
+            font-size: 1.8rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .category-icon::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(135deg, var(--light-green) 0%, var(--dark-blue) 100%);
+            border-radius: 50%;
+            z-index: -1;
+            opacity: 0.2;
+            transition: all 0.3s ease;
+        }
+
+        .category-card:hover .category-icon::after {
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            bottom: -8px;
+            opacity: 0.3;
+        }
+
+        .category-card h3 {
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .category-card p {
+            color: var(--gray-600);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .article-count {
+            color: var(--light-green);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Recent Articles Section */
+        .recent-articles {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .article-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid var(--gray-200);
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+            border-color: var(--light-green);
+        }
+
+        .article-thumbnail {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .article-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .article-card:hover .article-thumbnail img {
+            transform: scale(1.1);
+        }
+
+        .article-info {
+            padding: 1.5rem;
+        }
+
+        .article-tag {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: var(--gray-100);
+            color: var(--dark-blue);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .article-info h4 {
+            color: var(--dark-blue);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .article-card:hover .article-info h4 {
+            color: var(--light-green);
+        }
+
+        .article-info p {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .publish-date {
+            color: var(--gray-600);
+            font-size: 0.9rem;
+        }
+
+        .read-link {
+            color: var(--dark-blue);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .read-link:hover {
+            color: var(--light-green);
+            transform: translateX(5px);
+        }
+
+        /* Newsletter Section */
+        .insights-newsletter {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, var(--dark-blue) 0%, #1a365d 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .insights-newsletter::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('images/pattern.png');
+            opacity: 0.1;
+        }
+
+        .newsletter-content {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .newsletter-text {
+            margin-bottom: 3rem;
+        }
+
+        .newsletter-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-text h3 {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        .newsletter-form {
+            display: flex;
+            justify-content: center;
+        }
+
+        .newsletter-form form {
+            display: flex;
+            gap: 1rem;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            outline: none;
+        }
+
+        .btn-subscribe {
+            background: var(--light-green);
+            color: var(--dark-blue);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-subscribe:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 1200px) {
+            .articles-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .featured-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 4rem 0;
+            }
+
+            .article-image {
+                height: 220px;
+            }
+
+            .article-content {
+                padding: 1.5rem;
+            }
+
+            .article-content h3 {
+                font-size: 1.5rem;
+            }
+
+            .article-meta {
+                flex-wrap: wrap;
+                gap: 1rem;
+                padding-bottom: 1rem;
+            }
+
+            .categories-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+            }
+
+            .articles-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .section-subtitle {
+                font-size: 0.8rem;
+            }
+
+            .newsletter-form form {
+                flex-direction: column;
+            }
+
+            .newsletter-text h2 {
+                font-size: 2rem;
+            }
+
+            .newsletter-text h3 {
+                font-size: 1.1rem;
+            }
+
+            .btn-subscribe {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-padding {
+                padding: 3rem 0;
+            }
+
+            .article-content h3 {
+                font-size: 1.3rem;
+            }
+
+            .article-meta {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+
+            .category-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
@@ -216,21 +678,22 @@
     <section class="page-header">
         <div class="container">
             <div class="header-content">
-                <h1>Training Insights & Industry News</h1>
+                <h1>News & Insights</h1>
                 <p>Stay informed with the latest trends, insights, and best practices in training and professional development</p>
                 <div class="breadcrumb">
                     <a href="index.html">Home</a>
                     <i class="fas fa-chevron-right"></i>
-                    <span>Insights</span>
+                    <span>News & Insights</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Featured Insights -->
-    <section class="featured-insights">
+    <section class="featured-insights section-padding">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Featured Content</span>
                 <h2>Featured Insights</h2>
                 <p>Our latest thoughts on training trends and industry developments</p>
             </div>
@@ -273,9 +736,10 @@
     </section>
 
     <!-- Insights Categories -->
-    <section class="insights-categories">
+    <section class="insights-categories section-padding">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Browse Topics</span>
                 <h2>Explore by Category</h2>
                 <p>Find insights tailored to your interests and industry needs</p>
             </div>
@@ -439,7 +903,7 @@
     </section>
 
     <!-- Newsletter Signup -->
-    <section class="insights-newsletter">
+    <!-- <section class="insights-newsletter">
         <div class="container">
             <div class="newsletter-content">
                 <div class="newsletter-text">
@@ -454,29 +918,27 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Footer -->
-    <footer class="footer">
+   <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h4>Clients</h4>
                     <ul>
                         <li><a href="contact.html">Get In Touch</a></li>
-                        <li><a href="index.html#newsletter">Subscribe To Us</a></li>
+                        <li><a href="#subscribe">Subscribe To Us</a></li>
                         <li><a href="#feedback">Give Us Feedback</a></li>
-                        <li><a href="resources.html">Experts Portal</a></li>
-
+                        <li><a href="#portal">Experts Portal</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Learners</h4>
                     <ul>
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="about.html">The Team</a></li>
-                        <li><a href="courses.html">Why Choosing Guardian Angel Studios</a></li>
-                        <li><a href="index.html">Frequently Asked Questions</a></li>
+                        <li><a href="#campuses">Our Campuses</a></li>
+                        <li><a href="#departments">Our Departments</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -488,50 +950,54 @@
                         <li><a href="#development">Course Development</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
+                <div class="footer-section contact-section">
                     <h4>Talk to Us</h4>
-                    <div class="contact-table">
-                        <div class="contact-row">
-                            <span class="contact-phone">087 288 5068</span>
-                        </div>
-                        <div class="contact-row">
-                            <a href="mailto:info@guardianangel.co.za">info@guardianangel.co.za (business enquiries)</a><br>
-                            <a href="mailto:learn@guardianangel.co.za">learn@guardianangel.co.za (student enquiries)</a>
-                        </div>
-                        <div class="contact-row">
+                    <div class="contact-phone-box">
+                        <a href="tel:0872885068">087 288 5068</a>
+                    </div>
+                    <div class="contact-details">
+                        <a href="mailto:info@guardianangel.co.za" class="contact-email">info@guardianangel.co.za</a>
+                        <span class="email-type">(business enquiries)</span>
+                        
+                        <a href="mailto:learn@guardianangel.co.za" class="contact-email">learn@guardianangel.co.za</a>
+                        <span class="email-type">(student enquiries)</span>
+                        
+                        <div class="business-hours">
                             <span>Mondays - Fridays, 08:00 - 17:00</span>
                         </div>
-                    </div>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-spotify"></i></a>
+                        
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-spotify"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>Guardian Angel Studios is a multi-accredited training provider. BEE Level 2 | Professional Training Excellence</p>
-                <div class="footer-bottom-links">
-                    <span>&copy; 2025, Guardian Angel Studios. All Rights Reserved</span>
-                    <div class="footer-legal">
+                <div class="footer-info">
+                    <p>Guardian Angel Studios is a multi-accredited training provider. BEE Level 2 | Professional Training Excellence</p>
+                    <p>© 2025, Guardian Angel Studios. All Rights Reserved</p>
+                </div>
+                <div class="footer-bottom-right">
+                    <div class="footer-links">
                         <a href="#terms">Terms and Conditions</a>
                         <a href="#privacy">Privacy Policy</a>
                         <a href="login.html">Login</a>
                     </div>
-                </div>
-                <div class="footer-contact-bottom">
-                    <span>+27 87 288 5068</span>
-                    <span>info@guardianangel.co.za</span>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#top">Back to top</a>
+                    <div class="footer-contact">
+                        <span>+27 87 288 5068</span>
+                        <a href="mailto:info@guardianangel.co.za">info@guardianangel.co.za</a>
+                        <a href="#" class="youtube-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="linkedin-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#top" class="back-to-top">Back to top</a>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
