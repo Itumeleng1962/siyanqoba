@@ -9,11 +9,19 @@
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 4rem;
+    grid-template-columns: 3fr 2fr; /* left group + contact column */
+    gap: 3rem;
     max-width: 1200px;
-    margin: 0 auto 3rem;
+    margin: 0 auto 1rem; /* small gap above footer-legal if used outside */
     padding: 0 2rem;
+    align-items: start;
+}
+
+/* Left group: Clients, Learners, Explore + Legal beneath */
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+    gap: 3rem 3rem;
 }
 
 .footer-section h4 {
@@ -113,6 +121,40 @@
     margin-top: 2rem;
 }
 
+/* Footer Legal row */
+.footer-legal {
+    margin: 0.25rem 0 0; /* minimal offset from group */
+    padding: 0;
+}
+
+/* When legal is inside the columns group, span full width below 3 columns */
+.footer-columns .footer-legal { grid-column: 1 / -1; }
+
+.footer-legal h4 {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem; /* tighter */
+    letter-spacing: 0.5px;
+}
+
+.footer-legal ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-legal a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.footer-legal a:hover {
+    color: var(--light-green);
+}
+
 .footer-info {
     max-width: 1200px;
     margin: 0 auto;
@@ -194,14 +236,19 @@
 /* Responsive Design */
 @media (max-width: 1024px) {
     .footer-content {
-        gap: 3rem;
+        gap: 2.5rem;
     }
 }
 
 @media (max-width: 992px) {
     .footer-content {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 3rem 2rem;
+        grid-template-columns: 1fr; /* stack contact under group */
+        gap: 2rem;
+    }
+
+    .footer-columns {
+        grid-template-columns: repeat(2, minmax(160px, 1fr));
+        gap: 2rem;
     }
 
     .footer-bottom-right {
@@ -214,6 +261,8 @@
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    .footer-columns .footer-legal { grid-column: 1 / -1; }
 }
 
 @media (max-width: 768px) {
@@ -235,14 +284,13 @@
     .social-links {
         justify-content: flex-start;
     }
+
+    .footer-legal { padding: 0 1.5rem; text-align: left; }
 }
 
 @media (max-width: 576px) {
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 2rem;
-    }
+    .footer-content { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
+    .footer-columns { grid-template-columns: 1fr; }
 
     .social-links {
         justify-content: center;
