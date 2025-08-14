@@ -31,31 +31,97 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    align-items: center;
+    align-items: start;
 }
 
 .overview-text h2 {
     color: var(--dark-blue);
     font-size: 2.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .overview-text h3 {
     color: var(--dark-blue);
     font-size: 1.8rem;
-    margin: 2rem 0 1rem;
+    margin: 1.25rem 0 0.75rem;
 }
 
 .overview-text p {
     color: var(--gray-600);
     line-height: 1.8;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.overview-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.75rem 0 1.5rem 0;
+    display: grid;
+    gap: 0.6rem;
+}
+
+.overview-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    color: var(--gray-700);
+}
+
+.overview-list i {
+    color: var(--light-green);
+    margin-top: 3px;
+}
+
+.overview-list span { line-height: 1.7; }
+
+/* Split long paragraphs into two balanced columns on wide screens */
+.two-column-copy {
+    columns: 2 320px;
+    column-gap: 2rem;
+}
+
+.two-column-copy p { break-inside: avoid; }
+
+@media (max-width: 992px) {
+    .two-column-copy { columns: 1; }
 }
 
 .overview-image img {
     width: 100%;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    display: block;
+}
+
+/* Reduce empty space above image by aligning to top and controlling container spacing */
+.overview-image {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+/* Place story block at top to align with Who We Are; image below for balanced height */
+.overview-image .story-block { order: 2; }
+
+.story-block {
+    margin-top: 1.25rem;
+    background: #ffffff;
+    border: 1px solid var(--gray-200);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    border-radius: 16px;
+    /* padding: 1.25rem 1.5rem; */
+}
+
+.story-block h3 {
+    color: var(--dark-blue);
+    font-size: 1.8rem; /* match Who We Are heading */
+    margin-bottom: 0.75rem;
+}
+
+.story-block p {
+    color: var(--gray-600);
+    line-height: 1.65;
+    margin-bottom: 0.75rem;
 }
 
 /* Mission Vision Values Section */
