@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initFAQ();
     initTestimonialCarousel();
     initMandelaSlider();
+	initValuesSlider();
 });
 
 // Navigation functionality
@@ -482,22 +483,28 @@ function initFAQ() {
 // Testimonial carousel functionality
 // Mandela Slider functionality
 function initMandelaSlider() {
+    const sliderContainer = document.querySelector('.mandela-slider');
     const slides = document.querySelectorAll('.mandela-slide');
     const dots = document.querySelectorAll('.slider-dots .dot');
     const prevBtn = document.querySelector('.prev-slide');
     const nextBtn = document.querySelector('.next-slide');
+    if (!sliderContainer || slides.length === 0) return;
     let currentSlide = 0;
     let interval;
 
     function showSlide(index) {
         slides.forEach(slide => slide.classList.remove('active'));
-        dots.forEach(dot => dot.classList.remove('active'));
+        if (dots && dots.length > 0) {
+            dots.forEach(dot => dot.classList.remove('active'));
+        }
         
         if (index >= slides.length) currentSlide = 0;
         if (index < 0) currentSlide = slides.length - 1;
         
         slides[currentSlide].classList.add('active');
-        dots[currentSlide].classList.add('active');
+        if (dots && dots.length > 0 && dots[currentSlide]) {
+            dots[currentSlide].classList.add('active');
+        }
     }
 
     function nextSlide() {
@@ -519,17 +526,21 @@ function initMandelaSlider() {
     }
 
     // Event Listeners
-    prevBtn.addEventListener('click', () => {
-        prevSlide();
-        stopAutoSlide();
-        startAutoSlide();
-    });
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            stopAutoSlide();
+            startAutoSlide();
+        });
+    }
 
-    nextBtn.addEventListener('click', () => {
-        nextSlide();
-        stopAutoSlide();
-        startAutoSlide();
-    });
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            stopAutoSlide();
+            startAutoSlide();
+        });
+    }
 
     dots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
@@ -544,7 +555,6 @@ function initMandelaSlider() {
     startAutoSlide();
 
     // Pause on hover
-    const sliderContainer = document.querySelector('.mandela-slider');
     sliderContainer.addEventListener('mouseenter', stopAutoSlide);
     sliderContainer.addEventListener('mouseleave', startAutoSlide);
 }
@@ -601,6 +611,67 @@ function initTestimonialCarousel() {
         currentTestimonial = (currentTestimonial + 1) % testimonialTrack.children.length;
         updateTestimonialCarousel(currentTestimonial);
     }, 7000);
+}
+
+// Values slider (About page)
+function initValuesSlider() {
+	const slider = document.querySelector('.values-slider');
+	if (!slider) return;
+
+	const track = slider.querySelector('.values-track');
+	const slides = Array.from(slider.querySelectorAll('.values-slide'));
+	const prevBtn = slider.querySelector('.values-prev');
+	const nextBtn = slider.querySelector('.values-next');
+	const dotsContainer = slider.querySelector('.values-dots');
+
+	let currentIndex = 0;
+	let autoIntervalId;
+
+	function updateSlider() {
+		track.style.transform = `translateX(-${currentIndex * 100}%)`;
+		slides.forEach((slide, index) => {
+			slide.classList.toggle('active', index === currentIndex);
+		});
+		if (dotsContainer) {
+			const dots = Array.from(dotsContainer.querySelectorAll('.dot'));
+			dots.forEach((dot, index) => dot.classList.toggle('active', index === currentIndex));
+		}
+	}
+
+	function goTo(index) {
+		const total = slides.length;
+		currentIndex = (index + total) % total;
+		updateSlider();
+	}
+
+	function next() { goTo(currentIndex + 1); }
+	function prev() { goTo(currentIndex - 1); }
+
+	function startAuto() {
+		stopAuto();
+		autoIntervalId = setInterval(next, 5000);
+	}
+
+	function stopAuto() {
+		if (autoIntervalId) clearInterval(autoIntervalId);
+	}
+
+	if (prevBtn) prevBtn.addEventListener('click', () => { prev(); startAuto(); });
+	if (nextBtn) nextBtn.addEventListener('click', () => { next(); startAuto(); });
+
+	if (dotsContainer) {
+		const dots = Array.from(dotsContainer.querySelectorAll('.dot'));
+		dots.forEach((dot, index) => {
+			dot.addEventListener('click', () => { goTo(index); startAuto(); });
+		});
+	}
+
+	slider.addEventListener('mouseenter', stopAuto);
+	slider.addEventListener('mouseleave', startAuto);
+
+	// Initialize
+	updateSlider();
+	startAuto();
 }
 
 // Initialize newsletter on load

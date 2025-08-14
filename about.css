@@ -194,6 +194,82 @@
     text-align: left;
 }
 
+.values-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.values-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+.values-slide {
+    min-width: 100%;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.values-slide.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.values-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.values-prev,
+.values-next {
+    pointer-events: all;
+    background: rgba(16, 44, 75, 0.08);
+    border: none;
+    color: var(--dark-blue);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+    transition: all 0.3s ease;
+}
+
+.values-prev:hover,
+.values-next:hover {
+    background: var(--light-green);
+    color: var(--dark-blue);
+    transform: scale(1.06);
+}
+
+.values-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.values-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--gray-300);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.values-dots .dot.active {
+    background: var(--light-green);
+    transform: scale(1.2);
+}
+
 .value-item h4 {
     color: var(--dark-blue);
     margin-bottom: 0.5rem;
