@@ -104,12 +104,12 @@
 .overview-image .story-block { order: 2; }
 
 .story-block {
-    margin-top: 1.25rem;
+    margin-top: 2.5rem;
     background: #ffffff;
     border: 1px solid var(--gray-200);
     box-shadow: 0 10px 30px rgba(0,0,0,0.06);
     border-radius: 16px;
-    /* padding: 1.25rem 1.5rem; */
+    /* padding intentionally handled elsewhere for visual alignment */
 }
 
 .story-block h3 {
@@ -124,6 +124,14 @@
     margin-bottom: 0.75rem;
 }
 
+@media (max-width: 1200px) {
+    .story-block { margin-top: 2rem; }
+}
+
+@media (max-width: 992px) {
+    .story-block { margin-top: 1.25rem; }
+}
+
 /* Mission Vision Values Section */
 .mission-vision-values {
     padding: 6rem 0;
@@ -132,8 +140,10 @@
 
 .mvv-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
     gap: 2rem;
+    align-items: start;
 }
 
 .mvv-card {
@@ -143,6 +153,11 @@
     text-align: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     transition: transform 0.3s ease;
+}
+
+/* Make values stretch across both columns on second row */
+.values-card {
+    grid-column: 1 / -1;
 }
 
 .mvv-card:hover {
@@ -566,10 +581,9 @@
         gap: 3rem;
     }
 
-    .mvv-grid,
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    .mvv-grid { grid-template-columns: 1fr; }
+    .values-card { grid-column: auto; }
+    .team-grid { grid-template-columns: repeat(2, 1fr); }
 
     .accreditation-grid {
         grid-template-columns: repeat(2, 1fr);
