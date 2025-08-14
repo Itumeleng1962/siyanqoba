@@ -1464,6 +1464,44 @@ body {
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
 }
 
+.qualification-details {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: var(--shadow-lg);
+    max-width: 1000px;
+    margin: 0 auto 40px;
+}
+
+.qualification-details h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--blue-zodiac);
+    margin: 20px 0 12px;
+    padding-left: 12px;
+    border-left: 4px solid var(--electric-lime);
+}
+
+.qualification-details p {
+    color: var(--gray-600);
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.qualification-details ul {
+    margin: 12px 0 16px 20px;
+    color: var(--gray-700);
+    line-height: 1.7;
+}
+
+.qualification-details li { margin-bottom: 10px; }
+
+@media (max-width: 768px) {
+    .qualification-details { padding: 24px; margin-bottom: 24px; }
+    .qualification-details h3 { font-size: 18px; }
+}
+
 .qualification-categories {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -1531,6 +1569,10 @@ body {
     text-align: center;
     margin-bottom: 40px;
 }
+
+/* Polishing Our Qualifications header/intro spacing */
+.qualifications-section .section-header h2 { font-size: 36px; font-weight: 800; }
+.qualifications-section .section-header p { font-size: 18px; }
 
 .certificates-grid {
     display: grid;
