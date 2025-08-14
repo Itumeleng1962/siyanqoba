@@ -2,6 +2,7 @@
 html {
     scroll-behavior: smooth;
     overflow-x: hidden; /* prevent horizontal scroll on mobile */
+    -webkit-tap-highlight-color: transparent; /* remove mobile tap highlight */
 }
 
 * {
@@ -318,6 +319,7 @@ body {
     color: var(--gray-800);
     background-color: var(--white);
     overflow-x: hidden; /* prevent horizontal scroll on mobile */
+    -webkit-tap-highlight-color: transparent; /* remove mobile tap highlight */
 }
 
 .container {

@@ -542,12 +542,26 @@
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     border: 1px solid var(--gray-200);
     transition: all 0.3s ease;
+    outline: none; /* prevent default focus outline */
+    -webkit-tap-highlight-color: transparent; /* prevent tap highlight on mobile */
 }
 
-.accreditation-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-    border-color: var(--light-green);
+/* Hover effects (only on devices that actually support hover) */
+@media (hover: hover) {
+    .accreditation-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        border-color: var(--light-green);
+    }
+}
+
+/* Disable sticky hover look on touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .accreditation-card:hover {
+        transform: none;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        border-color: var(--gray-200);
+    }
 }
 
 .accreditation-logo {
