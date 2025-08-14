@@ -136,6 +136,7 @@
 .mission-vision-values {
     padding: 6rem 0;
     background: var(--gray-100);
+    overflow-x: hidden; /* avoid right-side overflow from slider */
 }
 
 .mvv-grid {
