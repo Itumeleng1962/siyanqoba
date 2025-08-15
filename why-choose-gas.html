@@ -86,12 +86,21 @@
         .stats-section {
             background: var(--gray-100);
             padding: var(--spacing-16) 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-section::before,
+        .stats-section::after {
+            display: none !important;
         }
 
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: var(--spacing-6);
+            position: relative;
+            z-index: 2;
         }
 
         .stat-card {
@@ -101,6 +110,13 @@
             text-align: center;
             box-shadow: var(--shadow-md);
             transition: all 0.3s ease;
+            position: relative;
+            z-index: 3;
+        }
+
+        .stat-card::before,
+        .stat-card::after {
+            display: none !important;
         }
 
         .stat-card:hover {
@@ -114,12 +130,37 @@
             color: var(--light-green);
             margin-bottom: var(--spacing-2);
             text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 4;
+        }
+
+        .stat-number::before,
+        .stat-number::after {
+            display: none !important;
         }
 
         .stat-label {
             color: var(--dark-blue);
             font-weight: 600;
-            font-size: var(--font-size-base);
+            font-size: var(--font-size-sm);
+            position: relative;
+            z-index: 4;
+            line-height: 1.3;
+            word-wrap: break-word;
+            hyphens: auto;
+        }
+
+        .stat-label::before,
+        .stat-label::after {
+            display: none !important;
+        }
+
+        /* Remove any unwanted background elements */
+        .stats-section *,
+        .stat-card *,
+        .stat-number *,
+        .stat-label * {
+            background-image: none !important;
         }
 
         /* Accreditations Section */
@@ -475,7 +516,7 @@
                 </div>
                 <div class="stat-card">
                     <div class="stat-number">8</div>
-                    <div class="stat-label">Accreditations</div>
+                    <div class="stat-label">Accredited Bodies</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-number">24/7</div>
