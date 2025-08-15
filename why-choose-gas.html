@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Choose GAS - Guardian Angel Studios Training & Development</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Page-specific styles */
+        .why-choose-hero {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, #1a4082 100%);
+            color: var(--white);
+            padding: 120px 0 var(--spacing-16);
+            margin-top: 70px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-choose-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+        }
+
+        .hero-content {
+            position: relative;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            color: var(--white);
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+            font-size: var(--font-size-5xl);
+            margin-bottom: var(--spacing-4);
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            color: var(--white);
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+            font-size: var(--font-size-lg);
+            opacity: 0.95;
+            margin-bottom: var(--spacing-6);
+            line-height: 1.6;
+        }
+
+        .breadcrumb {
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-2);
+        }
+
+        .breadcrumb a {
+            color: var(--light-green);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+            font-weight: 500;
+        }
+
+        .breadcrumb a:hover {
+            opacity: 0.8;
+        }
+
+        .breadcrumb i {
+            font-size: var(--font-size-xs);
+        }
+
+        .breadcrumb span {
+            color: var(--white);
+        }
+
+        /* Key Benefits Section */
+        .key-benefits {
+            background: var(--white);
+            padding: var(--spacing-16) 0;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-8);
+        }
+
+        .benefit-card {
+            background: var(--white);
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-6);
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--light-green) 0%, var(--dark-blue) 100%);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--light-green);
+        }
+
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--light-green) 0%, var(--dark-blue) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--spacing-4);
+            color: var(--white);
+            font-size: var(--font-size-2xl);
+        }
+
+        .benefit-card h3 {
+            color: var(--dark-blue);
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            margin-bottom: var(--spacing-3);
+        }
+
+        .benefit-card p {
+            color: var(--gray-600);
+            line-height: 1.7;
+            flex-grow: 1;
+            margin: 0;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: var(--gray-100);
+            padding: var(--spacing-16) 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-6);
+        }
+
+        .stat-card {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-6);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .stat-number {
+            font-size: var(--font-size-4xl);
+            font-weight: 700;
+            color: var(--light-green);
+            margin-bottom: var(--spacing-2);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .stat-label {
+            color: var(--dark-blue);
+            font-weight: 600;
+            font-size: var(--font-size-base);
+        }
+
+        /* Accreditations Section */
+        .accreditations-showcase {
+            background: var(--white);
+            padding: var(--spacing-16) 0;
+        }
+
+        .accred-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-6);
+        }
+
+        .accred-item {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-4);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-3);
+            transition: all 0.3s ease;
+            min-height: 80px;
+            flex-wrap: nowrap;
+        }
+
+        .accred-item:hover {
+            background: var(--white);
+            border-color: var(--light-green);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .accred-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--light-green);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark-blue);
+            font-size: var(--font-size-lg);
+            flex-shrink: 0;
+        }
+
+        .accred-text {
+            color: var(--dark-blue);
+            font-weight: 600;
+            font-size: var(--font-size-sm);
+            line-height: 1.4;
+            flex: 1;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, #1a4082 100%);
+            color: var(--white);
+            padding: var(--spacing-16) 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+        }
+
+        .cta-content {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cta-content h2 {
+            color: var(--white);
+            font-size: var(--font-size-3xl);
+            font-weight: 700;
+            margin-bottom: var(--spacing-4);
+        }
+
+        .cta-content p {
+            color: var(--white);
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--spacing-6);
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-4);
+            flex-wrap: wrap;
+        }
+
+        .btn-cta {
+            background: var(--light-green);
+            color: var(--dark-blue);
+            padding: var(--spacing-3) var(--spacing-6);
+            border: none;
+            border-radius: var(--radius-lg);
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-2);
+        }
+
+        .btn-cta:hover {
+            background: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn-cta-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+            padding: var(--spacing-3) var(--spacing-6);
+            border-radius: var(--radius-lg);
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-2);
+        }
+
+        .btn-cta-secondary:hover {
+            background: var(--white);
+            color: var(--dark-blue);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .why-choose-hero {
+                padding: 100px 0 var(--spacing-12);
+            }
+            
+            .hero-content h1 {
+                font-size: var(--font-size-3xl);
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn-cta,
+            .btn-cta-secondary {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stat-number {
+                font-size: var(--font-size-3xl);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-links">
+                    <a href="login.html" class="top-link">Booking Portal</a>
+                    <a href="signup.html" class="top-link">Apply Here</a>
+                    <a href="login.html" class="top-link">Learner Portal</a>
+                </div>
+                <div class="top-bar-contact">
+                    <span><i class="fas fa-phone"></i> 087 288 5068</span>
+                    <span><i class="fas fa-envelope"></i> info@guardianangel.co.za</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <h2>Guardian Angel Studios</h2>
+                    <span>Training & Consulting</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Explore <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="about.html">About Us</a>
+                        <a href="why-choose-gas.html">Why choose GAS</a>
+                        <a href="resources.html">Resources</a>
+                        <a href="skills-development.html">Skills Development</a>
+                        <a href="business-advisory.html">Business Advisory</a>
+                        <a href="courses.html#qualifications">Qualifications</a>
+                        <a href="frequently.html">Frequently Asked Questions</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Students <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="student-programs.html">Student Programs</a>
+                        <a href="fees-guide.html">Fees Guide</a>
+                        <a href="careers-guide.html">Careers Guide</a>
+                        <a href="prospectus.html">Prospectus</a>
+                        <a href="testimonials.html">Student Testimonials</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">For Business <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="challenges.html">Your Challenges</a>
+                        <a href="solutions.html">Our Solutions</a>
+                        <a href="why-choose-us.html">Why Choosing Guardian Angel Studios</a>
+                        <a href="free-offerings.html">Free Offerings</a>
+                        <a href="ai-hr.html">Upcoming AI for HR</a>
+                        <a href="corporate-brochure.html">Corporate Brochure</a>
+                        <a href="public-programs.html">Public Programs</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="insights.html" class="nav-link">News & Insights</a>
+                </li>
+                <li class="nav-item">
+                    <a href="courses.html" class="nav-link">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Get in Touch</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="why-choose-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Why Choose Guardian Angel Studios?</h1>
+                <p>Discover what makes us South Africa's premier training and consulting partner for individuals and organizations seeking excellence</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Why Choose GAS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Benefits Section -->
+    <section class="key-benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why We're Different</h2>
+                <p>Guardian Angel Studios stands out as a leader in training and consulting through our unwavering commitment to excellence</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Multi-Accredited Excellence</h3>
+                    <p>We're accredited by SETA, QCTO, ETDP-SETA, PSETA, TETA, and maintain NQF alignment. Our BEE Level 2 status and CIPS certification ensure the highest quality standards.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Industry Expert Trainers</h3>
+                    <p>Our trainers bring real-world experience from leading organizations. They don't just teach theory—they share practical insights that make an immediate impact.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Customized Solutions</h3>
+                    <p>We don't believe in one-size-fits-all. Every program is tailored to your specific needs, industry context, and organizational goals.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Proven Track Record</h3>
+                    <p>With thousands of successful graduates and corporate partnerships, we've consistently delivered results that advance careers and transform organizations.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Modern Learning Methods</h3>
+                    <p>We combine traditional classroom excellence with cutting-edge online platforms, virtual reality, and interactive learning technologies.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Ongoing Support</h3>
+                    <p>Our relationship doesn't end at graduation. We provide continuous support, career guidance, and opportunities for further development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Impact in Numbers</h2>
+                <p>These statistics reflect our commitment to delivering measurable results</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">10,000+</div>
+                    <div class="stat-label">Learners Trained</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Corporate Clients</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">Success Rate</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Accreditations</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Learning Access</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accreditations Showcase -->
+    <section class="accreditations-showcase">
+        <div class="container">
+            <div class="section-header">
+                <h2>Industry Recognition</h2>
+                <p>Our accreditations and certifications ensure you receive training that meets the highest industry standards</p>
+            </div>
+            <div class="accred-grid">
+                <div class="accred-item">
+                    <div class="accred-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="accred-text">SETA Accredited</div>
+                </div>
+                <div class="accred-item">
+                    <div class="accred-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="accred-text">QCTO Accredited</div>
+                </div>
+                <div class="accred-item">
+                    <div class="accred-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="accred-text">ETDP-SETA Accredited</div>
+                </div>
+                <div class="accred-item">
+                    <div class="accred-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="accred-text">PSETA Accredited</div>
+                </div>
+                <div class="accred-item">
+                    <div class="accred-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="accred-text">TETA Accredited</div>
+                </div>
+                <div class="accred-item">
+                    <div class="accred-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="accred-text">NQF Aligned</div>
+                </div>
+                <div class="accred-item">
+                    <div class="accred-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="accred-text">BEE Level 2</div>
+                </div>
+                <div class="accred-item">
+                    <div class="accred-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="accred-text">CIPS Certified</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Excel with GAS?</h2>
+                <p>Join thousands of successful learners and organizations who have chosen Guardian Angel Studios as their trusted training partner.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-cta">
+                        <i class="fas fa-phone"></i>
+                        Get in Touch
+                    </a>
+                    <a href="courses.html" class="btn-cta-secondary">
+                        <i class="fas fa-book"></i>
+                        View Our Courses
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-columns">
+                    <div class="footer-section">
+                        <h4>Clients</h4>
+                        <ul>
+                            <li><a href="contact.html">Get In Touch</a></li>
+                            <li><a href="#subscribe">Subscribe To Us</a></li>
+                            <li><a href="#feedback">Give Us Feedback</a></li>
+                            <li><a href="#portal">Experts Portal</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Learners</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="#campuses">Our Campuses</a></li>
+                            <li><a href="#departments">Our Departments</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Explore</h4>
+                        <ul>
+                            <li><a href="#absorption">Absorption</a></li>
+                            <li><a href="#accreditation">Accreditation</a></li>
+                            <li><a href="#community">Community Campuses</a></li>
+                            <li><a href="#development">Course Development</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-legal">
+                        <div class="footer-section">
+                            <h4>Legal</h4>
+                            <ul>
+                                <li><a href="#privacy">Privacy Policy</a></li>
+                                <li><a href="#cookies">Cookie Policy</a></li>
+                                <li><a href="#accessibility">Accessibility</a></li>
+                                <li><a href="#privacy-choices">Your Privacy Choices</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section contact-section">
+                    <h4>Talk to Us</h4>
+                    <div class="contact-phone-box">
+                        <a href="tel:0872885068">087 288 5068</a>
+                    </div>
+                    <div class="contact-details">
+                        <a href="mailto:info@guardianangel.co.za" class="contact-email">info@guardianangel.co.za</a>
+                        <span class="email-type">(business enquiries)</span>
+                        
+                        <a href="mailto:learn@guardianangel.co.za" class="contact-email">learn@guardianangel.co.za</a>
+                        <span class="email-type">(student enquiries)</span>
+                        
+                        <div class="business-hours">
+                            <span>Mondays - Fridays, 08:00 - 17:00</span>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-spotify"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-info">
+                    <p>Guardian Angel Studios is a multi-accredited training provider. BEE Level 2 | Professional Training Excellence</p>
+                    <p>© 2025, Guardian Angel Studios. All Rights Reserved</p>
+                </div>
+                <div class="footer-bottom-right">
+                    <div class="footer-contact">
+                        <span>+27 87 288 5068</span>
+                        <a href="mailto:info@guardianangel.co.za">info@guardianangel.co.za</a>
+                        <a href="#top" class="back-to-top">Back to top</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
