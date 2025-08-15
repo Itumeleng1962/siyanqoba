@@ -340,9 +340,46 @@ function getNotificationColor(type) {
     }
 }
 
+// Qualification details functionality
+function toggleQualificationDetails(qualificationType) {
+    // Close any open details first
+    const allSections = document.querySelectorAll('.qualification-detail-section');
+    allSections.forEach(section => {
+        if (section.id !== `${qualificationType}-details`) {
+            section.classList.remove('active');
+        }
+    });
+    
+    // Toggle the clicked section
+    const targetSection = document.getElementById(`${qualificationType}-details`);
+    if (targetSection) {
+        targetSection.classList.toggle('active');
+        
+        // Scroll to the section if it's being opened
+        if (targetSection.classList.contains('active')) {
+            setTimeout(() => {
+                targetSection.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'start',
+                    inline: 'nearest'
+                });
+            }, 100);
+        }
+    }
+}
+
+function closeQualificationDetails(qualificationType) {
+    const targetSection = document.getElementById(`${qualificationType}-details`);
+    if (targetSection) {
+        targetSection.classList.remove('active');
+    }
+}
+
 // Make functions globally available
 window.openEnrollmentModal = openEnrollmentModal;
 window.closeEnrollmentModal = closeEnrollmentModal;
+window.toggleQualificationDetails = toggleQualificationDetails;
+window.closeQualificationDetails = closeQualificationDetails;
 
 // Add styles for form validation
 const style = document.createElement('style');

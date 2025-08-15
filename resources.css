@@ -1285,3 +1285,91 @@
 .faq-item.active .faq-answer {
     animation: fadeIn 0.3s ease-out;
 }
+
+/* Our Qualifications */
+.our-qualifications {
+    background: var(--white);
+    padding: var(--spacing-16) 0;
+}
+
+.qualifications-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-8);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.qualification-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-8);
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+}
+
+.qualification-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--light-green);
+}
+
+.qualification-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto var(--spacing-4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-2xl);
+    transition: all 0.3s ease;
+}
+
+.qualification-card:nth-child(1) .qualification-icon {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.qualification-card:nth-child(2) .qualification-icon {
+    background-color: #f3e5f5;
+    color: #7b1fa2;
+}
+
+.qualification-card:nth-child(3) .qualification-icon {
+    background-color: #e8f5e8;
+    color: #388e3c;
+}
+
+.qualification-card:nth-child(4) .qualification-icon {
+    background-color: #fff3e0;
+    color: #f57c00;
+}
+
+.qualification-card h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--dark-blue);
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .qualifications-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-6);
+    }
+    
+    .qualification-card {
+        padding: var(--spacing-6);
+    }
+    
+    .qualification-icon {
+        width: 60px;
+        height: 60px;
+        font-size: var(--font-size-xl);
+    }
+}
