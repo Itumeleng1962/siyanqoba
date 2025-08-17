@@ -851,6 +851,29 @@ body .breadcrumb span,
     transition: all 0.3s ease;
 }
 
+.expand-indicator .plus-indicator {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.expand-indicator .plus-indicator::before {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
+}
+
 .qualification-category {
     position: relative;
 }
