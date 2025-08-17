@@ -818,24 +818,13 @@ body .breadcrumb span,
     transition: all 0.3s ease;
 }
 
-.qualification-category:nth-child(1) .category-icon {
-    background-color: #e3f2fd;
-    color: #1976d2;
-}
-
-.qualification-category:nth-child(2) .category-icon {
-    background-color: #f3e5f5;
-    color: #7b1fa2;
-}
-
-.qualification-category:nth-child(3) .category-icon {
-    background-color: #e8f5e8;
-    color: #388e3c;
-}
-
-.qualification-category:nth-child(4) .category-icon {
-    background-color: #fff3e0;
-    color: #f57c00;
+/* All category icons use consistent design */
+.qualification-category .category-icon {
+    background-color: var(--blue-zodiac);
+    color: var(--light-green);
+    font-weight: bold;
+    border: 2px solid var(--light-green);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .qualification-category h3 {
