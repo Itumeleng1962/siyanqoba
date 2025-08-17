@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Styles Showcase - Guardian Angel Studios</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 60px 20px 20px;
+            font-family: 'Inter', sans-serif;
+            background: #f8f9fa;
+        }
+
+        .showcase-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .showcase-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--dark-blue);
+        }
+
+        .dropdown-demo {
+            background: white;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .demo-title {
+            margin-bottom: 20px;
+            color: var(--dark-blue);
+            border-bottom: 2px solid var(--light-green);
+            padding-bottom: 10px;
+        }
+
+        .demo-nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        /* Style 1: Mega Menu Dropdown */
+        .mega-dropdown {
+            position: relative;
+        }
+
+        .mega-trigger {
+            padding: 12px 20px;
+            background: var(--dark-blue);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .mega-trigger:hover {
+            background: #1a3d66;
+        }
+
+        .mega-content {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 30px;
+            display: none;
+            z-index: 1000;
+            min-width: 600px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .mega-dropdown:hover .mega-content {
+            display: block;
+        }
+
+        .mega-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .mega-section h4 {
+            color: var(--dark-blue);
+            margin-bottom: 15px;
+            font-weight: 600;
+            border-bottom: 2px solid var(--light-green);
+            padding-bottom: 5px;
+        }
+
+        .mega-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mega-section li {
+            margin-bottom: 8px;
+        }
+
+        .mega-section a {
+            color: #666;
+            text-decoration: none;
+            padding: 4px 0;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .mega-section a:hover {
+            color: var(--dark-blue);
+            padding-left: 10px;
+        }
+
+        /* Style 2: Animated Slide Dropdown */
+        .slide-dropdown {
+            position: relative;
+        }
+
+        .slide-trigger {
+            padding: 12px 20px;
+            background: linear-gradient(135deg, var(--light-green), #7dc142);
+            color: var(--dark-blue);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .slide-trigger:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .slide-content {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            padding: 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            min-width: 250px;
+            overflow: hidden;
+        }
+
+        .slide-dropdown:hover .slide-content {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .slide-content a {
+            display: block;
+            padding: 15px 20px;
+            color: #555;
+            text-decoration: none;
+            border-bottom: 1px solid #f0f0f0;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .slide-content a::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 0;
+            background: var(--light-green);
+            transition: width 0.3s ease;
+        }
+
+        .slide-content a:hover {
+            background: #f8f9fa;
+            padding-left: 30px;
+            color: var(--dark-blue);
+        }
+
+        .slide-content a:hover::before {
+            width: 4px;
+        }
+
+        /* Style 3: Card-Style Dropdown */
+        .card-dropdown {
+            position: relative;
+        }
+
+        .card-trigger {
+            padding: 12px 20px;
+            background: white;
+            color: var(--dark-blue);
+            border: 2px solid var(--dark-blue);
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .card-trigger:hover {
+            background: var(--dark-blue);
+            color: white;
+        }
+
+        .card-content {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            padding: 20px;
+            display: none;
+            z-index: 1000;
+            min-width: 300px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .card-dropdown:hover .card-content {
+            display: block;
+        }
+
+        .card-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #555;
+            transition: all 0.3s ease;
+            margin-bottom: 8px;
+        }
+
+        .card-item:hover {
+            background: #f8f9fa;
+            transform: translateX(5px);
+        }
+
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--light-green), #7dc142);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark-blue);
+        }
+
+        .card-text h5 {
+            margin: 0;
+            color: var(--dark-blue);
+            font-weight: 600;
+        }
+
+        .card-text p {
+            margin: 4px 0 0;
+            font-size: 12px;
+            color: #888;
+        }
+
+        /* Style 4: Split Dropdown */
+        .split-dropdown {
+            display: flex;
+            position: relative;
+        }
+
+        .split-main {
+            padding: 12px 20px;
+            background: var(--dark-blue);
+            color: white;
+            border: none;
+            border-radius: 6px 0 0 6px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .split-arrow {
+            padding: 12px 15px;
+            background: #1a3d66;
+            color: white;
+            border: none;
+            border-radius: 0 6px 6px 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .split-content {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            padding: 10px 0;
+            display: none;
+            z-index: 1000;
+            min-width: 200px;
+        }
+
+        .split-dropdown:hover .split-content {
+            display: block;
+        }
+
+        .split-content a {
+            display: block;
+            padding: 10px 20px;
+            color: #555;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .split-content a:hover {
+            background: var(--light-green);
+            color: var(--dark-blue);
+        }
+
+        /* Style 5: Modern Glassmorphism */
+        .glass-dropdown {
+            position: relative;
+        }
+
+        .glass-trigger {
+            padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            color: var(--dark-blue);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .glass-trigger:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .glass-content {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            padding: 15px 0;
+            display: none;
+            z-index: 1000;
+            min-width: 220px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .glass-dropdown:hover .glass-content {
+            display: block;
+        }
+
+        .glass-content a {
+            display: block;
+            padding: 12px 20px;
+            color: var(--dark-blue);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .glass-content a:hover {
+            background: rgba(203, 251, 5, 0.2);
+            padding-left: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .demo-nav {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .mega-content {
+                min-width: 300px;
+                left: -100px;
+            }
+
+            .mega-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="showcase-container">
+        <h1 class="showcase-title">Professional Dropdown Menu Styles</h1>
+
+        <!-- Style 1: Mega Menu -->
+        <div class="dropdown-demo">
+            <h3 class="demo-title">1. Mega Menu Dropdown (Enterprise Style)</h3>
+            <div class="demo-nav">
+                <div class="mega-dropdown">
+                    <button class="mega-trigger">
+                        Our Services <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="mega-content">
+                        <div class="mega-grid">
+                            <div class="mega-section">
+                                <h4>Training Services</h4>
+                                <ul>
+                                    <li><a href="#">Skills Development</a></li>
+                                    <li><a href="#">Short Courses</a></li>
+                                    <li><a href="#">Professional Certifications</a></li>
+                                    <li><a href="#">Corporate Training</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-section">
+                                <h4>Consulting Services</h4>
+                                <ul>
+                                    <li><a href="#">Business Advisory</a></li>
+                                    <li><a href="#">BBBEE Consulting</a></li>
+                                    <li><a href="#">Grant Planning</a></li>
+                                    <li><a href="#">Strategic Planning</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Style 2: Animated Slide -->
+        <div class="dropdown-demo">
+            <h3 class="demo-title">2. Animated Slide Dropdown (Modern Style)</h3>
+            <div class="demo-nav">
+                <div class="slide-dropdown">
+                    <button class="slide-trigger">
+                        Explore <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="slide-content">
+                        <a href="#">About Us</a>
+                        <a href="#">Why Choose GAS</a>
+                        <a href="#">Resources</a>
+                        <a href="#">Qualifications</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Style 3: Card Style -->
+        <div class="dropdown-demo">
+            <h3 class="demo-title">3. Card-Style Dropdown (Rich Content)</h3>
+            <div class="demo-nav">
+                <div class="card-dropdown">
+                    <button class="card-trigger">
+                        Students <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="card-content">
+                        <a href="#" class="card-item">
+                            <div class="card-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="card-text">
+                                <h5>Student Programs</h5>
+                                <p>Explore our learning paths</p>
+                            </div>
+                        </a>
+                        <a href="#" class="card-item">
+                            <div class="card-icon">
+                                <i class="fas fa-money-bill"></i>
+                            </div>
+                            <div class="card-text">
+                                <h5>Fees Guide</h5>
+                                <p>Transparent pricing structure</p>
+                            </div>
+                        </a>
+                        <a href="#" class="card-item">
+                            <div class="card-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="card-text">
+                                <h5>Careers Guide</h5>
+                                <p>Your future starts here</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Style 4: Split Button -->
+        <div class="dropdown-demo">
+            <h3 class="demo-title">4. Split Button Dropdown (Action + Options)</h3>
+            <div class="demo-nav">
+                <div class="split-dropdown">
+                    <button class="split-main">For Business</button>
+                    <button class="split-arrow">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="split-content">
+                        <a href="#">Your Challenges</a>
+                        <a href="#">Our Solutions</a>
+                        <a href="#">Why Choose Us</a>
+                        <a href="#">Free Offerings</a>
+                        <a href="#">Corporate Brochure</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Style 5: Glassmorphism -->
+        <div class="dropdown-demo">
+            <h3 class="demo-title">5. Glassmorphism Dropdown (Ultra Modern)</h3>
+            <div class="demo-nav">
+                <div class="glass-dropdown">
+                    <button class="glass-trigger">
+                        Quick Access <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="glass-content">
+                        <a href="#">Contact Us</a>
+                        <a href="#">Apply Now</a>
+                        <a href="#">Download Brochure</a>
+                        <a href="#">Book Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
