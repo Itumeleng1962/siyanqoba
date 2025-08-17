@@ -2625,7 +2625,7 @@ body {
 
 .logos-track {
     display: flex;
-    width: calc(280px * 16); /* 8 logos × 2 (duplicated) × 280px width */
+    width: calc(280px * 30); /* 15 logos × 2 (duplicated) × 280px width */
     animation: scroll-logos 35s linear infinite;
 }
 
@@ -2684,7 +2684,7 @@ body {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-280px * 8)); /* Move by width of 8 original logos */
+        transform: translateX(calc(-280px * 15)); /* Move by width of 15 original logos */
     }
 }
 
@@ -2708,7 +2708,7 @@ body {
     }
     
     .logos-track {
-        width: calc(220px * 16);
+        width: calc(220px * 30);
         animation-duration: 30s;
     }
     
@@ -2728,7 +2728,7 @@ body {
             transform: translateX(0);
         }
         100% {
-            transform: translateX(calc(-220px * 8));
+            transform: translateX(calc(-220px * 15));
         }
     }
 }
