@@ -1,4 +1,4 @@
-// Main JavaScript file for Guardian Angel Studios website
+// Main JavaScript file for Ukwakhile Training & Consulting website
 
 document.addEventListener('DOMContentLoaded', function() {
     initNavigation();

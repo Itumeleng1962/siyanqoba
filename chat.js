@@ -163,7 +163,7 @@ class ChatWidget {
 
     redirectToWhatsApp(message) {
         // Create WhatsApp URL with pre-filled message
-        const encodedMessage = encodeURIComponent(`Hi! I'm interested in Guardian Angel Studios training services. ${message}`);
+    const encodedMessage = encodeURIComponent(`Hi! I'm interested in Ukwakhile Training & Consulting training services. ${message}`);
         const whatsappUrl = `https://wa.me/${this.whatsappNumber}?text=${encodedMessage}`;
         
         // Open WhatsApp in a new tab/window

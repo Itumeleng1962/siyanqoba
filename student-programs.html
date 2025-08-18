@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Programs - Ukwakhile Training & Consulting</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="resources.css">
+    <link rel="stylesheet" href="footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .usp-section { background: var(--gray-50); padding: 48px 0; }
+        .usp-title { color: var(--dark-blue); font-size: 2rem; margin-bottom: 24px; text-align: center; }
+        .usp-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px; max-width: 1000px; margin: 0 auto; }
+        .usp-item { background: #fff; border-radius: 12px; box-shadow: var(--shadow-sm); padding: 28px 22px; border-left: 4px solid var(--light-green); font-size: 1.08rem; color: var(--gray-700); display: flex; align-items: flex-start; gap: 16px; }
+        .usp-item i { color: var(--light-green); font-size: 1.5rem; margin-right: 10px; }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-links">
+                    <a href="login.html" class="top-link">Booking Portal</a>
+                    <a href="signup.html" class="top-link">Apply Here</a>
+                    <a href="login.html" class="top-link">Learner Portal</a>
+                </div>
+                <div class="top-bar-contact">
+                    <span><i class="fas fa-phone"></i> 087 288 5068</span>
+                    <span><i class="fas fa-envelope"></i> info@guardianangel.co.za</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <h2>Ukwakhile</h2>
+                    <span>Training & Consulting</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Explore <span class="plus-indicator"></span></a>
+                    <div class="dropdown-content">
+                        <a href="about.html">About Us</a>
+                        <a href="why-choose-gas.html">Why choose GAS</a>
+                        <a href="resources.html">Resources</a>
+                        <!-- <a href="courses.html#qualifications">Qualifications</a> -->
+                        <a href="frequently.html">Frequently Asked Questions</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown mega-dropdown">
+                    <a href="#" class="nav-link">Our Services <span class="plus-indicator"></span></a>
+                    <div class="dropdown-content">
+                        <div class="mega-grid">
+                            <div class="mega-section">
+                                <h4>Training Services</h4>
+                                <ul>
+                                    <li><a href="skills-development.html">Skills Development</a></li>
+                                    <li><a href="short-courses.html">Short Courses</a></li>
+                                    <li><a href="courses.html#qualifications">Professional Certifications</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-section">
+                                <h4>Consulting Services</h4>
+                                <ul>
+                                    <li><a href="business-advisory.html">Business Advisory</a></li>
+                                    <li><a href="bbbee-consulting.html">BBBEE Consulting</a></li>
+                                    <li><a href="grant-planning.html">Grant Planning</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Students <span class="plus-indicator"></span></a>
+                    <div class="dropdown-content">
+                        <a href="student-programs.html">Student Programs</a>
+                        <a href="fees-guide.html">Fees Guide</a>
+                        <a href="careers-guide.html">Careers Guide</a>
+                        <a href="prospectus.html">Prospectus</a>
+                        <!-- <a href="index.html#faq">FAQ's</a> -->
+                        <a href="testimonials.html">Student Testimonials</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">For Business <span class="plus-indicator"></span></a>
+                    <div class="dropdown-content">
+                        <a href="challenges.html">Your Challenges</a>
+                        <a href="solutions.html">Our Solutions</a>
+                        <a href="why-choose-us.html">Why Choosing Ukwakhile Training & Consulting</a>
+                        <a href="free-offerings.html">Free Offerings</a>
+                        <a href="ai-hr.html">Upcoming AI for HR</a>
+                        <a href="corporate-brochure.html">Corporate Brochure</a>
+                        <a href="public-programs.html">Public Programs</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="insights.html" class="nav-link">News & Insights</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Get in Touch</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <div class="header-content">
+                <h1>Student Programs</h1>
+                <p>Discover why Ukwakhile is the best choice for your learning journey and career growth.</p>
+                <div class="breadcrumb"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Student Programs</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="programs-featured" style="background:var(--white); padding:48px 0 32px 0;">
+        <div class="container">
+            <h2 style="text-align:center; color:var(--dark-blue); margin-bottom:18px;">Featured Student Programs</h2>
+            <p style="text-align:center; color:var(--gray-700); font-size:1.15rem; margin-bottom:32px;">We’ve done the hard work for you and have selected some of the best programs to advance your career.</p>
+            <div class="programs-card-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:32px; max-width:1100px; margin:0 auto 32px auto;">
+                <!-- Computer Technician -->
+                <div class="program-card-modern" style="background:#fff; border-radius:18px; box-shadow:var(--shadow-sm); overflow:hidden; position:relative; display:flex; flex-direction:column;">
+                    <div style="position:relative;">
+                        <img src="images/computer.jpg" alt="Computer Technician" style="width:100%; height:180px; object-fit:cover;">
+                        <span style="position:absolute; top:14px; right:14px; background:#d6ff3c; color:#222; font-weight:700; border-radius:8px; padding:6px 14px; font-size:1rem;">Tech</span>
+                    </div>
+                    <div style="padding:24px 22px 18px 22px; flex:1; display:flex; flex-direction:column;">
+                        <span style="display:inline-block; background:#0a2342; color:#fff; font-size:0.95rem; font-weight:600; border-radius:8px; padding:4px 16px 4px 16px; margin-bottom:12px;">Technology</span>
+                        <h3 style="font-size:1.18rem; color:var(--dark-blue); margin:0 0 10px 0;">Computer Technician</h3>
+                        <p style="color:var(--gray-600); font-size:1rem; margin-bottom:18px;">Gain hands-on skills in computer hardware, software, and troubleshooting for a tech-driven career.</p>
+                        <a href="courses.html#computer-technician" style="color:var(--dark-blue); font-weight:600; text-decoration:none;">Read More &rarr;</a>
+                    </div>
+                </div>
+                <!-- Business Administration -->
+                <div class="program-card-modern" style="background:#fff; border-radius:18px; box-shadow:var(--shadow-sm); overflow:hidden; position:relative; display:flex; flex-direction:column;">
+                    <div style="position:relative;">
+                        <img src="images/admin.jpg" alt="Business Administration" style="width:100%; height:180px; object-fit:cover;">
+                        <span style="position:absolute; top:14px; right:14px; background:#d6ff3c; color:#222; font-weight:700; border-radius:8px; padding:6px 14px; font-size:1rem;">Admin</span>
+                    </div>
+                    <div style="padding:24px 22px 18px 22px; flex:1; display:flex; flex-direction:column;">
+                        <span style="display:inline-block; background:#0a2342; color:#fff; font-size:0.95rem; font-weight:600; border-radius:8px; padding:4px 16px 4px 16px; margin-bottom:12px;">Business</span>
+                        <h3 style="font-size:1.18rem; color:var(--dark-blue); margin:0 0 10px 0;">Business Administration</h3>
+                        <p style="color:var(--gray-600); font-size:1rem; margin-bottom:18px;">Develop essential business and office management skills for diverse industries.</p>
+                        <a href="courses.html#business-administration" style="color:var(--dark-blue); font-weight:600; text-decoration:none;">Read More &rarr;</a>
+                    </div>
+                </div>
+                <!-- General Management -->
+                <div class="program-card-modern" style="background:#fff; border-radius:18px; box-shadow:var(--shadow-sm); overflow:hidden; position:relative; display:flex; flex-direction:column;">
+                    <div style="position:relative;">
+                        <img src="images/general.jpg" alt="General Management" style="width:100%; height:180px; object-fit:cover;">
+                        <span style="position:absolute; top:14px; right:14px; background:#d6ff3c; color:#222; font-weight:700; border-radius:8px; padding:6px 14px; font-size:1rem;">Mgmt</span>
+                    </div>
+                    <div style="padding:24px 22px 18px 22px; flex:1; display:flex; flex-direction:column;">
+                        <span style="display:inline-block; background:#0a2342; color:#fff; font-size:0.95rem; font-weight:600; border-radius:8px; padding:4px 16px 4px 16px; margin-bottom:12px;">Leadership</span>
+                        <h3 style="font-size:1.18rem; color:var(--dark-blue); margin:0 0 10px 0;">General Management</h3>
+                        <p style="color:var(--gray-600); font-size:1rem; margin-bottom:18px;">Lead teams and projects with confidence, mastering modern management practices.</p>
+                        <a href="courses.html#general-management" style="color:var(--dark-blue); font-weight:600; text-decoration:none;">Read More &rarr;</a>
+                    </div>
+                </div>
+                <!-- Customer Management -->
+                <div class="program-card-modern" style="background:#fff; border-radius:18px; box-shadow:var(--shadow-sm); overflow:hidden; position:relative; display:flex; flex-direction:column;">
+                    <div style="position:relative;">
+                        <img src="images/customer.jpg" alt="Customer Management" style="width:100%; height:180px; object-fit:cover;">
+                        <span style="position:absolute; top:14px; right:14px; background:#d6ff3c; color:#222; font-weight:700; border-radius:8px; padding:6px 14px; font-size:1rem;">Service</span>
+                    </div>
+                    <div style="padding:24px 22px 18px 22px; flex:1; display:flex; flex-direction:column;">
+                        <span style="display:inline-block; background:#0a2342; color:#fff; font-size:0.95rem; font-weight:600; border-radius:8px; padding:4px 16px 4px 16px; margin-bottom:12px;">Customer</span>
+                        <h3 style="font-size:1.18rem; color:var(--dark-blue); margin:0 0 10px 0;">Customer Management</h3>
+                        <p style="color:var(--gray-600); font-size:1rem; margin-bottom:18px;">Master customer service, relationship building, and client retention strategies.</p>
+                        <a href="courses.html#customer-management" style="color:var(--dark-blue); font-weight:600; text-decoration:none;">Read More &rarr;</a>
+                    </div>
+                </div>
+                <!-- Project Management -->
+                <div class="program-card-modern" style="background:#fff; border-radius:18px; box-shadow:var(--shadow-sm); overflow:hidden; position:relative; display:flex; flex-direction:column;">
+                    <div style="position:relative;">
+                        <img src="images/projectm.jpg" alt="Project Management" style="width:100%; height:180px; object-fit:cover;">
+                        <span style="position:absolute; top:14px; right:14px; background:#d6ff3c; color:#222; font-weight:700; border-radius:8px; padding:6px 14px; font-size:1rem;">Project</span>
+                    </div>
+                    <div style="padding:24px 22px 18px 22px; flex:1; display:flex; flex-direction:column;">
+                        <span style="display:inline-block; background:#0a2342; color:#fff; font-size:0.95rem; font-weight:600; border-radius:8px; padding:4px 16px 4px 16px; margin-bottom:12px;">Management</span>
+                        <h3 style="font-size:1.18rem; color:var(--dark-blue); margin:0 0 10px 0;">Project Management</h3>
+                        <p style="color:var(--gray-600); font-size:1rem; margin-bottom:18px;">Plan, execute, and deliver successful projects in any sector.</p>
+                        <a href="courses.html#project-management" style="color:var(--dark-blue); font-weight:600; text-decoration:none;">Read More &rarr;</a>
+                    </div>
+                </div>
+                <!-- Public Finance Management and Administration -->
+                <div class="program-card-modern" style="background:#fff; border-radius:18px; box-shadow:var(--shadow-sm); overflow:hidden; position:relative; display:flex; flex-direction:column;">
+                    <div style="position:relative;">
+                        <img src="images/finance.png" alt="Public Finance Management and Administration" style="width:100%; height:180px; object-fit:cover;">
+                        <span style="position:absolute; top:14px; right:14px; background:#d6ff3c; color:#222; font-weight:700; border-radius:8px; padding:6px 14px; font-size:1rem;">Finance</span>
+                    </div>
+                    <div style="padding:24px 22px 18px 22px; flex:1; display:flex; flex-direction:column;">
+                        <span style="display:inline-block; background:#0a2342; color:#fff; font-size:0.95rem; font-weight:600; border-radius:8px; padding:4px 16px 4px 16px; margin-bottom:12px;">Finance</span>
+                        <h3 style="font-size:1.18rem; color:var(--dark-blue); margin:0 0 10px 0;">Public Finance Management and Administration</h3>
+                        <p style="color:var(--gray-600); font-size:1rem; margin-bottom:18px;">Build expertise in public sector finance, budgeting, and administration.</p>
+                        <a href="courses.html#public-finance" style="color:var(--dark-blue); font-weight:600; text-decoration:none;">Read More &rarr;</a>
+                    </div>
+                </div>
+                <!-- Metal and Engineering Manufacturing Processes -->
+                <div class="program-card-modern" style="background:#fff; border-radius:18px; box-shadow:var(--shadow-sm); overflow:hidden; position:relative; display:flex; flex-direction:column;">
+                    <div style="position:relative;">
+                        <img src="images/Manufacturing.jpg" alt="Metal and Engineering Manufacturing Processes" style="width:100%; height:180px; object-fit:cover;">
+                        <span style="position:absolute; top:14px; right:14px; background:#d6ff3c; color:#222; font-weight:700; border-radius:8px; padding:6px 14px; font-size:1rem;">Engineering</span>
+                    </div>
+                    <div style="padding:24px 22px 18px 22px; flex:1; display:flex; flex-direction:column;">
+                        <span style="display:inline-block; background:#0a2342; color:#fff; font-size:0.95rem; font-weight:600; border-radius:8px; padding:4px 16px 4px 16px; margin-bottom:12px;">Manufacturing</span>
+                        <h3 style="font-size:1.18rem; color:var(--dark-blue); margin:0 0 10px 0;">Metal and Engineering Manufacturing Processes</h3>
+                        <p style="color:var(--gray-600); font-size:1rem; margin-bottom:18px;">Learn the fundamentals of metalwork, engineering, and manufacturing operations.</p>
+                        <a href="courses.html#metal-engineering" style="color:var(--dark-blue); font-weight:600; text-decoration:none;">Read More &rarr;</a>
+                    </div>
+                </div>
+                <!-- Supply Chain Manager -->
+                <div class="program-card-modern" style="background:#fff; border-radius:18px; box-shadow:var(--shadow-sm); overflow:hidden; position:relative; display:flex; flex-direction:column;">
+                    <div style="position:relative;">
+                        <img src="images/supply.jpg" alt="Supply Chain Manager" style="width:100%; height:180px; object-fit:cover;">
+                        <span style="position:absolute; top:14px; right:14px; background:#d6ff3c; color:#222; font-weight:700; border-radius:8px; padding:6px 14px; font-size:1rem;">Supply</span>
+                    </div>
+                    <div style="padding:24px 22px 18px 22px; flex:1; display:flex; flex-direction:column;">
+                        <span style="display:inline-block; background:#0a2342; color:#fff; font-size:0.95rem; font-weight:600; border-radius:8px; padding:4px 16px 4px 16px; margin-bottom:12px;">Logistics</span>
+                        <h3 style="font-size:1.18rem; color:var(--dark-blue); margin:0 0 10px 0;">Supply Chain Manager</h3>
+                        <p style="color:var(--gray-600); font-size:1rem; margin-bottom:18px;">Oversee logistics, procurement, and supply chain operations for business success.</p>
+                        <a href="courses.html#supply-chain" style="color:var(--dark-blue); font-weight:600; text-decoration:none;">Read More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center;">
+                <a href="courses.html" class="btn btn-primary" style="margin-right:18px;"><i class="fas fa-graduation-cap"></i> Explore qualifications</a>
+                <a href="signup.html" class="btn btn-secondary"><i class="fas fa-edit"></i> Register your interest</a>
+            </div>
+        </div>
+    </section>
+    <section class="usp-section">
+    <section class="testimonials-section" style="background:var(--gray-50); padding:48px 0 56px 0;">
+        <div class="container">
+            <h2 style="text-align:center; color:var(--dark-blue); margin-bottom:32px;">Student Testimonials</h2>
+            <div class="testimonials-list" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:32px; max-width:1100px; margin:0 auto;">
+                <div class="testimonial-card" style="background:#fff; border-radius:12px; box-shadow:var(--shadow-sm); padding:28px 22px; border-left:4px solid var(--light-green);">
+                    <p style="font-size:1.08rem; color:var(--gray-700); margin-bottom:16px;">“Ukwakhile transformed our approach to talent development, leading to unprecedented growth and success.”</p>
+                    <span style="font-weight:600; color:var(--dark-blue);">John</span>
+                </div>
+                <div class="testimonial-card" style="background:#fff; border-radius:12px; box-shadow:var(--shadow-sm); padding:28px 22px; border-left:4px solid var(--light-green);">
+                    <p style="font-size:1.08rem; color:var(--gray-700); margin-bottom:16px;">“Their BBBEE consulting services are top-notch, helping us achieve our goals efficiently and effectively.”</p>
+                    <span style="font-weight:600; color:var(--dark-blue);">Emily</span>
+                </div>
+                <div class="testimonial-card" style="background:#fff; border-radius:12px; box-shadow:var(--shadow-sm); padding:28px 22px; border-left:4px solid var(--light-green);">
+                    <p style="font-size:1.08rem; color:var(--gray-700); margin-bottom:16px;">“Ukwakhile's grant planning consulting exceeded our expectations, securing our financial future with precision.”</p>
+                    <span style="font-weight:600; color:var(--dark-blue);">Sophia</span>
+                </div>
+                <div class="testimonial-card" style="background:#fff; border-radius:12px; box-shadow:var(--shadow-sm); padding:28px 22px; border-left:4px solid var(--light-green);">
+                    <p style="font-size:1.08rem; color:var(--gray-700); margin-bottom:16px;">“Incredible service quality and human resources consulting that truly sets them apart in the industry.”</p>
+                    <span style="font-weight:600; color:var(--dark-blue);">Michael</span>
+                </div>
+                <div class="testimonial-card" style="background:#fff; border-radius:12px; box-shadow:var(--shadow-sm); padding:28px 22px; border-left:4px solid var(--light-green);">
+                    <p style="font-size:1.08rem; color:var(--gray-700); margin-bottom:16px;">“Their dedication to empowering individuals and organizations is unmatched, a true game-changer in the consultancy world.”</p>
+                    <span style="font-weight:600; color:var(--dark-blue);">Nkosinathi</span>
+                </div>
+                <div class="testimonial-card" style="background:#fff; border-radius:12px; box-shadow:var(--shadow-sm); padding:28px 22px; border-left:4px solid var(--light-green);">
+                    <p style="font-size:1.08rem; color:var(--gray-700); margin-bottom:16px;">“Ukwakhile's impact on our business has been phenomenal, a strategic partner that delivers results beyond imagination.”</p>
+                    <span style="font-weight:600; color:var(--dark-blue);">Jessica</span>
+                </div>
+            </div>
+        </div>
+    </section>
+        <div class="container">
+            <h1 class="usp-title">Why Studying with Ukwakhile is the Best Choice</h1>
+            <div class="usp-list">
+                <div class="usp-item"><i class="fas fa-certificate"></i> Accredited & Recognized Training</div>
+                <div class="usp-item"><i class="fas fa-chalkboard-teacher"></i> Practical & Industry-Relevant Skills</div>
+                <div class="usp-item"><i class="fas fa-briefcase"></i> Workplace Readiness</div>
+                <div class="usp-item"><i class="fas fa-users"></i> Experienced & Supportive Facilitators</div>
+                <div class="usp-item"><i class="fas fa-chart-line"></i> Pathway to Employment & Growth</div>
+                <div class="usp-item"><i class="fas fa-wallet"></i> Affordable & Accessible Education</div>
+                <div class="usp-item"><i class="fas fa-laptop"></i> Modern Learning Approach</div>
+                <div class="usp-item"><i class="fas fa-user-graduate"></i> Focus on Personal Development</div>
+                <div class="usp-item"><i class="fas fa-star"></i> Proven Success Stories</div>
+                <div class="usp-item"><i class="fas fa-hands-helping"></i> Community & Industry Impact</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-columns">
+                    <div class="footer-section">
+                        <h4>Explore</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="why-choose-gas.html">Why choose Ukwakhile</a></li>
+                            <li><a href="resources.html">Resources</a></li>
+                            <li><a href="frequently.html">Frequently Asked Questions</a></li>
+                            <li><a href="insights.html">News & Insights</a></li>
+                            <li><a href="contact.html">Get in Touch</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Our Services</h4>
+                        <h5>Training Services</h5>
+                        <ul>
+                            <li><a href="skills-development.html">Skills Development</a></li>
+                            <li><a href="short-courses.html">Short Courses</a></li>
+                            <li><a href="courses.html">Professional Certifications</a></li>
+                        </ul>
+                        <h5>Consulting Services</h5>
+                        <ul>
+                            <li><a href="business-advisory.html">Business Advisory</a></li>
+                            <li><a href="bbbee-consulting.html">BBBEE Consulting</a></li>
+                            <li><a href="grant-planning.html">Grant Planning</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Students</h4>
+                        <ul>
+                            <li><a href="#student-programs">Student Programs</a></li>
+                            <li><a href="#fees-guide">Fees Guide</a></li>
+                            <li><a href="#careers-guide">Careers Guide</a></li>
+                            <li><a href="#prospectus">Prospectus</a></li>
+                            <li><a href="#student-testimonials">Student Testimonials</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>For Business</h4>
+                        <ul>
+                            <li><a href="#your-challenges">Your Challenges</a></li>
+                            <li><a href="#our-solutions">Our Solutions</a></li>
+                            <li><a href="why-choose-gas.html">Why Choose Ukwakhile</a></li>
+                            <li><a href="#free-offerings">Free Offerings</a></li>
+                            <li><a href="#upcoming-ai-hr">Upcoming AI for HR</a></li>
+                            <li><a href="#corporate-brochure">Corporate Brochure</a></li>
+                            <li><a href="public-schedule.html">Public Programs</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-legal">
+                        <div class="footer-section">
+                            <h4>Legal</h4>
+                            <ul>
+                                <li><a href="#privacy-statement">Privacy Statement</a></li>
+                                <li><a href="#cookie-policy">Cookie Policy</a></li>
+                                <li><a href="#disclaimer">Disclaimer</a></li>
+                                <li><a href="#popia-forms">POPIA Forms</a></li>
+                                <li><a href="#newsletter">Subscribe to our Newsletter</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section contact-section">
+                    <h4>Contact Details</h4>
+                    <div class="contact-phone-box">
+                        <a href="tel:+27110262835">+27 11 026 2835</a>
+                    </div>
+                    <div class="contact-details">
+                        <a href="mailto:info@ukwakhile.co.za" class="contact-email">info@ukwakhile.co.za</a>
+                        <div class="business-hours">
+                            <span><strong>Working Hours</strong></span>
+                            <span>Mon-Fri: 8am-4pm</span>
+                        </div>
+                        <div class="address">
+                            <span><strong>Ukwakhile Training & Consultancy</strong></span>
+                            <span>237 Pine Ave, Ferndale, Randburg, 2194, South Africa</span>
+                        </div>
+                        <div class="social-section">
+                            <span><strong>Join us on our Socials</strong></span>
+                            <div class="social-links">
+                                <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-info">
+                    <p>Ukwakhile Training & Consultancy is a multi-accredited training provider. BEE Level 2 | Professional Training Excellence</p>
+                    <p>© 2025, Ukwakhile Training & Consultancy. All Rights Reserved</p>
+                </div>
+                <div class="footer-bottom-right">
+                    <div class="footer-contact">
+                        <span>+27 11 026 2835</span>
+                        <a href="mailto:info@ukwakhile.co.za">info@ukwakhile.co.za</a>
+                        <a href="#" class="youtube-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="linkedin-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#top" class="back-to-top">Back to top</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
