@@ -341,30 +341,26 @@ function getNotificationColor(type) {
 }
 
 // Qualification details functionality
-function toggleQualificationDetails(qualificationType) {
+function showQualificationDetails(qualificationType) {
     // Close any open details first
     const allSections = document.querySelectorAll('.qualification-detail-section');
     allSections.forEach(section => {
-        if (section.id !== `${qualificationType}-details`) {
-            section.classList.remove('active');
-        }
+        section.classList.remove('active');
     });
     
-    // Toggle the clicked section
+    // Show the clicked section
     const targetSection = document.getElementById(`${qualificationType}-details`);
     if (targetSection) {
-        targetSection.classList.toggle('active');
+        targetSection.classList.add('active');
         
-        // Scroll to the section if it's being opened
-        if (targetSection.classList.contains('active')) {
-            setTimeout(() => {
-                targetSection.scrollIntoView({ 
-                    behavior: 'smooth', 
-                    block: 'start',
-                    inline: 'nearest'
-                });
-            }, 100);
-        }
+        // Scroll to the section
+        setTimeout(() => {
+            targetSection.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'start',
+                inline: 'nearest'
+            });
+        }, 100);
     }
 }
 
@@ -378,7 +374,7 @@ function closeQualificationDetails(qualificationType) {
 // Make functions globally available
 window.openEnrollmentModal = openEnrollmentModal;
 window.closeEnrollmentModal = closeEnrollmentModal;
-window.toggleQualificationDetails = toggleQualificationDetails;
+window.showQualificationDetails = showQualificationDetails;
 window.closeQualificationDetails = closeQualificationDetails;
 
 // Add styles for form validation
@@ -477,3 +473,27 @@ style.textContent = `
 `;
 
 document.head.appendChild(style);
+
+// Inject circular plus links into qualification cards
+function addQualificationCardActions() {
+    document.querySelectorAll('.qualification-item-card').forEach(card => {
+        if (card.querySelector('.card-action')) return; // skip if already present
+
+        const titleEl = card.querySelector('h4, h3');
+        if (!titleEl) return;
+
+        // Create slug from title (remove prefix like 'Occupational Certificate:')
+        let text = titleEl.textContent.replace(/^Occupational Certificate:\s*/i, '').trim();
+        let slug = text.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-');
+
+        const a = document.createElement('a');
+        a.className = 'card-action';
+        a.href = `qualifications/${slug}.html`;
+        a.setAttribute('aria-label', `More about ${text}`);
+        a.textContent = '+';
+
+        card.appendChild(a);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', addQualificationCardActions);
