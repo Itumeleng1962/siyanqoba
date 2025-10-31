@@ -3094,7 +3094,7 @@ body {
 
 .contact-item i {
     font-size: var(--font-size-xl);
-    color: var(--electric-lime);
+    /* color: var(--electric-lime); */
     margin-top: var(--spacing-1);
 }
 
