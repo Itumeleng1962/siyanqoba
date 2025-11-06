@@ -153,7 +153,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Business Stories</h2>
-                <p>Our clients continue to benefit from our hands-on services and extensive expertise within the South African training landscape. Below are testimonials highlighting the impact of our tailored and effectiveÂ solutions.</p>
+                <p>Our clients continue to benefit from our hands-on services and extensive expertise within the South African training landscape. Below are testimonials highlighting the impact of our tailored and effective solutions.</p>
             </div>
             <div class="resources-grid">
                 <div class="resource-card">
@@ -181,6 +181,115 @@
                     <div class="resource-content">
                         <h3>Operational Excellence</h3>
                         <p>Blended learning helped a manufacturing firm standardize processes across 5 sites.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Case Studies Gallery -->
+    <section id="company-gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Case Studies</h2>
+                <p>Filter by year to explore our recent collaborations</p>
+            </div>
+            <div class="filter-bar" style="display:flex; gap:10px; flex-wrap:wrap; margin: 0 0 16px 0;">
+                <button class="filter-btn active" data-year="all">All</button>
+                <button class="filter-btn" data-year="2020">2020</button>
+                <button class="filter-btn" data-year="2021">2021</button>
+                <button class="filter-btn" data-year="2022">2022</button>
+                <button class="filter-btn" data-year="2023">2023</button>
+                <button class="filter-btn" data-year="2024">2024</button>
+            </div>
+            <div class="resources-grid">
+                <div class="resource-card" data-year="2024">
+                    <div class="resource-image">
+                        <img src="images/servest.png" alt="Servest logo">
+                    </div>
+                    <div class="resource-content">
+                        <h3>Servest</h3>
+                        <p>“Ukwakhile’s custom program accelerated our onboarding and improved quality metrics.”</p>
+                        <a href="#" class="read-more">Read case study →</a>
+                    </div>
+                </div>
+                <div class="resource-card" data-year="2023">
+                    <div class="resource-image">
+                        <img src="images/Dischem.png" alt="Dis-Chem logo">
+                    </div>
+                    <div class="resource-content">
+                        <h3>Dis-Chem</h3>
+                        <p>“Skills development aligned to our operations reduced rework by 30%."</p>
+                        <a href="#" class="read-more">Read case study →</a>
+                    </div>
+                </div>
+                <div class="resource-card" data-year="2022">
+                    <div class="resource-image">
+                        <img src="images/tsogo.png" alt="Tsogo Sun logo">
+                    </div>
+                    <div class="resource-content">
+                        <h3>Tsogo Sun</h3>
+                        <p>“Great partnership with measurable performance improvements.”</p>
+                        <a href="#" class="read-more">Read case study →</a>
+                    </div>
+                </div>
+                <div class="resource-card" data-year="2021">
+                    <div class="resource-image">
+                        <img src="images/unitrans.png" alt="Unitrans logo">
+                    </div>
+                    <div class="resource-content">
+                        <h3>Unitrans</h3>
+                        <p>“Blended learning standardized our processes across multiple sites.”</p>
+                        <a href="#" class="read-more">Read case study →</a>
+                    </div>
+                </div>
+                <div class="resource-card" data-year="2020">
+                    <div class="resource-image">
+                        <img src="images/ekurhuleni.png" alt="Ekurhuleni Municipality logo">
+                    </div>
+                    <div class="resource-content">
+                        <h3>Ekurhuleni Municipality</h3>
+                        <p>“Targeted programs improved service delivery turnarounds.”</p>
+                        <a href="#" class="read-more">Read case study →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="resource-categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Partner Testimonials</h2>
+                <p>What our partners say about working with us</p>
+            </div>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="images/adcock-Ingram.jpg" alt="Adcock Ingram">
+                    </div>
+                    <div class="resource-content">
+                        <h3>Adcock Ingram</h3>
+                        <p>“Ukwakhile’s programs delivered tangible performance gains within the first quarter.”</p>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="images/WIKA.jpeg" alt="WIKA">
+                    </div>
+                    <div class="resource-content">
+                        <h3>WIKA</h3>
+                        <p>“Professional, responsive, and results-driven training partner.”</p>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="images/WestRandDistrictMunicipality.png" alt="West Rand District Municipality">
+                    </div>
+                    <div class="resource-content">
+                        <h3>West Rand District Municipality</h3>
+                        <p>“Our teams are better equipped and more efficient thanks to their programs.”</p>
                     </div>
                 </div>
             </div>
@@ -297,6 +406,26 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+    (function(){
+        const root = document.getElementById('company-gallery');
+        if(!root) return;
+        const btns = root.querySelectorAll('.filter-btn');
+        const items = root.querySelectorAll('.resource-card');
+        btns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                btns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const year = btn.getAttribute('data-year');
+                items.forEach(item => {
+                    const itemYear = item.getAttribute('data-year');
+                    const show = (year === 'all') || (itemYear === year);
+                    item.style.display = show ? '' : 'none';
+                });
+            });
+        });
+    })();
+    </script>
 </body>
 </html>
 
