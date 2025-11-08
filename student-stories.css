@@ -1,0 +1,207 @@
+/* Student Stories Page Styles - Learner Profile Cards */
+
+.student-stories-section {
+    background: #ffffff;
+    padding: 4rem 0 6rem 0;
+    min-height: 60vh;
+}
+
+.student-stories-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.student-stories-header {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 4rem;
+}
+
+.student-stories-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.student-stories-header p {
+    font-size: 1.1rem;
+    color: #6c757d;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.student-stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.student-profile-card {
+    background: linear-gradient(135deg, var(--dark-blue) 0%, #1a3d66 100%);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: relative;
+    color: #ffffff;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+    overflow: hidden;
+}
+
+.student-profile-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+    pointer-events: none;
+    opacity: 0.3;
+    border-radius: 12px;
+}
+
+.student-profile-card:nth-child(1) { animation-delay: 0.1s; }
+.student-profile-card:nth-child(2) { animation-delay: 0.2s; }
+.student-profile-card:nth-child(3) { animation-delay: 0.3s; }
+.student-profile-card:nth-child(4) { animation-delay: 0.4s; }
+.student-profile-card:nth-child(5) { animation-delay: 0.5s; }
+.student-profile-card:nth-child(6) { animation-delay: 0.6s; }
+.student-profile-card:nth-child(7) { animation-delay: 0.7s; }
+.student-profile-card:nth-child(8) { animation-delay: 0.8s; }
+.student-profile-card:nth-child(9) { animation-delay: 0.9s; }
+.student-profile-card:nth-child(10) { animation-delay: 1.0s; }
+
+.student-profile-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+}
+
+.student-profile-image {
+    flex: 0 0 120px;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+.student-profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.student-profile-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.student-profile-program {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.student-profile-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+.student-profile-link {
+    display: inline-flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.student-profile-link:hover {
+    color: var(--light-green);
+    transform: translateX(4px);
+}
+
+.student-profile-link::after {
+    content: '→';
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.student-profile-link:hover::after {
+    transform: translateX(4px);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .student-stories-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .student-stories-section {
+        padding: 3rem 0 4rem 0;
+    }
+
+    .student-stories-container {
+        padding: 0 1.5rem;
+    }
+
+    .student-stories-header h1 {
+        font-size: 2rem;
+    }
+
+    .student-stories-header p {
+        font-size: 1rem;
+    }
+
+    .student-stories-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .student-profile-card {
+        padding: 1.25rem;
+        gap: 1.25rem;
+    }
+
+    .student-profile-image {
+        flex: 0 0 100px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .student-profile-name {
+        font-size: 1.1rem;
+    }
+}
+

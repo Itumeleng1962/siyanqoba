@@ -326,7 +326,7 @@ function initScrollEffects() {
     }, observerOptions);
     
     // Observe elements with fade-in class
-    document.querySelectorAll('.event-card, .download-card, .accreditation-item, .client-logo').forEach(el => {
+    document.querySelectorAll('.event-card, .download-card, .accreditation-item, .client-logo, .press-card, .newsroom-item, .insights-stat').forEach(el => {
         observer.observe(el);
     });
 }

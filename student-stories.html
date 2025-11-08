@@ -6,7 +6,7 @@
     <title>Student Stories - Ukwakhile Training & Consulting</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="resources.css">
+    <link rel="stylesheet" href="student-stories.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -16,7 +16,7 @@
         <div class="container">
             <div class="top-bar-content">
                 <div class="top-bar-links">
-                    <a href="login.html" class="top-link">Booking Portal</a>
+                    <a href="login.html" class="top-link">Business Portal</a>
                     <a href="signup.html" class="top-link">Apply Here</a>
                     <a href="login.html" class="top-link">Learner Portal</a>
                 </div>
@@ -109,13 +109,15 @@
                     <a href="#" class="nav-link">Students <span class="plus-indicator"></span></a>
                     <div class="dropdown-content">
                         <a href="student-programs.html">Student Programs</a>
-                        <a href="testimonials.html">Student Testimonials</a>
+                                <!-- <a href="testimonials.html">Student Testimonials</a> -->
+                        <a href="student-stories.html">Student Stories</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link">For Business <span class="plus-indicator"></span></a>
                     <div class="dropdown-content">
                         <a href="challenges.html">Your Challenges</a>
+                        <a href="business-stories.html">Business Stories</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -148,165 +150,134 @@
         </div>
     </section>
 
-    
+    <!-- Learner Stories Section -->
+    <section class="student-stories-section">
+        <div class="student-stories-container">
+            <div class="student-stories-header">
+                <h1>Learner Stories</h1>
+                <p>Our Training Force learners take the opportunities presented and work hard to make the most of them. With support from world class facilitators, they all have the potential to reach their goals and graduate with heads held high. Meet some of our dedicated students right here.</p>
+            </div>
 
-    <!-- Stories Grid -->
-    <section class="resource-categories">
-        <div class="container">
-            <div class="section-header">
-                <h2>Featured Journeys</h2>
-                <p>Inspiring outcomes from our qualifications and short courses</p>
-            </div>
-            <div class="resources-grid">
-                <div class="resource-card">
-                    <div class="resource-image">
-                        <img src="images/thandi.png" alt="Student success story">
+            <div class="student-stories-grid">
+                <!-- Learner 1 -->
+                <article class="student-profile-card">
+                    <div class="student-profile-image">
+                        <img src="images/placeholder.jpeg" alt="Emihle Zide">
                     </div>
-                    <div class="resource-content">
-                        <h3>From Unemployed to Project Coordinator</h3>
-                        <p><strong>Thandi M.</strong></p>
-                        <p>“This program gave me the confidence to lead real projects.”</p>
+                    <div class="student-profile-content">
+                        <div class="student-profile-program">Business Administration</div>
+                        <div class="student-profile-name">Emihle Zide</div>
+                        <a href="#" class="student-profile-link">Read more</a>
                     </div>
-                </div>
-                <div class="resource-card">
-                    <div class="resource-image">
-                        <img src="images/student.jpeg" alt="Student career growth">
-                    </div>
-                    <div class="resource-content">
-                        <h3>Upskilled and Promoted</h3>
-                        <p><strong>Sipho N.</strong></p>
-                        <p>“The short courses helped me step up into a team lead role.”</p>
-                    </div>
-                </div>
-                <div class="resource-card">
-                    <div class="resource-image">
-                        <img src="images/computer.jpg" alt="Digital skills success">
-                    </div>
-                    <div class="resource-content">
-                        <h3>Digital Skills Changed Everything</h3>
-                        <p><strong>Ayanda K.</strong></p>
-                        <p>“I gained real-world digital skills that improved my employability.”</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Gallery</h2>
-                <p>Snapshots from our learners’ journeys and campus life</p>
-            </div>
-            <div class="filter-bar" style="display:flex; gap:10px; flex-wrap:wrap; margin: 0 0 16px 0;">
-                <button class="filter-btn active" data-year="all">All</button>
-                <button class="filter-btn" data-year="2020">2020</button>
-                <button class="filter-btn" data-year="2021">2021</button>
-                <button class="filter-btn" data-year="2022">2022</button>
-                <button class="filter-btn" data-year="2023">2023</button>
-                <button class="filter-btn" data-year="2024">2024</button>
-            </div>
-            <div class="resources-grid">
-                <div class="resource-card" data-year="2024">
-                    <div class="resource-image">
-                        <img src="images/projectm.jpg" alt="Project Management graduate success story">
-                    </div>
-                    <div class="resource-content">
-                        <h3>From Unemployed to Project Coordinator</h3>
-                        <p><strong>Thandi M.</strong></p>
-                        <p>“After the program, I landed a full-time role within 2 months.”</p>
-                        <span>Project: Project Management Lab</span>
-                    </div>
-                </div>
+                </article>
 
-                <div class="resource-card" data-year="2023">
-                    <div class="resource-image">
-                        <img src="images/Black1.jpg" alt="Training session">
+                <!-- Learner 2 -->
+                <article class="student-profile-card">
+                    <div class="student-profile-image">
+                        <img src="images/placeholder.jpeg" alt="Samukelisiwe Vilakazi">
                     </div>
-                    <div class="resource-content">
-                        <h3>Leadership Growth</h3>
-                        <p><strong>Lebo D.</strong></p>
-                        <p>“This program helped me gain real-world experience.”</p>
-                        <span>Project: Leadership Lab</span>
+                    <div class="student-profile-content">
+                        <div class="student-profile-program">Business Practice</div>
+                        <div class="student-profile-name">Samukelisiwe Vilakazi</div>
+                        <a href="#" class="student-profile-link">Read more</a>
                     </div>
-                </div>
-                <div class="resource-card" data-year="2022">
-                    <div class="resource-image">
-                        <img src="images/Black2.jpg" alt="Learners collaborating">
+                </article>
+
+                <!-- Learner 3 -->
+                <article class="student-profile-card">
+                    <div class="student-profile-image">
+                        <img src="images/placeholder.jpeg" alt="Thokozani Dlamini">
                     </div>
-                    <div class="resource-content">
-                        <h3>Team Collaboration</h3>
-                        <p><strong>Kamo M.</strong></p>
-                        <p>“I learned to collaborate and communicate better.”</p>
-                        <span>Project: Team Dynamics</span>
+                    <div class="student-profile-content">
+                        <div class="student-profile-program">Contact Centre NQF 2</div>
+                        <div class="student-profile-name">Thokozani Dlamini</div>
+                        <a href="#" class="student-profile-link">Read more</a>
                     </div>
-                </div>
-                <div class="resource-card" data-year="2021">
-                    <div class="resource-image">
-                        <img src="images/Black3.jpg" alt="Facilitator in class">
+                </article>
+
+                <!-- Learner 4 -->
+                <article class="student-profile-card">
+                    <div class="student-profile-image">
+                        <img src="images/placeholder.jpeg" alt="Simphiwe Nxumalo">
                     </div>
-                    <div class="resource-content">
-                        <h3>Operations Bootcamp</h3>
-                        <p><strong>Musa P.</strong></p>
-                        <p>“Great mentorship and practical exposure.”</p>
-                        <span>Project: Operations Bootcamp</span>
+                    <div class="student-profile-content">
+                        <div class="student-profile-program">Business Administration NQF 5</div>
+                        <div class="student-profile-name">Simphiwe Nxumalo</div>
+                        <a href="#" class="student-profile-link">Read more</a>
                     </div>
-                </div>
-                <div class="resource-card" data-year="2024">
-                    <div class="resource-image">
-                        <img src="images/learn.jpg" alt="Hands-on learning">
+                </article>
+
+                <!-- Learner 5 -->
+                <article class="student-profile-card">
+                    <div class="student-profile-image">
+                        <img src="images/placeholder.jpeg" alt="Louwayne Jacobs">
                     </div>
-                    <div class="resource-content">
-                        <h3>Cloud Computing Lab</h3>
-                        <p><strong>Nomsa Z.</strong></p>
-                        <p>“The hands-on labs were invaluable.”</p>
-                        <span>Project: Cloud Computing Lab</span>
+                    <div class="student-profile-content">
+                        <div class="student-profile-program">Management NQF 3</div>
+                        <div class="student-profile-name">Louwayne Jacobs</div>
+                        <a href="#" class="student-profile-link">Read more</a>
                     </div>
-                </div>
-                <div class="resource-card" data-year="2020">
-                    <div class="resource-image">
-                        <img src="images/tools.jpg" alt="Practical workshop">
+                </article>
+
+                <!-- Learner 6 -->
+                <article class="student-profile-card">
+                    <div class="student-profile-image">
+                        <img src="images/placeholder.jpeg" alt="Thabo Mokoena">
                     </div>
-                    <div class="resource-content">
-                        <h3>Safety Workshop</h3>
-                        <p><strong>Sizwe R.</strong></p>
-                        <p>“I built foundational technical skills.”</p>
-                        <span>Project: Safety Workshop</span>
+                    <div class="student-profile-content">
+                        <div class="student-profile-program">Contact Centre & Business Process Outsourcing Support</div>
+                        <div class="student-profile-name">Thabo Mokoena</div>
+                        <a href="#" class="student-profile-link">Read more</a>
                     </div>
-                </div>
-                <div class="resource-card" data-year="2021">
-                    <div class="resource-image">
-                        <img src="images/officeadmin.jpg" alt="Office administration training">
+                </article>
+
+                <!-- Learner 7 -->
+                <article class="student-profile-card">
+                    <div class="student-profile-image">
+                        <img src="images/placeholder.jpeg" alt="Lerato Dlamini">
                     </div>
-                    <div class="resource-content">
-                        <h3>Office Administration</h3>
-                        <p><strong>Zanele T.</strong></p>
-                        <p>“I’m more organized and efficient at work now.”</p>
-                        <span>Program: Office Administration</span>
+                    <div class="student-profile-content">
+                        <div class="student-profile-program">Project Management</div>
+                        <div class="student-profile-name">Lerato Dlamini</div>
+                        <a href="#" class="student-profile-link">Read more</a>
                     </div>
-                </div>
-                <div class="resource-card" data-year="2022">
-                    <div class="resource-image">
-                        <img src="images/general.jpg" alt="Team development">
+                </article>
+
+                <!-- Learner 8 -->
+                <article class="student-profile-card">
+                    <div class="student-profile-image">
+                        <img src="images/placeholder.jpeg" alt="Sipho Ndlovu">
                     </div>
-                    <div class="resource-content">
-                        <h3>Team Development</h3>
-                        <p><strong>Andile C.</strong></p>
-                        <p>“Team exercises boosted my confidence.”</p>
-                        <span>Program: Team Development</span>
+                    <div class="student-profile-content">
+                        <div class="student-profile-program">Office Administration NQF 4</div>
+                        <div class="student-profile-name">Sipho Ndlovu</div>
+                        <a href="#" class="student-profile-link">Read more</a>
                     </div>
-                </div>
-                <div class="resource-card" data-year="2023">
-                    <div class="resource-image">
-                        <img src="images/student.jpeg" alt="Focused learner">
+                </article>
+
+                <!-- Learner 9 -->
+                <article class="student-profile-card">
+                    <div class="student-profile-image">
+                        <img src="images/placeholder.jpeg" alt="Ayanda Khumalo">
                     </div>
-                    <div class="resource-content">
-                        <h3>Flexible Learning</h3>
-                        <p><strong>Karabo N.</strong></p>
-                        <p>“Structured learning that fits my schedule.”</p>
-                        <span>Program: Flexible Learning</span>
+                    <div class="student-profile-content">
+                        <div class="student-profile-program">Digital Skills Development</div>
+                        <div class="student-profile-name">Ayanda Khumalo</div>
+                        <a href="#" class="student-profile-link">Read more</a>
                     </div>
-                </div>
+                </article>
+
+                <!-- Learner 10 -->
+                <article class="student-profile-card">
+                    <div class="student-profile-image">
+                        <img src="images/placeholder.jpeg" alt="Nomsa Zulu">
+                    </div>
+                    <div class="student-profile-content">
+                        <div class="student-profile-program">Leadership Development</div>
+                        <div class="student-profile-name">Nomsa Zulu</div>
+                        <a href="#" class="student-profile-link">Read more</a>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -421,24 +392,6 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-    (function(){
-        const btns = document.querySelectorAll('.filter-btn');
-        const items = document.querySelectorAll('#gallery .resource-card');
-        btns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                btns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                const year = btn.getAttribute('data-year');
-                items.forEach(item => {
-                    const itemYear = item.getAttribute('data-year');
-                    const show = (year === 'all') || (itemYear === year);
-                    item.style.display = show ? '' : 'none';
-                });
-            });
-        });
-    })();
-    </script>
 </body>
 </html>
 

@@ -6,17 +6,17 @@
     <title>Business Stories - Ukwakhile Training & Consulting</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="resources.css">
+    <link rel="stylesheet" href="business-stories.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body>      
     <!-- Top Bar -->
     <div class="top-bar">
         <div class="container">
             <div class="top-bar-content">
                 <div class="top-bar-links">
-                    <a href="login.html" class="top-link">Booking Portal</a>
+                    <a href="login.html" class="top-link">Business Portal</a>
                     <a href="signup.html" class="top-link">Apply Here</a>
                     <a href="login.html" class="top-link">Learner Portal</a>
                 </div>
@@ -75,9 +75,7 @@
                     <div class="dropdown-content">
                         <a href="about.html">About Us</a>
                         <a href="why-choose-ukwakhile.html">Why choose Ukwakhile</a>
-                        <a href="resources.html">Resources</a>
-                        <a href="student-stories.html">Student Stories</a>
-                        <a href="business-stories.html">Business Stories</a>
+                        <a href="resources.html">Resources</a>          
                         <!-- <a href="courses.html#qualifications">Qualifications</a> -->
                         <a href="frequently.html">Frequently Asked Questions</a>
                     </div>
@@ -109,13 +107,15 @@
                     <a href="#" class="nav-link">Students <span class="plus-indicator"></span></a>
                     <div class="dropdown-content">
                         <a href="student-programs.html">Student Programs</a>
-                        <a href="testimonials.html">Student Testimonials</a>
+                        <!-- <a href="testimonials.html">Student Testimonials</a> -->
+                        <a href="student-stories.html">Student Stories</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link">For Business <span class="plus-indicator"></span></a>
                     <div class="dropdown-content">
                         <a href="challenges.html">Your Challenges</a>
+                        <a href="business-stories.html">Business Stories</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -148,150 +148,162 @@
         </div>
     </section>
 
-    <!-- Stories Grid -->
-    <section class="resource-categories">
-        <div class="container">
-            <div class="section-header">
-                <h2>Business Stories</h2>
-                <p>Our clients continue to benefit from our hands-on services and extensive expertise within the South African training landscape. Below are testimonials highlighting the impact of our tailored and effective solutions.</p>
+    <!-- Business Stories Testimonials -->
+    <section class="business-stories-section">
+        <div class="business-stories-container">
+            <div class="business-stories-header">
+                <h1>Business Stories</h1>
+                <p>Our clients benefit from our practical services and experienced navigation of the South African training landscape. Here's what a few of them have had to say about our leading solutions.</p>
             </div>
-            <div class="resources-grid">
-                <div class="resource-card">
-                    <div class="resource-image">
-                        <img src="images/business.jpg" alt="Corporate training success">
-                    </div>
-                    <div class="resource-content">
-                        <h3>50% Faster Onboarding</h3>
-                        <p>Our tailored learnership program reduced time-to-productivity for a logistics client by half.</p>
-                    </div>
-                </div>
-                <div class="resource-card">
-                    <div class="resource-image">
-                        <img src="images/finance.png" alt="Finance transformation">
-                    </div>
-                    <div class="resource-content">
-                        <h3>Costs Down, Quality Up</h3>
-                        <p>Skills development improved compliance scores and cut rework by 30% in a finance team.</p>
-                    </div>
-                </div>
-                <div class="resource-card">
-                    <div class="resource-image">
-                        <img src="images/tools.jpg" alt="Operational excellence">
-                    </div>
-                    <div class="resource-content">
-                        <h3>Operational Excellence</h3>
-                        <p>Blended learning helped a manufacturing firm standardize processes across 5 sites.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Company Case Studies Gallery -->
-    <section id="company-gallery" class="gallery-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Case Studies</h2>
-                <p>Filter by year to explore our recent collaborations</p>
-            </div>
-            <div class="filter-bar" style="display:flex; gap:10px; flex-wrap:wrap; margin: 0 0 16px 0;">
-                <button class="filter-btn active" data-year="all">All</button>
-                <button class="filter-btn" data-year="2020">2020</button>
-                <button class="filter-btn" data-year="2021">2021</button>
-                <button class="filter-btn" data-year="2022">2022</button>
-                <button class="filter-btn" data-year="2023">2023</button>
-                <button class="filter-btn" data-year="2024">2024</button>
-            </div>
-            <div class="resources-grid">
-                <div class="resource-card" data-year="2024">
-                    <div class="resource-image">
+            <div class="business-stories-grid">
+                <!-- Testimonial 1 - Deloitte -->
+                <article class="business-testimonial-card">
+                    <div class="business-testimonial-logo">
+                        <img src="https://logos-world.net/wp-content/uploads/2021/08/Deloitte-Logo.png" alt="Deloitte logo" style="max-width: 180px; height: auto;">
+                    </div>
+                    <p class="business-testimonial-quote">"I would like to thank Training Force for always taking the time to find the best possible solutions to meet client expectations. They consistently think outside the box, offering flexible and practical strategies where everyone wins. Their dedication and adaptability make them an exceptional training partner."</p>
+                    <div class="business-testimonial-author">- Portia Selani</div>
+                </article>
+
+                <!-- Testimonial 2 - African Resonance -->
+                <article class="business-testimonial-card">
+                    <div class="business-testimonial-logo">
+                        <div style="background: #1e3a8a; color: white; padding: 1.5rem 2rem; border-radius: 8px; display: flex; align-items: center; gap: 0.75rem; font-weight: 700; font-size: 1.1rem;">
+                            <span style="font-size: 2rem; color: #60a5fa;">A</span>
+                            <div style="display: flex; flex-direction: column; line-height: 1.2;">
+                                <span>AFRICAN</span>
+                                <span>RESONANCE</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="business-testimonial-quote">"Training Force delivered an exceptional experience for our team at African Resonance. What stood out most was their excellent programme management. With clearly defined controls and dedicated teams in place, they provided structure and support that truly set them apart from other service providers."</p>
+                    <div class="business-testimonial-author">- Mosima Leshika</div>
+                </article>
+
+                <!-- Testimonial 3 - Icon Construction -->
+                <article class="business-testimonial-card">
+                    <div class="business-testimonial-logo">
+                        <div style="border: 2px solid #fff; padding: 1.5rem 2rem; border-radius: 8px; text-align: center; font-weight: 700; color: #fff;">
+                            <div style="font-size: 1.8rem; margin-bottom: 0.25rem;">
+                                <span style="position: relative;">
+                                    i<span style="position: absolute; top: -8px; left: 50%; transform: translateX(-50%); width: 12px; height: 12px; background: #fff; border-radius: 50%; display: inline-block;"></span>
+                                </span>con
+                            </div>
+                            <div style="font-size: 0.85rem; font-weight: 400; margin-top: 0.25rem;">construction (Pty) Ltd</div>
+                        </div>
+                    </div>
+                    <p class="business-testimonial-quote">"To be honest, I have not experienced any issues so far with the service provider. With that being said, I will be sending more skills development training in the coming months."</p>
+                    <div class="business-testimonial-author">- John</div>
+                </article>
+
+                <!-- Testimonial 4 - Servest -->
+                <article class="business-testimonial-card">
+                    <div class="business-testimonial-logo">
                         <img src="images/servest.png" alt="Servest logo">
                     </div>
-                    <div class="resource-content">
-                        <h3>Servest</h3>
-                        <p>“Ukwakhile’s custom program accelerated our onboarding and improved quality metrics.”</p>
-                        <a href="#" class="read-more">Read case study →</a>
-                    </div>
-                </div>
-                <div class="resource-card" data-year="2023">
-                    <div class="resource-image">
+                    <p class="business-testimonial-quote">"Ukwakhile's custom program accelerated our onboarding and improved quality metrics. Their team's understanding of our operational needs made all the difference in delivering impactful training solutions."</p>
+                    <div class="business-testimonial-author">- Operations Manager</div>
+                </article>
+
+                <!-- Testimonial 5 - Dis-Chem -->
+                <article class="business-testimonial-card">
+                    <div class="business-testimonial-logo">
                         <img src="images/Dischem.png" alt="Dis-Chem logo">
                     </div>
-                    <div class="resource-content">
-                        <h3>Dis-Chem</h3>
-                        <p>“Skills development aligned to our operations reduced rework by 30%."</p>
-                        <a href="#" class="read-more">Read case study →</a>
-                    </div>
-                </div>
-                <div class="resource-card" data-year="2022">
-                    <div class="resource-image">
+                    <p class="business-testimonial-quote">"Skills development aligned to our operations reduced rework by 30%. The practical approach and industry-specific training modules have significantly enhanced our team's performance and compliance standards."</p>
+                    <div class="business-testimonial-author">- Training Director</div>
+                </article>
+
+                <!-- Testimonial 6 - Tsogo Sun -->
+                <article class="business-testimonial-card">
+                    <div class="business-testimonial-logo">
                         <img src="images/tsogo.png" alt="Tsogo Sun logo">
                     </div>
-                    <div class="resource-content">
-                        <h3>Tsogo Sun</h3>
-                        <p>“Great partnership with measurable performance improvements.”</p>
-                        <a href="#" class="read-more">Read case study →</a>
-                    </div>
-                </div>
-                <div class="resource-card" data-year="2021">
-                    <div class="resource-image">
+                    <p class="business-testimonial-quote">"Great partnership with measurable performance improvements. Ukwakhile's hospitality-focused training programs have elevated our service standards and guest satisfaction scores across all our properties."</p>
+                    <div class="business-testimonial-author">- HR Director</div>
+                </article>
+
+                <!-- Testimonial 7 - Unitrans -->
+                <article class="business-testimonial-card">
+                    <div class="business-testimonial-logo">
                         <img src="images/unitrans.png" alt="Unitrans logo">
                     </div>
-                    <div class="resource-content">
-                        <h3>Unitrans</h3>
-                        <p>“Blended learning standardized our processes across multiple sites.”</p>
-                        <a href="#" class="read-more">Read case study →</a>
-                    </div>
-                </div>
-                <div class="resource-card" data-year="2020">
-                    <div class="resource-image">
+                    <p class="business-testimonial-quote">"Blended learning standardized our processes across multiple sites. The flexibility of their training delivery and the quality of content have been instrumental in maintaining consistent standards nationwide."</p>
+                    <div class="business-testimonial-author">- Learning & Development Manager</div>
+                </article>
+
+                <!-- Testimonial 8 - Ekurhuleni Municipality -->
+                <article class="business-testimonial-card">
+                    <div class="business-testimonial-logo">
                         <img src="images/ekurhuleni.png" alt="Ekurhuleni Municipality logo">
                     </div>
-                    <div class="resource-content">
-                        <h3>Ekurhuleni Municipality</h3>
-                        <p>“Targeted programs improved service delivery turnarounds.”</p>
-                        <a href="#" class="read-more">Read case study →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                    <p class="business-testimonial-quote">"Targeted programs improved service delivery turnarounds. Ukwakhile's understanding of public sector training requirements and their ability to customize programs has been invaluable to our organization."</p>
+                    <div class="business-testimonial-author">- Municipal Manager</div>
+                </article>
 
-    <!-- Testimonials Section -->
-    <section class="resource-categories">
-        <div class="container">
-            <div class="section-header">
-                <h2>Partner Testimonials</h2>
-                <p>What our partners say about working with us</p>
-            </div>
-            <div class="resources-grid">
-                <div class="resource-card">
-                    <div class="resource-image">
-                        <img src="images/adcock-Ingram.jpg" alt="Adcock Ingram">
+                <!-- Testimonial 9 - Adcock Ingram -->
+                <article class="business-testimonial-card">
+                    <div class="business-testimonial-logo">
+                        <img src="images/adcock-Ingram.jpg" alt="Adcock Ingram logo">
                     </div>
-                    <div class="resource-content">
-                        <h3>Adcock Ingram</h3>
-                        <p>“Ukwakhile’s programs delivered tangible performance gains within the first quarter.”</p>
+                    <p class="business-testimonial-quote">"Ukwakhile's programs delivered tangible performance gains within the first quarter. Their pharmaceutical industry expertise and regulatory compliance training have been exceptional."</p>
+                    <div class="business-testimonial-author">- Quality Assurance Manager</div>
+                </article>
+
+                <!-- Testimonial 10 - WIKA -->
+                <article class="business-testimonial-card">
+                    <div class="business-testimonial-logo">
+                        <img src="images/WIKA.jpeg" alt="WIKA logo">
                     </div>
-                </div>
-                <div class="resource-card">
-                    <div class="resource-image">
-                        <img src="images/WIKA.jpeg" alt="WIKA">
+                    <p class="business-testimonial-quote">"Professional, responsive, and results-driven training partner. The technical skills development programs have enhanced our manufacturing capabilities and improved our operational efficiency significantly."</p>
+                    <div class="business-testimonial-author">- Production Manager</div>
+                </article>
+
+                <!-- Testimonial 11 - West Rand District Municipality -->
+                <article class="business-testimonial-card">
+                    <div class="business-testimonial-logo">
+                        <img src="images/WestRandDistrictMunicipality.png" alt="West Rand District Municipality logo">
                     </div>
-                    <div class="resource-content">
-                        <h3>WIKA</h3>
-                        <p>“Professional, responsive, and results-driven training partner.”</p>
+                    <p class="business-testimonial-quote">"Our teams are better equipped and more efficient thanks to their programs. Ukwakhile's commitment to public service excellence and their tailored municipal training solutions have transformed our workforce capabilities."</p>
+                    <div class="business-testimonial-author">- Executive Mayor</div>
+                </article>
+
+                <!-- Testimonial 12 - DHL -->
+                <article class="business-testimonial-card">
+                    <div class="business-testimonial-logo">
+                        <img src="images/dhl.jpg" alt="DHL logo">
                     </div>
-                </div>
-                <div class="resource-card">
-                    <div class="resource-image">
-                        <img src="images/WestRandDistrictMunicipality.png" alt="West Rand District Municipality">
+                    <p class="business-testimonial-quote">"The logistics and supply chain training programs have been outstanding. Our team's understanding of best practices and safety protocols has improved dramatically, resulting in better operational outcomes."</p>
+                    <div class="business-testimonial-author">- Operations Director</div>
+                </article>
+
+                <!-- Testimonial 13 - SANTACO -->
+                <article class="business-testimonial-card">
+                    <div class="business-testimonial-logo">
+                        <img src="images/santaco.jpeg" alt="SANTACO logo">
                     </div>
-                    <div class="resource-content">
-                        <h3>West Rand District Municipality</h3>
-                        <p>“Our teams are better equipped and more efficient thanks to their programs.”</p>
+                    <p class="business-testimonial-quote">"Ukwakhile's transport sector training has empowered our members with essential business and safety skills. The programs are practical, relevant, and delivered with genuine commitment to our industry's growth."</p>
+                    <div class="business-testimonial-author">- Regional Coordinator</div>
+                </article>
+
+                <!-- Testimonial 14 - Spar -->
+                <article class="business-testimonial-card">
+                    <div class="business-testimonial-logo">
+                        <img src="images/Spar.jpg" alt="Spar logo">
                     </div>
-                </div>
+                    <p class="business-testimonial-quote">"Retail training excellence that drives customer satisfaction. The customer service and retail management programs have helped our stores maintain high service standards and improve sales performance."</p>
+                    <div class="business-testimonial-author">- Retail Operations Manager</div>
+                </article>
+
+                <!-- Testimonial 15 - Lesedi Local Municipality -->
+                <article class="business-testimonial-card">
+                    <div class="business-testimonial-logo">
+                        <img src="images/lesedi-local-municipality.jpeg" alt="Lesedi Local Municipality logo">
+                    </div>
+                    <p class="business-testimonial-quote">"Comprehensive municipal training that addresses our unique challenges. Ukwakhile's programs have strengthened our administrative capacity and improved service delivery to our communities."</p>
+                    <div class="business-testimonial-author">- Municipal Administrator</div>
+                </article>
             </div>
         </div>
     </section>
@@ -406,26 +418,6 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-    (function(){
-        const root = document.getElementById('company-gallery');
-        if(!root) return;
-        const btns = root.querySelectorAll('.filter-btn');
-        const items = root.querySelectorAll('.resource-card');
-        btns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                btns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                const year = btn.getAttribute('data-year');
-                items.forEach(item => {
-                    const itemYear = item.getAttribute('data-year');
-                    const show = (year === 'all') || (itemYear === year);
-                    item.style.display = show ? '' : 'none';
-                });
-            });
-        });
-    })();
-    </script>
 </body>
 </html>
 
