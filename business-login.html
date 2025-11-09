@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Ukwakhile Training & Consulting</title>
+    <title>Business Portal Login - Ukwakhile Training & Consulting</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="auth.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
     <div class="auth-container">
         <div class="auth-left">
             <div class="auth-image">
-                <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Black professionals in training environment">
+                <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Business professionals">
                 <div class="auth-overlay">
                     <div class="auth-logo">
                         <a href="index.html">
@@ -22,8 +22,8 @@
                         </a>
                     </div>
                     <div class="auth-tagline">
-                        <h3>Welcome Back</h3>
-                        <p>Continue your learning journey with us</p>
+                        <h3>Business Portal</h3>
+                        <p>Access your business dashboard and manage your training programs</p>
                     </div>
                 </div>
             </div>
@@ -31,17 +31,20 @@
         
         <div class="auth-right">
             <div class="auth-form-container">
+                <div class="auth-logo-form">
+                    <img src="images/ukwakhile.jpg" alt="Ukwakhile Logo" class="form-logo">
+                </div>
                 <div class="auth-header">
-                    <h1>Sign In</h1>
-                    <p>Access your training portal and continue your professional development</p>
+                    <h1>Business Portal</h1>
+                    <p>Sign in to access your business dashboard</p>
                 </div>
                 
-                <form class="auth-form" id="loginForm">
+                <form class="auth-form" id="businessLoginForm">
                     <div class="form-group">
                         <label for="email">Email Address</label>
                         <div class="input-wrapper">
                             <i class="fas fa-envelope"></i>
-                            <input type="email" id="email" name="email" required placeholder="Enter your email">
+                            <input type="email" id="email" name="email" required placeholder="Enter your business email">
                         </div>
                     </div>
                     
@@ -72,10 +75,6 @@
                     </div>
                     
                     <div class="social-auth">
-                        <!-- <button type="button" class="btn-social google">
-                            <i class="fab fa-google"></i>
-                            Sign in with Google
-                        </button> -->
                         <button type="button" class="btn-social microsoft">
                             <i class="fab fa-microsoft"></i>
                             Sign in with Microsoft
@@ -83,7 +82,7 @@
                     </div>
                     
                     <div class="auth-footer">
-                        <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+                        <p>Don't have a business account? <a href="contact.html">Contact us</a></p>
                     </div>
                 </form>
                 
@@ -100,3 +99,5 @@
     <script src="auth.js"></script>
 </body>
 </html>
+
+

@@ -339,7 +339,7 @@
 }
 
 .position {
-    color: var(--light-green);
+    color: var(--dark-blue);
     font-weight: 600;
     display: block;
     margin-bottom: 1rem;

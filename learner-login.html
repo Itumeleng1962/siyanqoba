@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Ukwakhile Training & Consulting</title>
+    <title>Learner Portal Login - Ukwakhile Training & Consulting</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="auth.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body class="auth-body">
     <div class="auth-container">
         <div class="auth-left">
             <div class="auth-image">
-                <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Black professionals in training environment">
+                <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Learners in training">
                 <div class="auth-overlay">
                     <div class="auth-logo">
                         <a href="index.html">
@@ -22,8 +23,8 @@
                         </a>
                     </div>
                     <div class="auth-tagline">
-                        <h3>Welcome Back</h3>
-                        <p>Continue your learning journey with us</p>
+                        <h3>Learner Portal</h3>
+                        <p>Continue your learning journey and track your progress</p>
                     </div>
                 </div>
             </div>
@@ -31,12 +32,15 @@
         
         <div class="auth-right">
             <div class="auth-form-container">
+                <div class="auth-logo-form">
+                    <img src="images/ukwakhile.jpg" alt="Ukwakhile Logo" class="form-logo">
+                </div>
                 <div class="auth-header">
-                    <h1>Sign In</h1>
-                    <p>Access your training portal and continue your professional development</p>
+                    <h1>Learner Portal</h1>
+                    <p>Sign in to access your learning dashboard</p>
                 </div>
                 
-                <form class="auth-form" id="loginForm">
+                <form class="auth-form" id="learnerLoginForm">
                     <div class="form-group">
                         <label for="email">Email Address</label>
                         <div class="input-wrapper">
@@ -65,6 +69,10 @@
                         <a href="#" class="forgot-password">Forgot password?</a>
                     </div>
                     
+                    <div class="recaptcha-container">
+                        <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+                    </div>
+                    
                     <button type="submit" class="btn-auth">Sign In</button>
                     
                     <div class="auth-divider">
@@ -72,10 +80,10 @@
                     </div>
                     
                     <div class="social-auth">
-                        <!-- <button type="button" class="btn-social google">
+                        <button type="button" class="btn-social google">
                             <i class="fab fa-google"></i>
                             Sign in with Google
-                        </button> -->
+                        </button>
                         <button type="button" class="btn-social microsoft">
                             <i class="fab fa-microsoft"></i>
                             Sign in with Microsoft
@@ -100,3 +108,5 @@
     <script src="auth.js"></script>
 </body>
 </html>
+
+
