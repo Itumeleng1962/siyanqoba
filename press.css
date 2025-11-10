@@ -78,12 +78,12 @@
 }
 
 .press-article-image {
-    flex: 0 0 200px;
-    width: 200px;
-    height: 150px;
+    flex: 0 0 320px;
+    width: 320px;
+    height: 220px;
     overflow: hidden;
     position: relative;
-    border-radius: 8px;
+    border-radius: 12px;
 }
 
 .press-article-image img {
@@ -115,7 +115,7 @@
 }
 
 .press-article-title a {
-    color: inherit;
+    color: var(--light-green) !important;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -409,6 +409,13 @@
     .press-main-layout {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+
+    /* Keep image prominent on tablets */
+    .press-article-image {
+        flex: 0 0 280px;
+        width: 280px;
+        height: 200px;
     }
 
     .press-sidebar {

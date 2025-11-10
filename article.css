@@ -5,6 +5,8 @@
     min-height: 100vh;
     position: relative;
     padding-bottom: 4rem;
+    /* Prevent fixed header/top bar from overlapping content */
+    padding-top: 180px;
 }
 
 .article-page::before {
@@ -263,6 +265,11 @@
 @media (max-width: 768px) {
     .article-container {
         padding: 1rem;
+    }
+
+    /* Reduce top offset for smaller screens */
+    .article-page {
+        padding-top: 140px;
     }
 
     .article-title {
