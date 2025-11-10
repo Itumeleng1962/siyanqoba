@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initTestimonialCarousel();
     initMandelaSlider();
 	initValuesSlider();
-	initPageLoader();
 });
 
 // Navigation functionality
@@ -677,48 +676,3 @@ function initValuesSlider() {
 
 // Initialize newsletter on load
 document.addEventListener('DOMContentLoaded', initNewsletter);
-
-// Global page loader (spinner overlay)
-function initPageLoader() {
-    // Create overlay
-    const overlay = document.createElement('div');
-    overlay.id = 'page-loader';
-    overlay.innerHTML = `
-        <div class="loader-backdrop"></div>
-        <div class="loader-content" aria-live="polite" aria-busy="true">
-            <div class="loader-spinner"></div>
-            <div class="loader-text">Loading...</div>
-        </div>
-    `;
-    document.body.appendChild(overlay);
-
-    // Show on initial load until all assets ready
-    overlay.classList.add('visible');
-    window.addEventListener('load', function() {
-        overlay.classList.remove('visible');
-        // remove after transition ends
-        setTimeout(() => overlay.classList.add('hidden'), 300);
-    });
-
-    // Intercept internal link clicks to show loader immediately
-    document.body.addEventListener('click', function(e) {
-        const anchor = e.target.closest('a');
-        if (!anchor) return;
-
-        const href = anchor.getAttribute('href');
-        if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
-
-        // Determine if internal navigation
-        const isSameOrigin = anchor.origin === window.location.origin;
-        if (!isSameOrigin) return; // skip external
-
-        // If opening in new tab/window, do not show overlay on current page
-        const target = anchor.getAttribute('target');
-        const modifier = e.ctrlKey || e.metaKey || e.shiftKey || e.altKey;
-        if (target === '_blank' || modifier) return;
-
-        // Show loader overlay
-        overlay.classList.remove('hidden');
-        overlay.classList.add('visible');
-    });
-}
