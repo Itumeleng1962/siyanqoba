@@ -180,6 +180,66 @@
     transform: translateX(4px);
 }
 
+.press-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.press-pagination ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.press-pagination .page-link,
+.press-pagination .page-dots {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 42px;
+    min-width: 42px;
+    padding: 0 1rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+}
+
+.press-pagination .page-link {
+    background: #ffffff;
+    border: 1px solid var(--gray-200);
+    color: var(--dark-blue);
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.press-pagination .page-link:hover,
+.press-pagination .page-link:focus {
+    border-color: var(--light-green);
+    color: var(--light-green);
+    outline: none;
+}
+
+.press-pagination .page-link.is-active {
+    background: var(--light-green);
+    color: var(--dark-blue);
+    border-color: transparent;
+    box-shadow: 0 6px 18px rgba(118, 134, 54, 0.3);
+}
+
+.press-pagination .page-dots {
+    color: rgba(16, 44, 75, 0.45);
+    padding: 0 0.25rem;
+}
+
+.press-pagination .page-next {
+    padding: 0 1.25rem;
+}
+
 /* Sidebar */
 .press-sidebar {
     position: sticky;

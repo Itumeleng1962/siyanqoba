@@ -134,15 +134,19 @@
             font-size: var(--font-size-4xl);
             font-weight: 700;
             color: var(--light-green);
-            margin-bottom: var(--spacing-2);
+            margin: 0 auto var(--spacing-2) auto;
             text-shadow: 0 2px 4px rgba(0,0,0,0.1);
             position: relative;
             z-index: 4;
-            padding: 0 var(--spacing-4);
+            padding: 0;
             word-spacing: normal;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            /* Ensure full numbers like 10,000+ are visible without truncation */
+            overflow: visible;
+            text-overflow: clip;
             white-space: nowrap;
+            display: block;
+            width: max-content;
+            text-align: center;
         }
 
         .stat-number::before,
@@ -470,7 +474,7 @@
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link">For Business <span class="plus-indicator"></span></a>
                     <div class="dropdown-content">
-                        <a href="challenges.html">Your Challenges</a>
+                        <!-- <a href="challenges.html">Your Challenges</a> -->
                         <a href="business-stories.html">Business Stories</a>
                     </div>
                 </li>
@@ -579,7 +583,7 @@
                     <div class="stat-label">Learners Trained</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">500+</div>
+                    <div class="stat-number">100+</div>
                     <div class="stat-label">Corporate Clients</div>
                 </div>
                 <div class="stat-card">
@@ -725,7 +729,6 @@
                     <div class="footer-section">
                         <h4>For Business</h4>
                         <ul>
-                            <li><a href="challenges.html">Your Challenges</a></li>
                             <li><a href="business-stories.html">Business Stories</a></li>
                         </ul>
                     </div>

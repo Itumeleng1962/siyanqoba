@@ -123,7 +123,6 @@
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link">For Business <span class="plus-indicator"></span></a>
                     <div class="dropdown-content">
-                        <a href="challenges.html">Your Challenges</a>
                         <a href="business-stories.html">Business Stories</a>
 
                     </div>
@@ -267,61 +266,63 @@
         </div>
     </section>
 
-    <!-- Leadership Team -->
-    <section id="team" class="leadership-team">
+    <!-- Leadership Team Organogram -->
+    <section id="team" class="leadership-team org-chart-section">
         <div class="container">
             <div class="section-header">
                 <h2>Meet Our Leadership Team</h2>
-                <p>Experienced professionals dedicated to your success</p>
-            </div>
-            <div class="team-grid">
-                <div class="team-member">
-                    <div class="member-photo">
-                        <img src="images/placeholder.jpeg" alt="Michael Thabang - Chief Executive Officer">
-                    </div>
-                    <div class="member-info">
-                        <h4>Mamo</h4>
-                        <span class="position">Director</span>
-                        <p>With over 20 years of experience in training and development, Mamo leads our strategic vision and ensures we deliver exceptional value to our clients.</p>
-                        <!-- <div class="member-social">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fas fa-envelope"></i></a>
-                        </div> -->
-                    </div>
-                </div>
-                
-                <div class="team-member">
-                    <div class="member-photo">
-                        <img src="images/placeholder.jpeg" alt="Nomsa Mthembu - Head of Training Operations">
-                    </div>
-                    <div class="member-info">
-                        <h4>Courage</h4>
-                        <span class="position">Director</span>
-                        <p>Courage brings extensive expertise in curriculum development and training delivery, ensuring our programs meet the highest standards of quality and effectiveness.</p>
-                        <!-- <div class="member-social">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fas fa-envelope"></i></a>
-                        </div> -->
-                    </div>
-                </div>
-                
-                <div class="team-member">
-                    <div class="member-photo">
-                        <img src="images/placeholder.jpeg" alt="Sarah Mitchell - Director of Client Relations">
-                    </div>
-                    <div class="member-info">
-                        <h4>Rafaele</h4>
-                        <span class="position">Manager (Projects and Learners)</span>
-                        <p>Rafaele ensures our clients receive personalized attention and support throughout their training journey, building lasting partnerships based on trust and results.</p>
-                        <!-- <div class="member-social">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fas fa-envelope"></i></a>
-                        </div> -->
-                    </div>
-                </div>
+                <p class="section-subheadline">Discover the strategists, mentors, and delivery specialists who shape our vision and keep every learning journey on track.</p>
+                <a class="team-cta-button" href="organo.html">Click Here To See Our Team</a>
             </div>
         </div>
     </section>
+        <style>
+        .org-chart-section { background: var(--gray-50); padding: 3rem 0; }
+        .section-subheadline { color: var(--gray-700); font-size: 1.1rem; max-width: 680px; margin: 0 auto 28px; }
+        .team-cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.9rem 3rem;
+            border-radius: 999px;
+            background: linear-gradient(135deg, #102c4b 0%, #1b4b84 40%, #cbfb05 100%);
+            color: #0a1630;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-size: 0.95rem;
+            text-decoration: none;
+            box-shadow: 0 14px 32px rgba(16, 44, 75, 0.25);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            position: relative;
+            overflow: hidden;
+            animation: teamPulse 3.2s ease-in-out infinite;
+            margin-top: 6px;
+        }
+        .team-cta-button::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.35) 45%, rgba(255,255,255,0) 100%);
+            transform: translateX(-100%);
+            transition: transform 0.7s ease;
+        }
+        .team-cta-button:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 20px 44px rgba(16, 44, 75, 0.3);
+        }
+        .team-cta-button:hover::after {
+            transform: translateX(100%);
+        }
+        .team-cta-button:focus {
+            outline: 3px solid rgba(203, 251, 5, 0.6);
+            outline-offset: 4px;
+        }
+        @keyframes teamPulse {
+            0%, 100% { box-shadow: 0 14px 32px rgba(16, 44, 75, 0.25); }
+            50% { box-shadow: 0 18px 46px rgba(203, 251, 5, 0.45); }
+            }
+        </style>
 
     <!-- Our Approach -->
     <section class="our-approach">
@@ -529,7 +530,7 @@
                     <div class="footer-section">
                         <h4>For Business</h4>
                         <ul>
-                            <li><a href="challenges.html">Your Challenges</a></li>
+                            <!-- <li><a href="challenges.html">Your Challenges</a></li> -->
                             <li><a href="business-stories.html">Business Stories</a></li>
                         </ul>
                     </div>

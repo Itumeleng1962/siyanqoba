@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Organogram - Clear Arrows & Alignment</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .org-container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            max-width: 1800px;
+            width: 100%;
+        }
+
+        .org-title {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 60px;
+            font-size: 2.5em;
+            font-weight: 300;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+        }
+
+        /* Main Structure */
+        .org-structure {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 80px;
+        }
+
+        /* CEO Level */
+        .ceo-level {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            width: 100%;
+        }
+
+        /* Managers Level - 4 Columns */
+        .managers-level {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 30px;
+            width: 100%;
+            max-width: 1600px;
+            position: relative;
+        }
+
+        .manager-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            position: relative;
+            min-height: 400px;
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border: 3px solid;
+            width: 100%;
+            max-width: 250px;
+            position: relative;
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+            z-index: 1000;
+        }
+
+        /* Profile Picture Styles */
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .profile-picture {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid white;
+            background: linear-gradient(135deg, #bdc3c7, #95a5a6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .ceo-card .profile-picture {
+            width: 100px;
+            height: 100px;
+            border: 4px solid white;
+            font-size: 28px;
+        }
+
+        .manager-card .profile-picture {
+            width: 90px;
+            height: 90px;
+            font-size: 22px;
+        }
+
+        .team-card .profile-picture {
+            width: 70px;
+            height: 70px;
+            font-size: 18px;
+        }
+
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        /* Card Types */
+        .ceo-card {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            border-color: #2c3e50;
+            max-width: 280px;
+            padding: 25px;
+        }
+
+        .manager-card {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            border-color: #3498db;
+        }
+
+        .manager-card.vacant {
+            background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+            border-color: #95a5a6;
+        }
+
+        .manager-card.finance {
+            background: linear-gradient(135deg, #27ae60, #229954);
+            border-color: #27ae60;
+        }
+
+        .manager-card.facilitators {
+            background: linear-gradient(135deg, #e67e22, #d35400);
+            border-color: #e67e22;
+        }
+
+        .team-card {
+            background: #ecf0f1;
+            color: #2c3e50;
+            border-color: #bdc3c7;
+        }
+
+        .coordinator-card {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            border-color: #e74c3c;
+        }
+
+        .administrator-card {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+            color: white;
+            border-color: #9b59b6;
+        }
+
+        /* Card Content */
+        .card h2 {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .card h3 {
+            font-size: 1.3em;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .card h4 {
+            font-size: 1.1em;
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+
+        .position {
+            font-size: 0.85em;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        /* ARROW CONNECTORS */
+        .connector {
+            position: absolute;
+            z-index: 1;
+        }
+
+        /* CEO to Managers Arrows */
+        .ceo-to-manager {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 60px;
+            background: #3498db;
+        }
+
+        .ceo-to-manager::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 12px solid #3498db;
+        }
+
+        /* Manager to Team Arrows */
+        .manager-to-team {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 40px;
+            background: #3498db;
+        }
+
+        .manager-to-team::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 10px solid #3498db;
+        }
+
+        /* Color-coded arrows */
+        .manager-card.finance .manager-to-team,
+        .manager-card.finance .manager-to-team::after {
+            background: #27ae60;
+            border-top-color: #27ae60;
+        }
+
+        .manager-card.facilitators .manager-to-team,
+        .manager-card.facilitators .manager-to-team::after {
+            background: #e67e22;
+            border-top-color: #e67e22;
+        }
+
+        .manager-card.vacant .manager-to-team,
+        .manager-card.vacant .manager-to-team::after {
+            background: #95a5a6;
+            border-top-color: #95a5a6;
+        }
+
+        /* Thato to Administrators Arrow */
+        .thato-to-admins {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 30px;
+            background: #e74c3c;
+        }
+
+        .thato-to-admins::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 10px solid #e74c3c;
+        }
+
+        /* Team members container */
+        .team-members {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            width: 100%;
+            position: relative;
+        }
+
+        /* Sub-team for Thato's structure */
+        .sub-team {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+            width: 100%;
+            position: relative;
+        }
+
+        /* Horizontal connectors for multiple team members */
+        .horizontal-connector {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 2px;
+            background: #3498db;
+        }
+
+        .horizontal-connector::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-bottom: 8px solid #3498db;
+        }
+
+        /* Photo upload styling */
+        .photo-upload {
+            margin-top: 8px;
+            font-size: 0.75em;
+            color: rgba(255,255,255,0.8);
+            background: rgba(0,0,0,0.2);
+            padding: 4px 10px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .photo-upload:hover {
+            background: rgba(0,0,0,0.3);
+        }
+
+        .team-card .photo-upload {
+            color: rgba(0,0,0,0.7);
+            background: rgba(0,0,0,0.1);
+        }
+
+        .team-card .photo-upload:hover {
+            background: rgba(0,0,0,0.2);
+        }
+
+        /* Ensure proper alignment */
+        .column-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1400px) {
+            .managers-level {
+                grid-template-columns: 1fr 1fr;
+                gap: 60px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .managers-level {
+                grid-template-columns: 1fr;
+                gap: 80px;
+            }
+            
+            .org-container {
+                padding: 20px;
+            }
+            
+            .org-title {
+                font-size: 2em;
+                margin-bottom: 40px;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="org-container">
+        <h1 class="org-title">Organization Chart</h1>
+        
+        <div class="org-structure">
+            <!-- CEO Level -->
+            <div class="ceo-level">
+                <div class="card ceo-card">
+                    <div class="profile-container">
+                        <div class="profile-picture" data-name="Mamo" style="background-image: none;">
+                            <span class="initials">M</span>
+                        </div>
+                        <div class="card-content">
+                            <h2>Mamo</h2>
+                            <div class="position">Chief Executive Officer</div>
+                        </div>
+                        <div class="photo-upload" onclick="uploadPhoto(this)">Add Photo</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CEO to Managers Arrows -->
+            <div class="ceo-to-manager" style="left: 12.5%;"></div>
+            <div class="ceo-to-manager" style="left: 37.5%;"></div>
+            <div class="ceo-to-manager" style="left: 62.5%;"></div>
+            <div class="ceo-to-manager" style="left: 87.5%;"></div>
+
+            <!-- Managers Level - 4 Columns -->
+            <div class="managers-level">
+                <!-- Column 1: Rafaele -->
+                <div class="manager-column">
+                    <div class="column-wrapper">
+                        <div class="card manager-card">
+                            <div class="profile-container">
+                                <div class="profile-picture" data-name="Rafaele" style="background-image: none;">
+                                    <span class="initials">R</span>
+                                </div>
+                                <div class="card-content">
+                                    <h3>Rafaele</h3>
+                                    <div class="position">Project Manager</div>
+                                </div>
+                                <div class="photo-upload" onclick="uploadPhoto(this)">Add Photo</div>
+                            </div>
+                        </div>
+                        
+                        <div class="manager-to-team"></div>
+                        
+                        <div class="team-members">
+                            <div class="horizontal-connector"></div>
+                            <div class="card team-card">
+                                <div class="profile-container">
+                                    <div class="profile-picture" data-name="Noluvo" style="background-image: none;">
+                                        <span class="initials">N</span>
+                                    </div>
+                                    <div class="card-content">
+                                        <h4>Noluvo</h4>
+                                        <div class="position">Projects Administrator</div>
+                                    </div>
+                                    <div class="photo-upload" onclick="uploadPhoto(this)">Add Photo</div>
+                                </div>
+                            </div>
+                            
+                            <div class="card team-card">
+                                <div class="profile-container">
+                                    <div class="profile-picture" data-name="Lebo" style="background-image: none;">
+                                        <span class="initials">L</span>
+                                    </div>
+                                    <div class="card-content">
+                                        <h4>Lebo</h4>
+                                        <div class="position">Facilities Management</div>
+                                    </div>
+                                    <div class="photo-upload" onclick="uploadPhoto(this)">Add Photo</div>
+                                </div>
+                            </div>
+                            
+                            <div class="card team-card">
+                                <div class="profile-container">
+                                    <div class="profile-picture" data-name="Mackayla" style="background-image: none;">
+                                        <span class="initials">M</span>
+                                    </div>
+                                    <div class="card-content">
+                                        <h4>Mackayla</h4>
+                                        <div class="position">Receptionist</div>
+                                    </div>
+                                    <div class="photo-upload" onclick="uploadPhoto(this)">Add Photo</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2: Vacant -->
+                <div class="manager-column">
+                    <div class="column-wrapper">
+                        <div class="card manager-card vacant">
+                            <div class="profile-container">
+                                <div class="profile-picture" data-name="Vacant" style="background-image: none;">
+                                    <span class="initials">?</span>
+                                </div>
+                                <div class="card-content">
+                                    <h3>VACANT</h3>
+                                    <div class="position">Business Development Manager</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="manager-to-team"></div>
+                        
+                        <div class="team-members">
+                            <div class="card team-card">
+                                <div class="profile-container">
+                                    <div class="profile-picture" data-name="Sales Team" style="background-image: none;">
+                                        <span class="initials">ST</span>
+                                    </div>
+                                    <div class="card-content">
+                                        <h4>Sales Team</h4>
+                                        <div class="position">Sales Department</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3: Courage -->
+                <div class="manager-column">
+                    <div class="column-wrapper">
+                        <div class="card manager-card finance">
+                            <div class="profile-container">
+                                <div class="profile-picture" data-name="Courage" style="background-image: none;">
+                                    <span class="initials">C</span>
+                                </div>
+                                <div class="card-content">
+                                    <h3>Courage</h3>
+                                    <div class="position">QA & Finance Manager</div>
+                                </div>
+                                <div class="photo-upload" onclick="uploadPhoto(this)">Add Photo</div>
+                            </div>
+                        </div>
+                        
+                        <div class="manager-to-team"></div>
+                        
+                        <div class="team-members">
+                            <div class="horizontal-connector"></div>
+                            
+                            <!-- Thato - Coordinator -->
+                            <div class="sub-team">
+                                <div class="card coordinator-card">
+                                    <div class="profile-container">
+                                        <div class="profile-picture" data-name="Thato" style="background-image: none;">
+                                            <span class="initials">T</span>
+                                        </div>
+                                        <div class="card-content">
+                                            <h4>Thato</h4>
+                                            <div class="position">ETQA Coordinator</div>
+                                        </div>
+                                        <div class="photo-upload" onclick="uploadPhoto(this)">Add Photo</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="thato-to-admins"></div>
+                                
+                                <div class="team-members">
+                                    <div class="card administrator-card">
+                                        <div class="profile-container">
+                                            <div class="profile-picture" data-name="Nathasha & Matshidiso" style="background-image: none;">
+                                                <span class="initials">N&M</span>
+                                            </div>
+                                            <div class="card-content">
+                                                <h4>Nathasha & Matshidiso</h4>
+                                                <div class="position">ETQA Administrators</div>
+                                            </div>
+                                            <div class="photo-upload" onclick="uploadPhoto(this)">Add Photo</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Olga -->
+                            <div class="card team-card">
+                                <div class="profile-container">
+                                    <div class="profile-picture" data-name="Olga" style="background-image: none;">
+                                        <span class="initials">O</span>
+                                    </div>
+                                    <div class="card-content">
+                                        <h4>Olga</h4>
+                                        <div class="position">Training Coordinator</div>
+                                    </div>
+                                    <div class="photo-upload" onclick="uploadPhoto(this)">Add Photo</div>
+                                </div>
+                            </div>
+
+                            <!-- Gcina -->
+                            <div class="card team-card">
+                                <div class="profile-container">
+                                    <div class="profile-picture" data-name="Gcina" style="background-image: none;">
+                                        <span class="initials">G</span>
+                                    </div>
+                                    <div class="card-content">
+                                        <h4>Gcina</h4>
+                                        <div class="position">Finance/Bookkeeper/Interns</div>
+                                    </div>
+                                    <div class="photo-upload" onclick="uploadPhoto(this)">Add Photo</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 4: Agnes -->
+                <div class="manager-column">
+                    <div class="column-wrapper">
+                        <div class="card manager-card facilitators">
+                            <div class="profile-container">
+                                <div class="profile-picture" data-name="Agnes" style="background-image: none;">
+                                    <span class="initials">A</span>
+                                </div>
+                                <div class="card-content">
+                                    <h3>Agnes</h3>
+                                    <div class="position">Facilitators, Assessors & Moderators</div>
+                                </div>
+                                <div class="photo-upload" onclick="uploadPhoto(this)">Add Photo</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Photo upload functionality
+        function uploadPhoto(element) {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = 'image/*';
+            
+            input.onchange = function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        const profilePicture = element.parentElement.querySelector('.profile-picture');
+                        profilePicture.style.backgroundImage = `url(${e.target.result})`;
+                        profilePicture.innerHTML = ''; // Remove initials
+                        element.textContent = 'Change Photo';
+                    }
+                    reader.readAsDataURL(file);
+                }
+            };
+            
+            input.click();
+        }
+
+        // Add interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card');
+            
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.zIndex = '1000';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.zIndex = '2';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -9,6 +9,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Ukwakhile Training & Consulting - Frequently Asked Questions</title>
+    <style>
+        /* Two-column FAQ layout on desktop, single column on mobile */
+        .faq-section .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.5rem;
+            align-items: start;
+        }
+        @media (max-width: 768px) {
+            .faq-section .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* Card styling to ensure consistent look if not covered by global styles */
+        .faq-section .faq-item {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        .faq-section .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 1.5rem;
+            cursor: pointer;
+        }
+        .faq-section .faq-answer {
+            padding: 0 1.5rem 1.25rem 1.5rem;
+        }
+    </style>
 </head>
 <body>
       <!-- Top Bar -->
@@ -123,7 +155,6 @@
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link">For Business <span class="plus-indicator"></span></a>
                     <div class="dropdown-content">
-                        <a href="challenges.html">Your Challenges</a>
                         <a href="business-stories.html">Business Stories</a>
                     </div>
                 </li>
@@ -263,7 +294,7 @@
                     <div class="footer-section">
                         <h4>For Business</h4>
                         <ul>
-                            <li><a href="challenges.html">Your Challenges</a></li>
+                            <!-- <li><a href="challenges.html">Your Challenges</a></li> -->
                             <li><a href="business-stories.html">Business Stories</a></li>
                         </ul>
                     </div>

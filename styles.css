@@ -3223,6 +3223,10 @@ body {
     background: var(--white);
 }
 
+.faq-section .faq-item {
+    background: linear-gradient(135deg, var(--blue-zodiac) 0%, var(--primary-blue-light) 100%) !important;
+}
+
 .faq-section .section-header {
     text-align: center;
     margin-bottom: 80px;

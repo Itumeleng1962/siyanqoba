@@ -18,6 +18,93 @@
             margin-top: 3rem;
         }
 
+        /* Imported from Your Challenges page */
+        .challenges-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .challenge-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .challenge-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .challenge-card h3 {
+            color: var(--dark-blue);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .challenge-card .icon {
+            width: 40px;
+            height: 40px;
+            background: var(--light-green);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark-blue);
+        }
+
+        .challenge-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .challenge-card li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            color: #555;
+        }
+
+        .challenge-card li:last-child {
+            border-bottom: none;
+        }
+
+        .solutions-section {
+            background: #f8f9fa;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .solutions-section h2 {
+            color: var(--dark-blue);
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .solution-item {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .solution-item h4 {
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+        }
+
         .course-card {
             background: var(--white);
             border: 1px solid var(--gray-200);
@@ -151,6 +238,33 @@
             font-size: 18px;
             line-height: 1.6;
         }
+        
+        /* Short Courses list styles imported from Your Challenges */
+        .short-courses-section {
+            padding: 4rem 0;
+        }
+        .short-courses-section h2 {
+            color: var(--dark-blue);
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .courses-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .course-item {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--light-green);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .course-item h4 {
+            color: var(--dark-blue);
+            margin-bottom: 0.5rem;
+        }
 
         @media (max-width: 768px) {
             .courses-grid {
@@ -160,6 +274,10 @@
 
             .course-card {
                 padding: var(--spacing-4);
+            }
+            .challenges-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
         }
     </style>
@@ -274,7 +392,7 @@
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link">For Business <span class="plus-indicator"></span></a>
                     <div class="dropdown-content">
-                        <a href="challenges.html">Your Challenges</a>
+                        <!-- <a href="challenges.html">Your Challenges</a> -->
                         <a href="business-stories.html">Business Stories</a>
                     </div>
                 </li>
@@ -321,6 +439,9 @@
         </div>
     </section>
 
+    <!-- Short Courses (from Your Challenges page) -->
+   
+
     <!-- Courses Grid -->
     <section class="courses-section">
         <div class="container">
@@ -338,6 +459,81 @@
                         <li><i class="fas fa-check"></i> Administrative Procedures</li>
                         <li><i class="fas fa-check"></i> Business Communication</li>
                         <li><i class="fas fa-check"></i> Record Keeping & Filing</li>
+                    </ul>
+                    <div class="course-action">
+                        <a href="contact.html" class="btn-course btn-primary">Enquire Now</a>
+                    </div>
+                </div>
+
+                <!-- Management & Leadership -->
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>Management & Leadership</h3>
+                    <p>Provides foundational knowledge in planning, organising, leading teams, strategic management, and decision-making in a business context.</p>
+                    <ul class="course-features">
+                        <li><i class="fas fa-check"></i> Supervisory Training</li>
+                        <li><i class="fas fa-check"></i> Team Leader Training</li>
+                        <li><i class="fas fa-check"></i> Middle Management Training</li>
+                        <li><i class="fas fa-check"></i> Strategic Management and Leadership Development</li>
+                    </ul>
+                    <div class="course-action">
+                        <a href="contact.html" class="btn-course btn-primary">Enquire Now</a>
+                    </div>
+                </div>
+
+                <!-- Marketing -->
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Marketing</h3>
+                    <p>Covers topics such as understanding consumer behaviour, market research, branding and advertising, and digital marketing strategies.</p>
+                    <ul class="course-features">
+                        <li><i class="fas fa-check"></i> Understanding Consumer Behaviour</li>
+                        <li><i class="fas fa-check"></i> Market Research</li>
+                        <li><i class="fas fa-check"></i> Branding and Advertising</li>
+                        <li><i class="fas fa-check"></i> Digital Marketing Strategies</li>
+                    </ul>
+                    <div class="course-action">
+                        <a href="contact.html" class="btn-course btn-primary">Enquire Now</a>
+                    </div>
+                </div>
+
+                <!-- Human Resource (HR) Management -->
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-user-cog"></i>
+                    </div>
+                    <h3>Human Resource (HR) Management</h3>
+                    <p>Covers, but is not limited to, talent management, recruitment and selection, employee relations, coaching and mentoring, and disciplinary hearing training.</p>
+                    <ul class="course-features">
+                        <li><i class="fas fa-check"></i> Talent Management</li>
+                        <li><i class="fas fa-check"></i> Recruitment and Selection</li>
+                        <li><i class="fas fa-check"></i> Employee Relations</li>
+                        <li><i class="fas fa-check"></i> Coaching and Mentoring</li>
+                        <li><i class="fas fa-check"></i> Disciplinary Hearing Training</li>
+                    </ul>
+                    <div class="course-action">
+                        <a href="contact.html" class="btn-course btn-primary">Enquire Now</a>
+                    </div>
+                </div>
+
+                <!-- Entrepreneurship -->
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Entrepreneurship</h3>
+                    <p>Prepares students with the skills needed to launch, manage, and grow new business ventures.</p>
+                    <ul class="course-features">
+                        <li><i class="fas fa-check"></i> Business Plan Preparation</li>
+                        <li><i class="fas fa-check"></i> Identifying Opportunities</li>
+                        <li><i class="fas fa-check"></i> Establishing a New Business</li>
+                        <li><i class="fas fa-check"></i> Managing and Growing a New Business</li>
+                        <li><i class="fas fa-check"></i> Finance and Funding for a New Venture</li>
+                        <li><i class="fas fa-check"></i> Marketing and Business Development</li>
                     </ul>
                     <div class="course-action">
                         <a href="contact.html" class="btn-course btn-primary">Enquire Now</a>
@@ -456,6 +652,190 @@
         </div>
     </section>
 
+    <!-- <section class="short-courses-section">
+        <div class="container">
+            <h2>Short Courses</h2>
+            <div class="courses-list">
+                <div class="course-item">
+                    <h4><i class="fas fa-briefcase"></i> Business Administration Skills</h4>
+                </div>
+                <div class="course-item">
+                    <h4><i class="fas fa-project-diagram"></i> Project Management</h4>
+                </div>
+                <div class="course-item">
+                    <h4><i class="fas fa-chart-line"></i> Financial Management</h4>
+                </div>
+                <div class="course-item">
+                    <h4><i class="fas fa-users"></i> Corporate Life Skill</h4>
+                </div>
+                <div class="course-item">
+                    <h4><i class="fas fa-laptop"></i> Computer Skills</h4>
+                </div>
+                <div class="course-item">
+                    <h4><i class="fas fa-hard-hat"></i> Occupational Health & Safety Training</h4>
+                </div>
+                <div class="course-item">
+                    <h4><i class="fas fa-landmark"></i> Public Sector Related Short Courses</h4>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="courses.html" class="btn btn-primary" style="background: var(--light-green); color: var(--dark-blue); padding: 1rem 2rem; border-radius: 25px; text-decoration: none; font-weight: 600; display: inline-block;">
+                    <i class="fas fa-graduation-cap"></i> Discover our programs
+                </a>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="intro-section">
+        <div class="container">
+            <div class="intro-content">
+                <h2>Your Challenges</h2>
+                <p>
+                    We understand your challenges and have tailored solutions to help you overcome them.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Your Challenges (moved from Your Challenges page) -->
+    <section class="challenges-section">
+        <div class="container">
+            <div class="challenges-grid">
+                <div class="challenge-card">
+                    <h3>
+                        <div class="icon"><i class="fas fa-weight-hanging"></i></div>
+                        Workload & Pressure
+                    </h3>
+                    <ul>
+                        <li>Heavy workload and unrealistic deadlines</li>
+                        <li>Pressure to meet targets and performance expectations</li>
+                        <li>Burnout due to lack of work-life balance</li>
+                    </ul>
+                </div>
+                <div class="challenge-card">
+                    <h3>
+                        <div class="icon"><i class="fas fa-comments"></i></div>
+                        Communication Issues
+                    </h3>
+                    <ul>
+                        <li>Poor communication from management or team members</li>
+                        <li>Misunderstandings caused by unclear instructions</li>
+                        <li>Language or cultural barriers in diverse workplaces</li>
+                    </ul>
+                </div>
+                <div class="challenge-card">
+                    <h3>
+                        <div class="icon"><i class="fas fa-users"></i></div>
+                        Workplace Relationships
+                    </h3>
+                    <ul>
+                        <li>Conflicts with colleagues or managers</li>
+                        <li>Favoritism and office politics</li>
+                        <li>Lack of teamwork or collaboration</li>
+                    </ul>
+                </div>
+                <div class="challenge-card">
+                    <h3>
+                        <div class="icon"><i class="fas fa-briefcase"></i></div>
+                        Job Security & Career Growth
+                    </h3>
+                    <ul>
+                        <li>Uncertainty about job stability</li>
+                        <li>Limited opportunities for promotions or training</li>
+                        <li>Feeling undervalued or overlooked</li>
+                    </ul>
+                </div>
+                <div class="challenge-card">
+                    <h3>
+                        <div class="icon"><i class="fas fa-building"></i></div>
+                        Work Environment
+                    </h3>
+                    <ul>
+                        <li>Lack of proper resources or tools to do the job</li>
+                        <li>Unsafe or uncomfortable working conditions</li>
+                        <li>Remote work challenges (isolation, poor internet, distractions at home)</li>
+                    </ul>
+                </div>
+                <div class="challenge-card">
+                    <h3>
+                        <div class="icon"><i class="fas fa-user-tie"></i></div>
+                        Management & Leadership
+                    </h3>
+                    <ul>
+                        <li>Micromanagement or poor leadership styles</li>
+                        <li>Lack of recognition and appreciation</li>
+                        <li>Inconsistent policies or unfair treatment</li>
+                    </ul>
+                </div>
+                <div class="challenge-card">
+                    <h3>
+                        <div class="icon"><i class="fas fa-money-bill-wave"></i></div>
+                        Compensation & Benefits
+                    </h3>
+                    <ul>
+                        <li>Low salary compared to workload</li>
+                        <li>Inadequate benefits (healthcare, leave days, pension)</li>
+                        <li>Pay inequality among employees</li>
+                    </ul>
+                </div>
+                <div class="challenge-card">
+                    <h3>
+                        <div class="icon"><i class="fas fa-sync-alt"></i></div>
+                        Adaptation to Change
+                    </h3>
+                    <ul>
+                        <li>Struggling with new technologies or systems</li>
+                        <li>Adjusting to organizational restructuring</li>
+                        <li>Resistance to innovation or new ways of working</li>
+                    </ul>
+                </div>
+                <div class="challenge-card">
+                    <h3>
+                        <div class="icon"><i class="fas fa-balance-scale"></i></div>
+                        Diversity, Equity & Inclusion
+                    </h3>
+                    <ul>
+                        <li>Discrimination or harassment (gender, race, age, etc.)</li>
+                        <li>Lack of inclusivity in decision-making</li>
+                        <li>Unconscious bias from peers or managers</li>
+                    </ul>
+                </div>
+                <div class="challenge-card">
+                    <h3>
+                        <div class="icon"><i class="fas fa-heart"></i></div>
+                        Personal Challenges Affecting Work
+                    </h3>
+                    <ul>
+                        <li>Mental health issues (stress, anxiety, depression)</li>
+                        <li>Family responsibilities conflicting with work</li>
+                        <li>Financial difficulties impacting focus at work</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions (moved) -->
+    <section class="solutions-section">
+        <div class="container">
+            <h2>And have tailored solutions to help.</h2>
+            <div class="solutions-grid">
+                <div class="solution-item">
+                    <h4><i class="fas fa-book"></i> Learning Materials</h4>
+                    <p>Comprehensive learning resources designed to address your specific workplace challenges.</p>
+                </div>
+                <div class="solution-item">
+                    <h4><i class="fas fa-clipboard-check"></i> Assessment Tools</h4>
+                    <p>Professional assessment tools to measure progress and identify areas for improvement.</p>
+                </div>
+                <div class="solution-item">
+                    <h4><i class="fas fa-laptop-code"></i> Digital Learning Tools</h4>
+                    <p>Modern digital platforms and tools to enhance your learning experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
    <footer class="footer">
         <div class="container">
@@ -501,7 +881,6 @@
                     <div class="footer-section">
                         <h4>For Business</h4>
                         <ul>
-                            <li><a href="challenges.html">Your Challenges</a></li>
                             <li><a href="business-stories.html">Business Stories</a></li>
                         </ul>
                     </div>
